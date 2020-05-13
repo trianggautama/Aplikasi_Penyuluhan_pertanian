@@ -34,7 +34,7 @@ $(document).ready(function() {
     pageLength: 4,
     buttons: [
       {
-        text: "<i class='feather icon-plus'></i> Add New",
+        text: "<i class='feather icon-plus'></i> Tambah Data",
         action: function() {
           $(this).removeClass("btn-secondary")
           $(".add-new-data").addClass("show")
@@ -42,7 +42,7 @@ $(document).ready(function() {
           $("#data-name, #data-price").val("")
           $("#data-category, #data-status").prop("selectedIndex", 0)
         },
-        className: "btn-outline-primary"
+        className: "btn-primary"
       }
     ],
     initComplete: function(settings, json) {
