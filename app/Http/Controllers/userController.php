@@ -10,4 +10,9 @@ class userController extends Controller
 
         return view('admin.user.index');
     }
+
+    public function edit(){
+
+        return view('admin.user.edit');
+    }
 }

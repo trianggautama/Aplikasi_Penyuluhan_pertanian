@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/ui/prism.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/file-uploaders/dropzone.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/tables/datatable/extensions/dataTables.checkboxes.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
     
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/bootstrap-extended.css')}}">
@@ -114,15 +114,15 @@
                         </li>
                         <li><a href="{{Route('kecamatanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">User Kecamatan</span></a>
                         </li>
-                        <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
-                        </li>
-                        <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Form Evaluasi</span></a>
+                        <li><a href="{{Route('evaluasiIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed layout">Form Evaluasi</span></a>
                         </li>
                     </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Pelatihan</span></a>
                     <ul class="menu-content">
                         <li class="active"><a href="sk-layout-2-columns.html"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
+                        </li>
+                        <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
                         </li>
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item" data-i18n="Floating navbar">Peserta</span></a>
                         </li>
@@ -157,19 +157,26 @@
 
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="{{asset('admin/app-assets/vendors/js/extensions/dropzone.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js')}}"></script>
+    <!-- <script src="{{asset('admin/app-assets/vendors/js/extensions/dropzone.min.js')}}"></script>
     <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/dataTables.select.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script> -->
     <!-- END: Page Vendor JS-->
 
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{asset('admin/app-assets/vendors/js/ui/prism.min.js')}}"></script>
     <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/pdfmake.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/vfs_fonts.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
+     <!-- END: Page JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="{{asset('admin/app-assets/js/core/app-menu.js')}}"></script>
@@ -178,10 +185,8 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{asset('admin/app-assets/js/scripts/ui/data-list-view.js')}}"></script>
-    <!-- END: Page JS-->
+    <script src="{{asset('admin/app-assets/js/scripts/datatables/datatable.js')}}"></script>
 
-    <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
 
 </body>

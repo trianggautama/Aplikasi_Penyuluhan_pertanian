@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class kecamatanController extends Controller
+class evaluasiController extends Controller
 {
     public function index()
     {
-        return view('admin.kecamatan.index');
+        return view('admin.evaluasi.index');
     }
 
     public function edit()
     {
-        return view('admin.kecamatan.edit');
+        return view('admin.evaluasi.edit');
     }
 }

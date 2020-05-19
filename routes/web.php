@@ -21,5 +21,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//User Route
 Route::get('/user', 'userController@index')->name('userIndex');
+Route::get('/user/edit', 'userController@edit')->name('userEdit');
+
+//Kecamatan Route
 Route::get('/kecamatan', 'kecamatanController@index')->name('kecamatanIndex');
+Route::get('/kecamatan/edit', 'kecamatanController@edit')->name('kecamatanEdit');
+
+////evaluasi Route
+Route::get('/evaluasi', 'evaluasiController@index')->name('evaluasiIndex');
+Route::get('/evaluasi/edit', 'evaluasiController@edit')->name('evaluasiEdit');
