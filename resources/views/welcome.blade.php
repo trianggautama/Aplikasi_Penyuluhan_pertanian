@@ -60,35 +60,29 @@
 	<div class="nav_area" id="sticker">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 col-sm-3 col-xs-4">
-					<div class="logo"><a href="index.html"><img src="img/logo.png" alt="" /></a></div>
+				<div class="col-md-5 col-sm-5 col-xs-6">
+					<div class=""><a href="index.html"><img src="{{asset('depan/img/logo.png')}}" alt="" / width="80px"> <b class="navid">Aplikasi Penyuluhan Pertanian</b></a></div>
 				</div>
-				<div class="col-md-9 col-sm-9 col-xs-8">
+				<div class="col-md-7 col-sm-7 col-xs-8">
 					<nav class="menu">
 						<ul class="navid">
 							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#teams">Teams</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#pricing">Pricing</a></li>
-							<li><a href="#services">Services</a></li>							
-							<li><a href="#blogs">Blogs</a></li>
-							<li><a href="#work">Work</a></li>
+							<li><a href="#about">Tentang Kami</a></li>
+							<li><a href="#services">Manfaat</a></li>							
+							<li><a href="#blogs">Berita</a></li>
 							<li><a href="#contact">Contact</a></li>
+							<li><a href="{{Route('login')}}">Login</a></li>
 						</ul>
 					</nav>
 						<div class="dropdown mabile_menu">
 							<a data-toggle="dropdown" class="mobile-menu" href="#"><span> MENU </span><i class="fa fa-bars"></i></a>
 						  <ul class="dropdown-menu mobile_menus drop_mobile navid">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#teams">Teams</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#pricing">Pricing</a></li>
-								<li><a href="#services">Services</a></li>							
-								<li><a href="#blogs">Blogs</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#contact">Contact</a></li>
+						  	<li><a href="#home">Home</a></li>
+							<li><a href="#about">Tentang Kami</a></li>
+							<li><a href="#services">Manfaat</a></li>							
+							<li><a href="#blogs">Berita</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a href="{{Route('login')}}">Login</a></li>
 						  </ul>
 						</div>	
 				</div>
@@ -97,8 +91,8 @@
 	</div>
 	<div class="slider-wrap home-1-slider" id="home">
 		<div id="mainSlider" class="nivoSlider slider-image">
-			<img src="{{asset('depan/img/slider.jpg')}}" alt="main slider" title="#htmlcaption1"/>
-			<img src="{{asset('depan/img/slider.jpg')}}" alt="main slider" title="#htmlcaption2"/>
+			<img src="{{asset('depan/img/bg1.jpg')}}" alt="main slider" title="#htmlcaption1"/>
+			<img src="{{asset('depan/img/bg2.jpg')}}" alt="main slider" title="#htmlcaption2"/>
 		</div>
 		<div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
 			<div class="slider-progress"></div>	
@@ -109,19 +103,20 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>Parallax & Responsive Template</h1>
+										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN KABUPATEN TANAH LAUT</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
-										<h2>Liendo provides absolutely responsive and flexible layout, which adapts to any<br /> screen resolution. Each block will resize and fit any screen perfectly.</h2>
+										<h2>Aplikasi Manajemen Data Penyuluhan Pertanian Berbasis Web</h2>
 									</div>	
 									<div class="cap-readmore animated fadeInUpBig" data-wow-duration="1.5s" data-wow-delay=".5s">
-										<a href="#" >Buy now</a>
-										<a href="#" class="hover_slider_button">Shop Now</a>
+										<a href="#about" class="hover_slider_button">Tentang Kami</a>
 									</div>
 								</div>
 								<div class="right_sidet1">
-									<div class="slide-image1">
-										<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="{{asset('depan/img/home1/1.png')}}" alt="slider caption" />
+									<div class="slide-image1 ">
+										<br>
+										<br>
+										<img class="wow slideInUp "  data-wow-duration="1.5s" data-wow-delay="0s" src="{{asset('depan/img/head1.jpg')}}" alt="slider caption" />
 									</div>									
 								</div>				
 							</div>	
@@ -139,19 +134,20 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow bounceInDown" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>How to start your own business</h1>
+										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN KABUPATEN TANAH LAUT</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
-										<h2>Liendo provides absolutely responsive and flexible layout, which adapts to any<br /> screen resolution. Each block will resize and fit any screen perfectly.</h2>
+									<h2>Aplikasi Manajemen Data Penyuluhan Pertanian Berbasis Web</h2>
 									</div>	
 									<div class="cap-readmore animated fadeInUpBig" data-wow-duration="1.5s" data-wow-delay=".5s">
-										<a href="#" >Buy now</a>
-										<a href="#" class="hover_slider_button">Shop Now</a>
+										<a href="#about" class="hover_slider_button">Tentang Kami</a>
 									</div>
 								</div>
 								<div class="right_sidet1">
 									<div class="slide-image2">
-										<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="{{asset('depan/img/home1/2.png')}}" alt="slider caption" />
+										<br>
+										<br>
+										<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="{{asset('depan/img/head2.jpg')}}" alt="slider caption" />
 									</div>									
 								</div>										
 							</div>										
@@ -165,102 +161,52 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-lg-12">	
-					<div class="section_title">
-						<h2 class="title"><span>About Us</span></h2>
+					<div class="section_title text-center">
+						<img class="" src="{{asset('depan/img/logo.png')}}" alt="" / width="150px">
+						<br>
+						<br>
+						<h2 class="title text-center" style="text-decoration:none !important;"><span>About Us</span></h2>
 					</div>
 				</div>
 			</div>		
 			<div class="row">
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="icon"><i class="fa fa-lightbulb-o "></i></div>
-					<div class="about_content">
-						<h2><span>Clean design</span></h2>
-						<p>Maecenas efficitur et erat at mattis. Nullam finibus massa nec augue ullamcorper, </p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="icon"><i class="fa fa-html5"></i></div>
-					<div class="about_content">
-						<h2><span>Html5 & CSS3</span></h2>
-						<p>Praesent ornare ipsum at nulla pulvinar, imperdiet hendrerit dui suscipit. Aenean</p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="icon"><i class="fa fa-cog"></i></div>
-					<div class="about_content">
-						<h2><span>Easy Customization</span></h2>
-						<p>Vestibulum eget enim consequat neque iaculis mattis ac quis nunc. Aenean </p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3 col-lg-3">
-					<div class="icon">
-						<i class="fa fa-laptop"></i>
-					</div>
-					<div class="about_content">
-						<h2><span>Responsive Design</span></h2>
-						<p>Etiam dolor quam, maximus vitae quam a, cursus dictum nibh. Vivamus a ex tellus.  </p>
-					</div>
-				</div>
+				<h4 class="text-center">Balai Pelatihan dan Penerapan Teknologi Pertanian  Kabupaten Tanah Laut adalah UPTD atau unit pelaksana teknis daerah yang berfungsi untuk Melaksanakan pembinaan dan pelatihan, bimbingan kerjasama dalam penggunaan dan penerapan teknologi pertanian tanaman pangan dan hortikultura sesuai dengan ketentuan yang berlaku untuk pengembangan teknologi pertanian yang berkelanjutan.</h4>
 			</div>
 		</div>	
 </div>
 	<div class="service_area service_color" id="services">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="service_thum">
-						<div class="service_img"><img src="img/sr2.png" alt="" /></div>
+						<div class="service_img"><img src="{{asset('depan/img/home1/1.png')}}" alt="" /></div>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-12">	
 							<div class="section_title">
-								<h2 class="title"><span>Amazing Features</span></h2>
+								<h2 class="title"><span>Manfaat Aplikasi</span></h2>
 							</div>
 						</div>
 					</div>				
 					<div class="row">
-						<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div class="icon"><i class="fa fa-bolt"></i></div>
 							<div class="about_content">
-								<h2><span>Modern design Trends</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
+								<p>Memudahkan Pegawai BPPTP Kabupaten Tanah Laut dalam mengelola kegiatan pelatihan pertanian </p>
 							</div>						
 						</div>						
-						<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div class="icon"><i class="fa fa-laptop"></i></div>
 							<div class="about_content">
-								<h2><span>Responsive Design</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
+								<p>	Memudahkan pihak dari setiap kecamatan dalam merekomendasikan peserta pelatihan pertanian.</p>
 							</div>
-						</div>					
-						<div class="col-sm-6 col-md-6 col-lg-6">
-							<div class="icon"><i class="fa fa-cogs"></i></div>
-							<div class="about_content">
-								<h2><span>Easy to Customize</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-6">
-							<div class="icon"><i class="fa fa-file-text-o"></i></div>
-							<div class="about_content">
-								<h2><span>Multi Layouts</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-6 col-lg-6">
-							<div class="icon"><i class="fa fa-arrows-alt"></i></div>
-							<div class="about_content">
-								<h2><span>Retina Ready</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
-							</div>
-						</div>						
-						<div class="col-sm-6 col-md-6 col-lg-6">
+						</div>							
+						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div class="icon"><i class="fa fa-briefcase"></i></div>
 							<div class="about_content">
-								<h2><span>24/7 Online Support</span></h2>
-								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
+								<p>Memudahkan pelaku agribisnis maupun masyarakat dalam mengakses informasi terkait dengan kegiatan pelatihan pertanian serta berita-berita tentang pemanfaatan teknologi di bidang pertanian. </p>
 							</div>
 						</div>
 					</div>
@@ -282,7 +228,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b1.jpg" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -308,7 +254,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b2.jpg" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -334,7 +280,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b3.jpg" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -360,7 +306,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b4.jpg" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -388,7 +334,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="#"><img src="img/blog/b1.jpg" alt="" /></a>
+							<a href="#"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -416,61 +362,7 @@
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b2.jpg" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<!--end single blog item-->	
-				<!--single blog item-->
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b3.jpg" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<!--end single blog item-->	
-				<!--single blog item-->
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="img/blog/b4.jpg" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
 									<span>28</span>
@@ -498,47 +390,6 @@
 		</div>	
 	</div>
 	<!--end blog area -->
-	<!--counter up area -->
-	<div class="counterup_area" id="work">
-		<div class="container">
-			<div class="row">
-				<!--single counterup item-->
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter"><i class="fa fa-coffee"></i></div>
-						<div class="counter">
-							<h1 class="number">18,450</h1>
-							<p class="text">Questions Answered</p>
-						</div>
-					</div>
-				</div>				
-				<!--end single counterup item-->
-				<!--single counterup item-->
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter cb2"><i class="fa fa-download"></i></div>
-						<div class="counter ">
-							<h1 class="number cn2">12,380</h1>
-							<p class="text">Time Downloaded</p>
-						</div>
-					</div>
-				</div>
-				<!--end single counterup item-->
-				<!--single counterup item-->
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter cb3"><i class="fa fa-heart"></i></div>
-						<div class="counter">
-							<h1 class="number cn3">34,292</h1>
-							<p class="text">Heart Given</p>
-						</div>
-					</div>
-				</div>
-				<!--end single counterup item-->
-			</div>		
-		</div>	
-	</div>
-	<!--end counterup area -->
 	<div class="footer_area ">
 		<div class="container">
 			<div class="row">
@@ -551,7 +402,7 @@
 				<!--end section title-->
 			</div>		
 			<div class="row">
-				<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="single_address fix">
 						<div class="address_icon"><span><i class="fa fa-map-marker"></i></span></div>
 						<div class="address_text"><p><span>Address:</span> 123 Street- E14/E15 Cambridge, USA</p></div>
@@ -565,7 +416,7 @@
 						<div class="address_text"><p><span>Email: </span> info@liendo.com</p></div>
 					</div>					
 				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="map">
 					   <!-- Start contact-map -->
                             <div class="contact-map">
@@ -573,28 +424,7 @@
                             </div>
 						<!-- End contact-map -->
 					</div>				
-				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
-					<form action="mail.php" method="post">
-						<div class="contract_us">
-							<div class="inputt input_change">
-								<span class="message_icon"><i class="fa fa-user"></i></span>
-								<input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
-							</div>
-							<div class="inputt input_change">
-								<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
-								<input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-							</div>
-							<div class="inputt">
-								<span class="message_icon"><i class="fa fa-external-link"></i></span>
-								<textarea class="form-control" name="message"  rows="4" id="mes" placeholder="Message"></textarea>
-							</div>
-							<div class="sunmite_button">
-								<button type="submit" name="ok">send message</button>
-							</div>
-						</div>
-					</form>
-				</div>				
+				</div>			
 			</div>
 		</div>			
 	</div>
