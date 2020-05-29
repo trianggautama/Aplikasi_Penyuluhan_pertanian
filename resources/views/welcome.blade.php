@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7">    <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8">    <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -63,21 +57,13 @@
         <script src="{{asset('depan/js/vendor/modernizr-2.8.3.min.js')}}"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!--Start nav  area --> 
 	<div class="nav_area" id="sticker">
 		<div class="container">
 			<div class="row">
-				<!--logo area-->
 				<div class="col-md-3 col-sm-3 col-xs-4">
 					<div class="logo"><a href="index.html"><img src="img/logo.png" alt="" /></a></div>
 				</div>
-				<!--end logo area-->
-				<!--nav area-->
 				<div class="col-md-9 col-sm-9 col-xs-8">
-					<!--  nav menu-->
 					<nav class="menu">
 						<ul class="navid">
 							<li><a href="#home">Home</a></li>
@@ -91,8 +77,6 @@
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
-					<!--end  nav menu-->
-					<!--moblie menu area-->
 						<div class="dropdown mabile_menu">
 							<a data-toggle="dropdown" class="mobile-menu" href="#"><span> MENU </span><i class="fa fa-bars"></i></a>
 						  <ul class="dropdown-menu mobile_menus drop_mobile navid">
@@ -107,14 +91,10 @@
 								<li><a href="#contact">Contact</a></li>
 						  </ul>
 						</div>	
-						<!--end moblie menu-->						
 				</div>
-				<!--end nav area-->
 			</div>	
 		</div>
 	</div>
-	<!--end header  area -->	
-	<!-- HOME SLIDER -->
 	<div class="slider-wrap home-1-slider" id="home">
 		<div id="mainSlider" class="nivoSlider slider-image">
 			<img src="{{asset('depan/img/slider.jpg')}}" alt="main slider" title="#htmlcaption1"/>
@@ -180,23 +160,17 @@
 				</div>
 			</div>	
 		</div>	
-
 	</div>
-	<!-- HOME SLIDER -->
-	<!-- about  area -->
 	<div class="about_area" id="about">
 		<div class="container">
 			<div class="row">
-				<!--section title-->
 				<div class="col-md-12 col-sm-12 col-lg-12">	
 					<div class="section_title">
 						<h2 class="title"><span>About Us</span></h2>
 					</div>
 				</div>
-				<!--end section title-->
 			</div>		
 			<div class="row">
-				<!--single Item-->
 				<div class="col-sm-6 col-md-3 col-lg-3">
 					<div class="icon"><i class="fa fa-lightbulb-o "></i></div>
 					<div class="about_content">
@@ -204,7 +178,6 @@
 						<p>Maecenas efficitur et erat at mattis. Nullam finibus massa nec augue ullamcorper, </p>
 					</div>
 				</div>
-				<!--single Item-->
 				<div class="col-sm-6 col-md-3 col-lg-3">
 					<div class="icon"><i class="fa fa-html5"></i></div>
 					<div class="about_content">
@@ -212,7 +185,6 @@
 						<p>Praesent ornare ipsum at nulla pulvinar, imperdiet hendrerit dui suscipit. Aenean</p>
 					</div>
 				</div>
-				<!--single Item-->
 				<div class="col-sm-6 col-md-3 col-lg-3">
 					<div class="icon"><i class="fa fa-cog"></i></div>
 					<div class="about_content">
@@ -220,7 +192,6 @@
 						<p>Vestibulum eget enim consequat neque iaculis mattis ac quis nunc. Aenean </p>
 					</div>
 				</div>
-				<!--single Item-->
 				<div class="col-sm-6 col-md-3 col-lg-3">
 					<div class="icon">
 						<i class="fa fa-laptop"></i>
@@ -230,7 +201,6 @@
 						<p>Etiam dolor quam, maximus vitae quam a, cursus dictum nibh. Vivamus a ex tellus.  </p>
 					</div>
 				</div>
-				<!-- end single Item-->
 			</div>
 		</div>	
 </div>
@@ -244,34 +214,27 @@
 				</div>
 				<div class="col-md-8">
 					<div class="row">
-						<!--section title-->
 						<div class="col-md-12">	
 							<div class="section_title">
 								<h2 class="title"><span>Amazing Features</span></h2>
 							</div>
 						</div>
-						<!--end section title-->
 					</div>				
 					<div class="row">
-						<!--single service item-->						
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-bolt"></i></div>
 							<div class="about_content">
 								<h2><span>Modern design Trends</span></h2>
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>						
-						</div>
-						<!--end single service item-->
-						<!--single service item-->							
+						</div>						
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-laptop"></i></div>
 							<div class="about_content">
 								<h2><span>Responsive Design</span></h2>
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>
-						</div>
-						<!--end single service item-->
-						<!--single service item-->						
+						</div>					
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-cogs"></i></div>
 							<div class="about_content">
@@ -279,8 +242,6 @@
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>
 						</div>
-						<!--end single service item-->
-						<!--single service item-->
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-file-text-o"></i></div>
 							<div class="about_content">
@@ -288,17 +249,13 @@
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>
 						</div>
-						<!--end single service item-->
-						<!--single service item-->
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-arrows-alt"></i></div>
 							<div class="about_content">
 								<h2><span>Retina Ready</span></h2>
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>
-						</div>
-						<!--end single service item-->
-						<!--single service item-->						
+						</div>						
 						<div class="col-sm-6 col-md-6 col-lg-6">
 							<div class="icon"><i class="fa fa-briefcase"></i></div>
 							<div class="about_content">
@@ -306,27 +263,22 @@
 								<p>Vestibulum feugiat cursus velit, vel maximus orci. Pellentesque et finibus est, eu pulvinar sapien. Aenean vel libero porta</p>
 							</div>
 						</div>
-						<!--end single service item-->
 					</div>
 				</div>				
 			</div>
 		</div>	
 	</div>
-	<!--blog area -->
 	<div class="blog_area" id="blogs">
 		<div class="container">
 			<div class="row">
-				<!--section title-->
 				<div class="col-md-12">	
 					<div class="section_title">
 						<h2 class="title"><span>Blog Posts</span></h2>
 					</div>
 				</div>
-				<!--end section title-->
 			</div>			
 			<div class="row">
 				<div class="team_own curosel-style">
-				<!--single blog item-->
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
@@ -353,8 +305,6 @@
 						</div>
 					</div>
 				</div>
-				<!--end single blog item-->
-				<!--single blog item-->
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
@@ -381,8 +331,6 @@
 						</div>
 					</div>
 				</div>
-				<!--end single blog item-->
-				<!--single blog item-->
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
@@ -409,8 +357,6 @@
 						</div>
 					</div>
 				</div>
-				<!--end single blog item-->
-				<!--single blog item-->
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">

@@ -108,7 +108,7 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item"><a href="../../../html/ltr/vertical-collapsed-menu-template/index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Beranda</span><span class="badge badge badge-warning badge-pill float-right">2</span></a>
                 </li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Data Master</span></a>
+                <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title" data-i18n="Starter kit">Data Master</span></a>
                     <ul class="menu-content">
                         <li class="active"><a href="{{Route('userIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">User Admin</span></a>
                         </li>
@@ -120,7 +120,7 @@
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Pelatihan</span></a>
                     <ul class="menu-content">
-                        <li class="active"><a href="sk-layout-2-columns.html"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
+                        <li class="active"><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
                         </li>
                         <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
                         </li>
