@@ -15,6 +15,10 @@ class CreateModulsTable extends Migration
     {
         Schema::create('moduls', function (Blueprint $table) {
             $table->id();
+            $table->string('uuid', 36);
+            $table->string('kode_modul', 50);
+            $table->string('judul', 100);
+            $table->string('file', 100);
             $table->timestamps();
         });
     }
