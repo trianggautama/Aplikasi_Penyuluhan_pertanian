@@ -42,9 +42,12 @@ Route::put('/pelatihan/edit/{uuid}', 'pelatihanController@update')->name('pelati
 Route::get('/pelatihan/delete/{uuid}', 'pelatihanController@destroy')->name('pelatihanDestroy');
 
 ////modul Route
-Route::get('/modul', 'modulController@index')->name('modulIndex');
-Route::get('/modul/detail', 'modulController@show')->name('modulShow');
-Route::get('/modul/edit', 'modulController@edit')->name('modulEdit');
+Route::get('/modul/index', 'modulController@index')->name('modulIndex');
+Route::post('/modul/index', 'modulController@store')->name('modulStore');
+Route::get('/modul/preview/{uuid}', 'modulController@preview')->name('modulPreview');
+Route::get('/modul/edit/{uuid}', 'modulController@edit')->name('modulEdit');
+Route::put('/modul/edit/{uuid}', 'modulController@update')->name('modulUpdate');
+Route::get('/modul/delete/{uuid}', 'modulController@destroy')->name('modulDestroy');
 
 ////Berita Route
 Route::get('/berita', 'beritaController@index')->name('beritaIndex');
