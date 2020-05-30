@@ -28,3 +28,8 @@ Route::get('/evaluasi/edit', 'evaluasiController@edit')->name('evaluasiEdit');
 Route::get('/pelatihan', 'pelatihanController@index')->name('pelatihanIndex');
 Route::get('/pelatihan/detail', 'pelatihanController@show')->name('pelatihanShow');
 Route::get('/pelatihan/edit', 'pelatihanController@edit')->name('pelatihanEdit');
+
+////Berita Route
+Route::get('/berita', 'beritaController@index')->name('beritaIndex');
+Route::get('/berita/detail', 'beritaController@show')->name('beritaShow');
+Route::get('/berita/edit', 'beritaController@edit')->name('beritaEdit');

@@ -20,10 +20,10 @@
     
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/bootstrap-extended.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin/admin/app-assets/css/colors.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/colors.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/components.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/themes/dark-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin/admin/app-assets/css/themes/semi-dark-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/themes/semi-dark-layout.css')}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin/app-assets/css/core/colors/palette-gradient.css')}}">
@@ -49,35 +49,6 @@
                     </div>
                     <ul class="nav navbar-nav float-right">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
-                        <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
-                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
-                                <li class="dropdown-menu-header">
-                                    <div class="dropdown-header m-0 p-2">
-                                        <h3 class="white">5 New</h3><span class="grey darken-2">App Notifications</span>
-                                    </div>
-                                </li>
-                                <li class="scrollable-container media-list">
-                                   <a class="d-flex justify-content-between" href="javascript:void(0)">
-                                        <div class="media d-flex align-items-start">
-                                            <div class="media-left"><i class="feather icon-plus-square font-medium-5 primary"></i></div>
-                                            <div class="media-body">
-                                                <h6 class="primary media-heading">You have new order!</h6><small class="notification-text"> Are your going to meet me tonight?</small>
-                                            </div><small>
-                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">9 hours ago</time></small>
-                                        </div>
-                                    </a><a class="d-flex justify-content-between" href="javascript:void(0)">
-                                        <div class="media d-flex align-items-start">
-                                            <div class="media-left"><i class="feather icon-file font-medium-5 warning"></i></div>
-                                            <div class="media-body">
-                                                <h6 class="warning media-heading">Generate monthly report</h6><small class="notification-text">Chocolate cake oat cake tiramisu marzipan</small>
-                                            </div><small>
-                                                <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last month</time></small>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
-                            </ul>
-                        </li>
                         <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                                 <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="{{asset('admin/app-assets/images/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40"></span>
                             </a>
@@ -97,7 +68,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-collapsed-menu-template/index.html">
-                        <div class="brand-logo"></div>
+                        <img src="{{asset('admin/app-assets/images/logo/vuexy-logo.png')}}" width="50px" alt="">
                         <h2 class="brand-text mb-0">BP2TP</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block primary" data-ticon="icon-disc"></i></a></li>
@@ -106,11 +77,11 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item"><a href="../../../html/ltr/vertical-collapsed-menu-template/index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Beranda</span><span class="badge badge badge-warning badge-pill float-right">2</span></a>
+                <li class=" active nav-item"><a href="{{Route('adminIndex')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Beranda</span><span class="badge badge badge-warning badge-pill float-right"></span></a>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title" data-i18n="Starter kit">Data Master</span></a>
                     <ul class="menu-content">
-                        <li class="active"><a href="{{Route('userIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">User Admin</span></a>
+                        <li ><a href="{{Route('userIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">User Admin</span></a>
                         </li>
                         <li><a href="{{Route('kecamatanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">User Kecamatan</span></a>
                         </li>
@@ -120,7 +91,7 @@
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Pelatihan</span></a>
                     <ul class="menu-content">
-                        <li class="active"><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
+                        <li><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
                         </li>
                         <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
                         </li>
@@ -129,6 +100,8 @@
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item" data-i18n="Floating navbar">Evaluasi Peserta</span></a>
                         </li>
                     </ul>
+                </li>
+                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span class="menu-title" >Berita Kegiatan</span></a>
                 </li>
             </ul>
         </div>
@@ -154,13 +127,6 @@
     <script src="{{asset('admin/app-assets/vendors/js/vendors.min.js')}}"></script>
     <script src="{{asset('admin/app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
     <!-- BEGIN Vendor JS-->
-
-
-    <!-- BEGIN: Page Vendor JS-->
-    <!-- <script src="{{asset('admin/app-assets/vendors/js/extensions/dropzone.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/dataTables.select.min.js')}}"></script>
-    <script src="{{asset('admin/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script> -->
-    <!-- END: Page Vendor JS-->
 
 
     <!-- BEGIN: Page Vendor JS-->

@@ -219,7 +219,7 @@
 			<div class="row">
 				<div class="col-md-12">	
 					<div class="section_title">
-						<h2 class="title"><span>Blog Posts</span></h2>
+						<h2 class="title"><span>Berita Kegiatan</span></h2>
 					</div>
 				</div>
 			</div>			
