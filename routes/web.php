@@ -13,8 +13,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/index', 'adminController@index')->name('adminIndex');
 
 //User Route
-Route::get('/user', 'userController@index')->name('userIndex');
-Route::get('/user/edit', 'userController@edit')->name('userEdit');
+Route::get('/user/index', 'userController@index')->name('userIndex');
+Route::post('/user/index', 'userController@store')->name('userStore');
+Route::get('/user/edit/{uuid}', 'userController@edit')->name('userEdit');
+Route::put('/user/edit/{uuid}', 'userController@update')->name('userUpdate');
+Route::get('/user/delete/{uuid}', 'userController@destroy')->name('userDestroy');
 
 //Kecamatan Route
 Route::get('/kecamatan', 'kecamatanController@index')->name('kecamatanIndex');
@@ -38,7 +41,6 @@ Route::get('/modul/edit', 'modulController@edit')->name('modulEdit');
 Route::get('/berita', 'beritaController@index')->name('beritaIndex');
 Route::get('/berita/detail', 'beritaController@show')->name('beritaShow');
 Route::get('/berita/edit', 'beritaController@edit')->name('beritaEdit');
-
 
 ////Cetak Report
 Route::get('/kecamatan/cetak', 'reportController@kecamatanCetak')->name('kecamatanCetak');
