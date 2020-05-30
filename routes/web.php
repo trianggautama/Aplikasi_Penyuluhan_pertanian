@@ -27,13 +27,19 @@ Route::put('/kecamatan/edit/{uuid}', 'kecamatanController@update')->name('kecama
 Route::get('/kecamatan/delete/{uuid}', 'kecamatanController@destroy')->name('kecamatanDestroy');
 
 ////evaluasi Route
-Route::get('/evaluasi', 'evaluasiController@index')->name('evaluasiIndex');
-Route::get('/evaluasi/edit', 'evaluasiController@edit')->name('evaluasiEdit');
+Route::get('/evaluasi/index', 'evaluasiController@index')->name('evaluasiIndex');
+Route::post('/evaluasi/index', 'evaluasiController@store')->name('evaluasiStore');
+Route::get('/evaluasi/edit/{uuid}', 'evaluasiController@edit')->name('evaluasiEdit');
+Route::put('/evaluasi/edit/{uuid}', 'evaluasiController@update')->name('evaluasiUpdate');
+Route::get('/evaluasi/delete/{uuid}', 'evaluasiController@destroy')->name('evaluasiDestroy');
 
 ////pelatihan Route
-Route::get('/pelatihan', 'pelatihanController@index')->name('pelatihanIndex');
-Route::get('/pelatihan/detail', 'pelatihanController@show')->name('pelatihanShow');
-Route::get('/pelatihan/edit', 'pelatihanController@edit')->name('pelatihanEdit');
+Route::get('/pelatihan/index', 'pelatihanController@index')->name('pelatihanIndex');
+Route::post('/pelatihan/index', 'pelatihanController@store')->name('pelatihanStore');
+Route::get('/pelatihan/detail/{uuid}', 'pelatihanController@show')->name('pelatihanShow');
+Route::get('/pelatihan/edit/{uuid}', 'pelatihanController@edit')->name('pelatihanEdit');
+Route::put('/pelatihan/edit/{uuid}', 'pelatihanController@update')->name('pelatihanUpdate');
+Route::get('/pelatihan/delete/{uuid}', 'pelatihanController@destroy')->name('pelatihanDestroy');
 
 ////modul Route
 Route::get('/modul', 'modulController@index')->name('modulIndex');
