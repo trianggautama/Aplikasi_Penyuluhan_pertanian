@@ -20,8 +20,11 @@ Route::put('/user/edit/{uuid}', 'userController@update')->name('userUpdate');
 Route::get('/user/delete/{uuid}', 'userController@destroy')->name('userDestroy');
 
 //Kecamatan Route
-Route::get('/kecamatan', 'kecamatanController@index')->name('kecamatanIndex');
-Route::get('/kecamatan/edit', 'kecamatanController@edit')->name('kecamatanEdit');
+Route::get('/kecamatan/index', 'kecamatanController@index')->name('kecamatanIndex');
+Route::post('/kecamatan/index', 'kecamatanController@store')->name('kecamatanStore');
+Route::get('/kecamatan/edit/{uuid}', 'kecamatanController@edit')->name('kecamatanEdit');
+Route::put('/kecamatan/edit/{uuid}', 'kecamatanController@update')->name('kecamatanUpdate');
+Route::get('/kecamatan/delete/{uuid}', 'kecamatanController@destroy')->name('kecamatanDestroy');
 
 ////evaluasi Route
 Route::get('/evaluasi', 'evaluasiController@index')->name('evaluasiIndex');
