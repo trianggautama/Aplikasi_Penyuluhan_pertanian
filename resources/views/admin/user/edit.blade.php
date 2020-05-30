@@ -62,14 +62,15 @@
                                             <input type="file" name="foto" id="foto" class="form-control">
                                             <p class="text-danger">Isi Jika Ingin Merubah Foto</p>
                                         </div>
+                                        <div
+                                            class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                            <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                                    class="feather icon-save"></i> Batal</button>
+                                            <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                                    class="feather icon-save"></i> Ubah Data</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-save"></i> Batal</button>
-                                    <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-save"></i> Ubah Data</button>
-                                </div>
-                                </form>
                             </div>
                         </div>
                     </div>
