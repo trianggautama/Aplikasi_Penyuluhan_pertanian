@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Modul;
+use App\Modul_pelatihan;
 use App\Pelatihan;
 use Illuminate\Http\Request;
 
@@ -29,7 +31,22 @@ class pelatihanController extends Controller
     public function show($uuid)
     {
         $data = pelatihan::where('uuid', $uuid)->first();
-        return view('admin.pelatihan.show', compact('data'));
+        $modul = Modul::orderBy('id', 'Desc')->get();
+        $modul_pelatihan = Modul_pelatihan::where('pelatihan_id', $data->id)->orderBy('id', 'desc')->get();
+        return view('admin.pelatihan.show', compact('data', 'modul', 'modul_pelatihan'));
+    }
+
+    public function addModul(Request $request)
+    {
+        $pelatihan = Pelatihan::findOrfail($request->pelatihan_id);
+        $data = new Modul_pelatihan;
+        $data->pelatihan_id = $request->pelatihan_id;
+        $data->modul_id = $request->modul_id;
+
+        $data->save();
+
+        return redirect()->back()->with('success', 'Data Berhasil Disimpan');
+
     }
 
     public function edit($uuid)

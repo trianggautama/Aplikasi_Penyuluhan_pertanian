@@ -37,6 +37,7 @@ Route::get('/evaluasi/delete/{uuid}', 'evaluasiController@destroy')->name('evalu
 Route::get('/pelatihan/index', 'pelatihanController@index')->name('pelatihanIndex');
 Route::post('/pelatihan/index', 'pelatihanController@store')->name('pelatihanStore');
 Route::get('/pelatihan/detail/{uuid}', 'pelatihanController@show')->name('pelatihanShow');
+Route::post('/pelatihan/detail/addModul', 'pelatihanController@addModul')->name('pelatihanAddModul');
 Route::get('/pelatihan/edit/{uuid}', 'pelatihanController@edit')->name('pelatihanEdit');
 Route::put('/pelatihan/edit/{uuid}', 'pelatihanController@update')->name('pelatihanUpdate');
 Route::get('/pelatihan/delete/{uuid}', 'pelatihanController@destroy')->name('pelatihanDestroy');

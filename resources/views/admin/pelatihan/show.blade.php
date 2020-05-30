@@ -93,17 +93,22 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($modul_pelatihan as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>M01213</td>
-                                                    <td>Penerapan Pupuk Kompos pad tanaman A</td>
-                                                    <td><a href="" class="btn btn-icon btn-success"><i
-                                                                class="feather icon-download"></i></a></td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->modul->kode_modul}}</td>
+                                                    <td>{{$d->modul->judul}}</td>
+                                                    <td>
+                                                        <a href="{{Route('modulPreview',['uuid' => $d->modul->uuid])}}"
+                                                            class="btn btn-icon btn-success">
+                                                            <i class="feather icon-download"></i></a>
+                                                    </td>
                                                     <td>
                                                         <a href="" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></a>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -198,19 +203,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form action="{{Route('pelatihanAddModul')}}" method="POST">
                     @csrf
+                    <input type="hidden" name="pelatihan_id" value="{{$data->id}}" id="">
                     <div class="form-group">
                         <label for="">Modul</label>
                         <select name="modul_id" id="modul_id" class="form-control">
+                            @foreach($modul as $d)
                             <option value="">-- pilih modul --</option>
+                            <option value="{{$d->id}}">{{$d->kode_modul}} - {{$d->judul}}</option>
+                            @endforeach
                         </select>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Simpan Data</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Simpan Data</button>
             </div>
         </div>
     </div>
