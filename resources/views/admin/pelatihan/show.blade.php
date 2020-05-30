@@ -28,10 +28,15 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                        <div class="col-12">
+                                        <div class="col-6">
                                             <h4 class="card-title">Detail Data</h4>
                                             <hr>
                                         </div>
+                                        <div class="col-6">
+                                            <a href="{{Route('detailPelatihanCetak')}}" class="btn btn-sm btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i class="feather icon-printer"></i> Cetak Data</a>
+                                            <hr>
+                                        </div>
+                                    
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body card-dashboard">
@@ -122,6 +127,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
+                                                        <th>Nama</th>
                                                         <th>Tanggal SPT</th>
                                                         <th>Nomor SPT</th>
                                                         <th>Jenis Kelamin</th>
@@ -132,6 +138,7 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
+                                                        <td>John Doe</td>
                                                         <td>2 Februari</td>
                                                         <td>123131/2121/12</td>
                                                         <td>Laki -laki</td>

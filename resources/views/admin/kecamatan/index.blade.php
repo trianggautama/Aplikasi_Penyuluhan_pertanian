@@ -35,7 +35,7 @@
                                             <h4 class="card-title">Tabel Data</h4>
                                         </div>
                                         <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                            <button  class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i class="feather icon-printer"></i> Cetak Data</button>
+                                            <a href="{{Route('kecamatanCetak')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i class="feather icon-printer"></i> Cetak Data</a>
                                             <button  class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal" data-target="#exampleModal">Tambah Data</button>
                                         </div>
                                 </div>

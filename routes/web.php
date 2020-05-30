@@ -38,3 +38,10 @@ Route::get('/modul/edit', 'modulController@edit')->name('modulEdit');
 Route::get('/berita', 'beritaController@index')->name('beritaIndex');
 Route::get('/berita/detail', 'beritaController@show')->name('beritaShow');
 Route::get('/berita/edit', 'beritaController@edit')->name('beritaEdit');
+
+
+////Cetak Report
+Route::get('/kecamatan/cetak', 'reportController@kecamatanCetak')->name('kecamatanCetak');
+Route::get('/evaluasi/cetak', 'reportController@evaluasiCetak')->name('evaluasiCetak');
+Route::get('/pelatihan/cetak', 'reportController@pelatihanCetak')->name('pelatihanCetak');
+Route::get('/pelatihan/detailk/cetak', 'reportController@detailPelatihanCetak')->name('detailPelatihanCetak');

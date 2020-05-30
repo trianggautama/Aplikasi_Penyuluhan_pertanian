@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home One || Liendo</title>
+        <title>BP2TP</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -103,7 +103,7 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN KABUPATEN TANAH LAUT</h1>
+										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN PROVINSI KALIMANTAN SELATAN</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
 										<h2>Aplikasi Manajemen Data Penyuluhan Pertanian Berbasis Web</h2>
@@ -134,7 +134,7 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow bounceInDown" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN KABUPATEN TANAH LAUT</h1>
+										<h1>BALAI PELATIHAN DAN PENERAPAN TEKNOLOGI PERTANIAN PROVINSI KALIMANTAN SELATAN</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
 									<h2>Aplikasi Manajemen Data Penyuluhan Pertanian Berbasis Web</h2>
@@ -170,7 +170,7 @@
 				</div>
 			</div>		
 			<div class="row">
-				<h4 class="text-center">Balai Pelatihan dan Penerapan Teknologi Pertanian  Kabupaten Tanah Laut adalah UPTD atau unit pelaksana teknis daerah yang berfungsi untuk Melaksanakan pembinaan dan pelatihan, bimbingan kerjasama dalam penggunaan dan penerapan teknologi pertanian tanaman pangan dan hortikultura sesuai dengan ketentuan yang berlaku untuk pengembangan teknologi pertanian yang berkelanjutan.</h4>
+				<h4 class="text-center">Balai Pelatihan dan Penerapan Teknologi Pertanian  Provinsi Kalimantan Selatan adalah UPTD atau unit pelaksana teknis daerah yang berfungsi untuk Melaksanakan pembinaan dan pelatihan, bimbingan kerjasama dalam penggunaan dan penerapan teknologi pertanian tanaman pangan dan hortikultura sesuai dengan ketentuan yang berlaku untuk pengembangan teknologi pertanian yang berkelanjutan.</h4>
 			</div>
 		</div>	
 </div>
