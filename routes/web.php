@@ -29,6 +29,11 @@ Route::get('/pelatihan', 'pelatihanController@index')->name('pelatihanIndex');
 Route::get('/pelatihan/detail', 'pelatihanController@show')->name('pelatihanShow');
 Route::get('/pelatihan/edit', 'pelatihanController@edit')->name('pelatihanEdit');
 
+////modul Route
+Route::get('/modul', 'modulController@index')->name('modulIndex');
+Route::get('/modul/detail', 'modulController@show')->name('modulShow');
+Route::get('/modul/edit', 'modulController@edit')->name('modulEdit');
+
 ////Berita Route
 Route::get('/berita', 'beritaController@index')->name('beritaIndex');
 Route::get('/berita/detail', 'beritaController@show')->name('beritaShow');

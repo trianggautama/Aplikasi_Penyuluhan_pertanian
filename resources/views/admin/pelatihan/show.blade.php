@@ -63,6 +63,53 @@
                             <div class="card">
                                 <div class="card-header">
                                         <div class="col-6">
+                                            <h4 class="card-title">Tabel Modul pelatihan</h4>
+                                        </div>
+                                        <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                            <button  class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal" data-target="#exampleModal">Tambah Modul</button>
+                                        </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                        <div class="table-responsive">
+                                        <table class="table zero-configuration">
+                                                <thead >
+                                                    <tr class=" text-primary">
+                                                        <th>No</th>
+                                                        <th>Kode Modul</th>
+                                                        <th>Judul</th>
+                                                        <th>File</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>M01213</td>
+                                                        <td>Penerapan Pupuk Kompos pad tanaman A</td>
+                                                        <td><a href="" class="btn btn-icon btn-success"><i class="feather icon-download"></i></a></td>
+                                                        <td>
+                                                            <a href="" class="btn btn-icon btn-danger"><i class="feather icon-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Kode Modul</th>
+                                                        <th>Judul</th>
+                                                        <th>File</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                        <div class="col-6">
                                             <h4 class="card-title">Tabel Peserta</h4>
                                         </div>
                                         <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
@@ -121,4 +168,33 @@
         </div>
     </div>
     <!-- END: Content-->
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            @csrf
+            <div class="form-group">
+                <label for="">Modul</label>
+                <select name="modul_id" id="modul_id" class="form-control">
+                    <option value="">-- pilih modul --</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Simpan Data</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection

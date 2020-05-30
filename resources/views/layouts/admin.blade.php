@@ -93,7 +93,7 @@
                     <ul class="menu-content">
                         <li><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Data Pelatihan</span></a>
                         </li>
-                        <li><a href="sk-layout-fixed.html"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
+                        <li><a href="{{Route('modulIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed layout">Data Modul</span></a>
                         </li>
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item" data-i18n="Floating navbar">Peserta</span></a>
                         </li>
@@ -102,6 +102,15 @@
                     </ul>
                 </li>
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span class="menu-title" >Berita Kegiatan</span></a>
+                </li>
+                <hr>
+                <li class=" nav-item"><p><i class="feather icon-users"></i><span class="menu-title" >Menu Halaman Kelurahan</span></p>
+                </li>
+                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-user"></i><span class="menu-title" >Profil Kelurahan</span></a>
+                </li>
+                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span class="menu-title" >Pelatihan</span></a>
+                </li>
+                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span class="menu-title" >hasil Evaluasi</span></a>
                 </li>
             </ul>
         </div>
@@ -152,7 +161,6 @@
 
     <!-- BEGIN: Page JS-->
     <script src="{{asset('admin/app-assets/js/scripts/datatables/datatable.js')}}"></script>
-
     <!-- END: Page JS-->
 
 </body>
