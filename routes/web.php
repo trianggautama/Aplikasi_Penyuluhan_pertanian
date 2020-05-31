@@ -59,4 +59,5 @@ Route::get('/berita/edit', 'beritaController@edit')->name('beritaEdit');
 Route::get('/kecamatan/cetak', 'reportController@kecamatanCetak')->name('kecamatanCetak');
 Route::get('/evaluasi/cetak', 'reportController@evaluasiCetak')->name('evaluasiCetak');
 Route::get('/pelatihan/cetak', 'reportController@pelatihanCetak')->name('pelatihanCetak');
-Route::get('/pelatihan/detailk/cetak', 'reportController@detailPelatihanCetak')->name('detailPelatihanCetak');
+Route::get('/pelatihan/detail/cetak/{uuid}', 'reportController@detailPelatihanCetak')->name('detailPelatihanCetak');
+Route::get('/modul/cetak', 'reportController@modulCetak')->name('modulCetak');

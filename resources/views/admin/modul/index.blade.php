@@ -9,10 +9,10 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-left mb-0">Data Berita Kegiatan</h2>
+                        <h2 class="content-header-title float-left mb-0">Data Modul</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Berita Kegiatan</a>
+                                <li class="breadcrumb-item"><a href="index.html">Modul</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Data</a>
                                 </li>
@@ -32,8 +32,8 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-printer"></i> Cetak Data</button>
+                                    <a href="{{Route('modulCetak')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
+                                            class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
                                         data-target="#exampleModal">Tambah Data</button>
                                 </div>

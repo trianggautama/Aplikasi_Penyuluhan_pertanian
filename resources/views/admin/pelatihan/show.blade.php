@@ -6,9 +6,9 @@
     <div class="header-navbar-shadow"></div>
     <div class="content-wrapper">
         <div class="content-header row">
-            <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="content-header-left col-md-12 col-12 mb-2">
                 <div class="row breadcrumbs-top">
-                    <div class="col-12">
+                    <div class="col-6">
                         <h2 class="content-header-title float-left mb-0">Data Pelatihan</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
@@ -18,6 +18,11 @@
                                 </li>
                             </ol>
                         </div>
+                    </div>
+                    <div class="col-6 text-right">
+                    <a href="{{Route('pelatihanIndex')}}"
+                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                            class="feather icon-arrow-left"></i> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -33,7 +38,7 @@
                                     <hr>
                                 </div>
                                 <div class="col-6">
-                                    <a href="{{Route('detailPelatihanCetak')}}"
+                                    <a href="{{Route('detailPelatihanCetak',['uuid'=>$data->uuid])}}"
                                         class="btn btn-sm btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <hr>

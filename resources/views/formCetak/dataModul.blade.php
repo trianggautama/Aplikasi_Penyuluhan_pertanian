@@ -74,7 +74,7 @@
     </style>
 </head>
 <body>
-<div class="header">
+    <div class="header">
             <div class="logo">
                     <img  class="pemko" src="depan/img/logo.png">
             </div>
@@ -89,38 +89,27 @@
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">DATA PELATIHAN</h2>
-                <table class="table zero-configuration">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama Pelatihan</th>
-                                                    <th>Tanggal Mulai</th>
-                                                    <th>Tanggal Selesai</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($data as $d)
-                                                <tr>
-                                                    <td>{{$loop->iteration}}</td>
-                                                    <td>{{$d->nama_pelatihan}}</td>
-                                                    <td>{{carbon\carbon::parse($d->tgl_mulai)->translatedFormat('d F Y')}}
-                                                    </td>
-                                                    <td>{{carbon\carbon::parse($d->tgl_selesai)->translatedFormat('d F Y')}}
-                                                    </td>
-                                                    <td>
-                                                        @if(carbon\carbon::parse($d->tgl_selesai) > carbon\carbon::now())
-                                                            Belum Terlaksana
-                                                        @else
-                                                            Sudah Terlaksana
-                                                        @endif
-
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
+            <h2 style="text-align:center;">DATA MODUL</h2>
+            <table class="table table-hover" id="myTable">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode Modul</th>
+                            <th>Judul</th>
+                            <th>Tanggal Upload</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($data as $d)
+                            <tr>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$d->kode_modul}}</td>
+                                <td>{{$d->judul}}</td>
+                                <td>{{$d->created_at->format('d-m-Y')}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                       <br>
                       <br>
                       <div class="ttd">

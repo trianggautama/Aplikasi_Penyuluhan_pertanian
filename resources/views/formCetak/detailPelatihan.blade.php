@@ -72,19 +72,20 @@
      .isi{
          padding:10px;
      }
+     .page-break { page-break-before: always; }
+
     </style>
 </head>
 <body>
-    <div class="header">
+<div class="header">
             <div class="logo">
                     <img  class="pemko" src="depan/img/logo.png">
             </div>
             <div class="headtext">
                 <h4 style="margin:0px;">PEMERINTAH PROVINSI KALIMANTAN </h4>
                 <h3 style="margin:0px; text-transform:uppercase;">Balai Pelatihan dan Penerapan Teknologi Pertanian (BP2TP) Provinsi Kalimantan Selatan</h3>
-                <p style="margin:0px;">Jl.A.yani Timur No.14 Telepon (0511) 4777534 Fax (0511) 47772234</p>
-                <p style="margin:0px;">Website:www.dishut.kalselprov.go.id Email: dishutkalsel01@gmail.com Kotak Pos 30</p>
-                <p style="margin:0px;">Kode Pos 70713 BANJARBARU</p>
+                <p style="margin:0px;">Jalan Jendral Ahmad Yani KM.51 Kecamatan Tambang Ulang, Kabupaten Tanah Laut</p>
+                <p style="margin:0px;">Email: bp2tp.provkalsel@gmail.com </p>
             </div>
             <br>
     </div>
@@ -103,40 +104,30 @@
                 </tr>
                 <tr >
                     <td style="width:100px !important;">Perihal</td>
-                    <td>:</td>
+                    <td>: Pelaksanaan Pelatihan</td>
                 </tr>
             </table>
-                <p style="text-align:justify;">dengan ini memberitahukan mengenai pelaksanaan Pelatihan (Nama Pelatihan) yang diselenggarakan oleh
-                Balai Pelatihan dan Penerapan Teknologi Pertanian (BP2TP) Provinsi Kalimantan Selatan, dengan peserta usulan dari setiap kelurahan. Adapun usulan kami, pada: </p>
+                <p style="text-align:justify;">dengan ini memberitahukan mengenai pelaksanaan Pelatihan {{$data->nama_pelatihan}} yang diselenggarakan oleh
+                Balai Pelatihan dan Penerapan Teknologi Pertanian (BP2TP) Provinsi Kalimantan Selatan, dengan peserta usulan dari setiap kecamatan. Adapun rincian usulan pelaksanaan  sebagai berikut : </p>
                 <table>
                 <tr >
                     <td style="width:150px !important;">Nama Pelatihan</td>
-                    <td>:</td>
+                    <td>: {{$data->nama_pelatihan}}</td>
                 </tr>
                 <tr >
                     <td style="width:100px !important;">uraian</td>
-                    <td> <p style="text-align:justify;">: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quod sed sequi eaque cum architecto rem obcaecati culpa mollitia ab voluptas necessitatibus consequuntur, nemo, placeat, quisquam incidunt? Cum, fugiat modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque blanditiis laboriosam non iste neque et quidem exercitationem saepe doloribus harum, distinctio quia, expedita necessitatibus temporibus ea. Nam repellat vitae praesentium? </p></td>
+                    <td> <p style="text-align:justify;">: {{$data->uraian}}</p></td>
                 </tr>
                 <tr >
                     <td style="width:100px !important;">Pelaksanaan</td>
-                    <td>: </td>
+                    <td>: {{carbon\carbon::parse($data->tgl_mulai)->translatedFormat('d F Y')}} - {{carbon\carbon::parse($data->tgl_selesai)->translatedFormat('d F Y')}}</td>
                 </tr>
             </table>
-            <p style="text-align:justify;">Sebagai upaya agar kegitan pelatihan (Nama Pelatihan) berjalan lancar, terlampir kami sampaikan Daftar Peserta yang mengikuti pelatihan ini  </p>
+            <p style="text-align:justify;">Sebagai upaya agar kegitan pelatihan {{$data->nama_pelatihan}} berjalan lancar, terlampir kami sampaikan Daftar Peserta yang mengikuti pelatihan ini  </p>
             <p> Demikian pemberitahuan ini disampaikan. Atas perhatiannya, kami ucapkan terima kasih. </p>
-            <div class="ttd">
-                    <p> Kabupaten Tanah Laut,
-                </p>
-                       
-                      <p>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </p>
-                      <br>
-                      <br>
-                      <h5 style="text-decoration:underline;">Nama</h5>
-                      <h5>NIP. 19580726 1984 03 1 007</h5>
-                      </div>
             <br>
             <br>
-
+            <div class="page-break"></div>
             <table>
                 <tr >
                     <td style="width:100px !important;">Lampiran</td>
@@ -165,6 +156,16 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="ttd">
+                    <p> Kabupaten Tanah Laut,
+                </p>
+                       
+                      <p>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </p>
+                      <br>
+                      <br>
+                      <h5 style="text-decoration:underline;">Nama</h5>
+                      <h5>NIP. 19580726 1984 03 1 007</h5>
+                      </div>
                     </div>
              </div>
          </body>

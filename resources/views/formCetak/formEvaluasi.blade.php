@@ -20,9 +20,7 @@
         border: 1px solid black;
       }
       th{
-        background-color: #708090;
         text-align: center;
-        color: white;
       }
       td{
         text-align: center;
@@ -76,16 +74,15 @@
     </style>
 </head>
 <body>
-    <div class="header">
+<div class="header">
             <div class="logo">
                     <img  class="pemko" src="depan/img/logo.png">
             </div>
             <div class="headtext">
                 <h4 style="margin:0px;">PEMERINTAH PROVINSI KALIMANTAN </h4>
                 <h3 style="margin:0px; text-transform:uppercase;">Balai Pelatihan dan Penerapan Teknologi Pertanian (BP2TP) Provinsi Kalimantan Selatan</h3>
-                <p style="margin:0px;">Jl.A.yani Timur No.14 Telepon (0511) 4777534 Fax (0511) 47772234</p>
-                <p style="margin:0px;">Website:www.dishut.kalselprov.go.id Email: dishutkalsel01@gmail.com Kotak Pos 30</p>
-                <p style="margin:0px;">Kode Pos 70713 BANJARBARU</p>
+                <p style="margin:0px;">Jalan Jendral Ahmad Yani KM.51 Kecamatan Tambang Ulang, Kabupaten Tanah Laut</p>
+                <p style="margin:0px;">Email: bp2tp.provkalsel@gmail.com </p>
             </div>
             <br>
     </div>
@@ -100,17 +97,17 @@
                             <th>Kode Evaluasi</th>
                             <th>Nama Evaluasi</th>
                             <th>Keterangan</th>
-                            <th>Nilai</th>
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
+                            @foreach($data as $d)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$d->kode_evaluasi}}</td>
+                                    <td>{{$d->nama_evaluasi}}</td>
+                                    <td>{{$d->keterangan}}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                       <br>
