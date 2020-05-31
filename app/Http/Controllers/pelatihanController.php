@@ -49,6 +49,14 @@ class pelatihanController extends Controller
 
     }
 
+    public function destroyModul($uuid)
+    {
+        $pelatihan = Modul_pelatihan::where('uuid', $uuid)->first()->delete();
+
+        return redirect()->back()->with('success', 'Berhasil menghapus data');
+
+    }
+
     public function edit($uuid)
     {
         $data = pelatihan::where('uuid', $uuid)->first();
