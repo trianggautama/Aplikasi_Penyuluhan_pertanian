@@ -66,9 +66,9 @@
                                             </div>
                                             <div
                                                 class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                                <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                                        class="feather icon-save"></i>
-                                                    Batal</button>
+                                                <a href="{{Route('kecamatanIndex')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                                        class="feather arraow-left"></i>
+                                                    Batal</a>
                                                 <button type="submit"
                                                     class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
                                                         class="feather icon-save"></i>
