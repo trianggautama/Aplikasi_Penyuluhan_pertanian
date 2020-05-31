@@ -20,9 +20,8 @@
                         </div>
                     </div>
                     <div class="col-6 text-right">
-                    <a href="{{Route('pelatihanIndex')}}"
-                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-arrow-left"></i> Kembali</a>
+                        <a href="{{Route('pelatihanIndex')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                class="feather icon-arrow-left"></i> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +108,8 @@
                                                             <i class="feather icon-download"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
+                                                        <a href="{{Route('modulPelatihanDestroy',['uuid' => $d->uuid])}}"
+                                                            class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></a>
                                                     </td>
                                                 </tr>
