@@ -59,14 +59,14 @@
                                                     <td>{{$d->judul}}</td>
                                                     <td>
                                                         <a href="{{Route('modulPreview',['uuid' => $d->uuid])}}"
-                                                            class="btn btn-icon btn-success">
+                                                            class="btn btn-icon btn-success" target="_blank">
                                                             <i class="feather icon-download"></i></a></td>
                                                     <td>
                                                         <a href="{{Route('modulEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                            <button onclick="Hapus('{{$d->uuid}}','{{$d->judul}}')" class="btn btn-icon btn-danger"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                                 @endforeach
@@ -127,3 +127,24 @@
     </div>
 </div>
 @endsection
+@section('scripts')
+        <script>
+            function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Modul" + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("modulDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+        </script>
+    @endsection

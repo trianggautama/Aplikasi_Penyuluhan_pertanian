@@ -111,6 +111,9 @@
                         <li><a href="{{Route('kecamatanIndex')}}"><i></i><span class="menu-item"
                                     data-i18n="Fixed navbar">User Kecamatan</span></a>
                         </li>
+                        <li><a href="{{Route('modulIndex')}}"><i></i><span class="menu-item"
+                                    data-i18n="Fixed layout">Data Modul</span></a>
+                        </li>
                         <li><a href="{{Route('evaluasiIndex')}}"><i></i><span class="menu-item"
                                     data-i18n="Fixed layout">Form Evaluasi</span></a>
                         </li>
@@ -121,9 +124,6 @@
                     <ul class="menu-content">
                         <li><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item"
                                     data-i18n="2 columns">Data Pelatihan</span></a>
-                        </li>
-                        <li><a href="{{Route('modulIndex')}}"><i></i><span class="menu-item"
-                                    data-i18n="Fixed layout">Data Modul</span></a>
                         </li>
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"
                                     data-i18n="Floating navbar">Peserta</span></a>
