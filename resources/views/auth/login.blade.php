@@ -72,8 +72,8 @@
                                                 <form method="POST" action="{{ route('login') }}">
                                                 @csrf
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                                    @error('email')
+                                                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                                    @error('username')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
