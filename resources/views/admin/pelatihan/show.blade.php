@@ -100,7 +100,7 @@
                                                     <td>{{$d->modul->judul}}</td>
                                                     <td>
                                                         <a href="{{Route('modulPreview',['uuid' => $d->modul->uuid])}}"
-                                                            class="btn btn-icon btn-success">
+                                                            class="btn btn-icon btn-success" target="_blank">
                                                             <i class="feather icon-download"></i></a>
                                                     </td>
                                                     <td>

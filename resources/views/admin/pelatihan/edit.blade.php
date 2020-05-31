@@ -56,7 +56,7 @@
                                         <div class="form-group">
                                             <label for="">Keterangan</label>
                                             <textarea name="uraian" id="keterangan"
-                                                class="form-control">{{$data->uraian}}</textarea>
+                                                class="form-control" rows="10">{{$data->uraian}}</textarea>
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">

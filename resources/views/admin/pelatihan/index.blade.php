@@ -68,8 +68,8 @@
                                                         <a href="{{Route('pelatihanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_pelatihan}}')" class="btn btn-icon btn-danger"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                                 @endforeach
@@ -97,7 +97,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Keterangan</label>
-                        <textarea name="uraian" id="keterangan" class="form-control"></textarea>
+                        <textarea name="uraian" id="keterangan" class="form-control" rows="10"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -135,3 +135,24 @@
     </div>
 </div>
 @endsection
+@section('scripts')
+        <script>
+            function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Pelatihan" + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("pelatihanDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+        </script>
+    @endsection
