@@ -204,7 +204,9 @@
 
     <!-- BEGIN: Page JS-->
     <script src="{{asset('admin/app-assets/js/scripts/datatables/datatable.js')}}"></script>
+    <script src="{{asset('vendor/sweetalert/sweetalert.all.js')}}"></script>
     <!-- END: Page JS-->
+    @yield('scripts')
 
 </body>
 <!-- END: Body-->
