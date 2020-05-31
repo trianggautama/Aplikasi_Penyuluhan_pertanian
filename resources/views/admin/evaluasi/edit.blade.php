@@ -56,8 +56,8 @@
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-save"></i> Batal</button>
+                                    <a href="{{Route('evaluasiIndex')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                            class="feather arrow-left"></i> Batal</a>
                                     <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
                                             class="feather icon-save"></i> Ubah Data</button>
                                 </div>

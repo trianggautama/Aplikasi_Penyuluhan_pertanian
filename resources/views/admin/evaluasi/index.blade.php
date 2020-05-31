@@ -63,8 +63,8 @@
                                                         <a href="{{Route('evaluasiEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_evaluasi}}')" class="btn btn-icon btn-danger"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                                 @endforeach
@@ -127,3 +127,24 @@
     </div>
 </div>
 @endsection
+@section('scripts')
+        <script>
+            function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Evaluasi" + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("evaluasiDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+        </script>
+    @endsection
