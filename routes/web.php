@@ -52,9 +52,12 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/modul/delete/{uuid}', 'modulController@destroy')->name('modulDestroy');
 
 ////Berita Route
-    Route::get('/berita', 'beritaController@index')->name('beritaIndex');
-    Route::get('/berita/detail', 'beritaController@show')->name('beritaShow');
-    Route::get('/berita/edit', 'beritaController@edit')->name('beritaEdit');
+    Route::get('/berita/index', 'beritaController@index')->name('beritaIndex');
+    Route::post('/berita/index', 'beritaController@store')->name('beritaStore');
+    Route::get('/berita/detail/{uuid}', 'beritaController@show')->name('beritaShow');
+    Route::get('/berita/edit/{uuid}', 'beritaController@edit')->name('beritaEdit');
+    Route::put('/berita/edit/{uuid}', 'beritaController@update')->name('beritaUpdate');
+    Route::get('/berita/delete/{uuid}', 'beritaController@destroy')->name('beritaDestroy');
 
 ////Cetak Report
     Route::get('/kecamatan/cetak', 'reportController@kecamatanCetak')->name('kecamatanCetak');
