@@ -55,7 +55,12 @@ class kecamatanController extends Controller
         $data = User::where('uuid', $uuid)->first();
         $data->nama = $request->nama;
         $data->username = $request->username;
-        $data->password = Hash::make($request->password);
+        if (isset($request->password)) {
+            $data->password = Hash::make($request->password);
+        } else {
+            $data->password = $data->password;
+        }
+
         if ($request->foto != null) {
             $img = $request->file('foto');
             $FotoExt = $img->getClientOriginalExtension();
