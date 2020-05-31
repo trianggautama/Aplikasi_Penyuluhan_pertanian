@@ -23,7 +23,7 @@ class beritaController extends Controller
         if ($request->foto != null) {
             $img = $request->file('foto');
             $fotoExt = $img->getClientOriginalExtension();
-            $fotoName = $request->kode_berita;
+            $fotoName = $request->judul;
             $foto = $fotoName . '.' . $fotoExt;
             $img->move('berita', $foto);
             $data->foto = $foto;
@@ -54,7 +54,7 @@ class beritaController extends Controller
         if ($request->foto != null) {
             $img = $request->file('foto');
             $fotoExt = $img->getClientOriginalExtension();
-            $fotoName = $request->kode_berita;
+            $fotoName = $request->judul;
             $foto = $fotoName . '.' . $fotoExt;
             $img->move('berita', $foto);
             $data->foto = $foto;
