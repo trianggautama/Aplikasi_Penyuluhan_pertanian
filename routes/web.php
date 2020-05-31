@@ -42,6 +42,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/pelatihan/edit/{uuid}', 'pelatihanController@edit')->name('pelatihanEdit');
     Route::put('/pelatihan/edit/{uuid}', 'pelatihanController@update')->name('pelatihanUpdate');
     Route::get('/pelatihan/delete/{uuid}', 'pelatihanController@destroy')->name('pelatihanDestroy');
+    Route::get('/pelatihan/detail/deleteModul/{uuid}', 'pelatihanController@destroyModul')->name('modulPelatihanDestroy');
 
 ////modul Route
     Route::get('/modul/index', 'modulController@index')->name('modulIndex');
