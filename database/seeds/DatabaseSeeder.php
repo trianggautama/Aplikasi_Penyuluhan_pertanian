@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
         \App\User::create([
             'nama'  => 'admin',
             'username' => 'admin123',
-            'password'  => bcrypt('admin123')
+            'password'  => bcrypt('admin123'),
+            'role' => 2
     ]);
     }
 }
