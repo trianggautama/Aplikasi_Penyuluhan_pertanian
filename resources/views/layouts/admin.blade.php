@@ -61,16 +61,24 @@
                                     class="ficon feather icon-maximize"></i></a></li>
                         <li class="dropdown dropdown-user nav-item"><a
                                 class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John
-                                        Doe</span><span class="user-status">Available</span></div><span><img
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{Auth::user()->nama}}</span><span class="user-status">@if(Auth::user()->role == 2 ) Admin @else Kecamatan @endif</span></div><span><img
                                         class="round"
-                                        src="{{asset('admin/app-assets/images/portrait/small/avatar-s-11.jpg')}}"
+                                        src="{{asset('images/user/'. Auth::user()->foto)}}"
                                         alt="avatar" height="40" width="40"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i
                                         class="feather icon-user"></i> Edit Profile</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
-                                        class="feather icon-power"></i> Logout</a>
+                                <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       <i
+                                        class="feather icon-power"></i> Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                             </div>
                         </li>
                     </ul>
@@ -98,6 +106,7 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            @if(Auth::user()->role == 2)
                 <li class=" active nav-item"><a href="{{Route('adminIndex')}}"><i class="feather icon-home"></i><span
                             class="menu-title" data-i18n="Dashboard">Beranda</span><span
                             class="badge badge badge-warning badge-pill float-right"></span></a>
@@ -136,9 +145,11 @@
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">Berita Kegiatan</span></a>
                 </li>
-                <hr>
-                <li class=" nav-item">
-                    <p><i class="feather icon-users"></i><span class="menu-title">Menu Halaman Kelurahan</span></p>
+                @endif
+                @if(Auth::user()->role == 1)
+                <li class=" active nav-item"><a href="{{Route('userDashboardIndex')}}"><i class="feather icon-home"></i><span
+                            class="menu-title" data-i18n="Dashboard">Beranda</span><span
+                            class="badge badge badge-warning badge-pill float-right"></span></a>
                 </li>
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-user"></i><span
                             class="menu-title">Profil Kelurahan</span></a>
@@ -149,6 +160,7 @@
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span
                             class="menu-title">hasil Evaluasi</span></a>
                 </li>
+                @endif
             </ul>
         </div>
     </div>

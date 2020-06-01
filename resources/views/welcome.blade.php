@@ -225,14 +225,15 @@
 			</div>			
 			<div class="row">
 				<div class="team_own curosel-style">
+				@foreach($berita as $b)
 				<div class="col-md-12">
 					<div class="blog_content">
 						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
+							<a href="blog-deatils-1.html"><img src="{{asset('berita/'. $b->foto)}}" width="270" height="205"  /></a> 
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
+									<span>{{$b->created_at->format('d')}}</span>
+									<span class="month">{{$b->created_at->format('M')}}</span>
 								</a>
 							</div>
 							
@@ -240,150 +241,17 @@
 						<div class="blog_comment fix">
 							<ul>
 								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
+								<li><a href="#"><i class="fa fa-picture-o"></i>{{$b->user->nama}}</a></li>
 							</ul>
 						</div>
 						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
+							<h2><a href="blog-deatils-1.html">{{$b->judul}}</a></h2>
+							<p>{{ \Illuminate\Support\Str::limit($b->isi, 150, $end='...') }}</p>
+							<a href="{{Route('beritaDetail',['uuid'=>$b->uuid])}}">See more ...</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>
-							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Aliquam sed libero neque ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>
-							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>
-							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Aliquam sed libero neque ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<!--end single blog item-->
-				<!--single blog item-->
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="#"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>
-							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
-				<!--end single blog item-->
-				<!--single blog item-->
-				<div class="col-md-12">
-					<div class="blog_content">
-						<div class="blog_img hover_effect blog_hover">
-							<a href="blog-deatils-1.html"><img src="{{asset('depan/img/blog/b4.jpg')}}" alt="" /></a>
-							<div class="bolg_date">
-								<a href="blog-deatils-1.html">
-									<span>28</span>
-									<span class="month">sept</span>
-								</a>
-							</div>							
-						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
-								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
-							</ul>
-						</div>
-						<div class="blog_text">
-							<h2><a href="blog-deatils-1.html">Sample text image blogs ...</a></h2>
-							<p>Aliquam sed libero neque. Duis ut finibus dui. Sed egestas elit tortor, vel volutpat est ultrices sed. </p>
-							<a href="#">See more ...</a>
-						</div>
-					</div>
-				</div>
+				@endforeach
 				<!--end single blog item-->					
 				</div>
 			</div>

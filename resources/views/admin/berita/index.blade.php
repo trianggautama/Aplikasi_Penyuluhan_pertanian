@@ -32,8 +32,8 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-printer"></i> Cetak Data</button>
+                                    <!-- <button class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                            class="feather icon-printer"></i> Cetak Data</button> -->
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
                                         data-target="#exampleModal">Tambah Data</button>
                                 </div>
@@ -57,19 +57,19 @@
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$d->judul}}</td>
-                                                    <td>{{$d->isi}}</td>
+                                                    <td>{{ \Illuminate\Support\Str::limit($d->isi, 250, $end='...') }}</td>
                                                     <td>{{carbon\carbon::parse($d->created_at)->translatedFormat('d F Y')}}
                                                     </td>
                                                     <td>{{$d->user->nama}}</td>
                                                     <td>
                                                         <a href="{{Route('beritaShow',['uuid' => $d->uuid])}}"
-                                                            class="btn btn-icon btn-primary"><i
+                                                            class="btn btn-icon btn-primary m-1"><i
                                                                 class="feather icon-info"></i></a>
                                                         <a href="{{Route('beritaEdit',['uuid' => $d->uuid])}}"
-                                                            class="btn btn-icon btn-warning"><i
+                                                            class="btn btn-icon btn-warning m-1"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->judul}}')" class="btn btn-icon btn-danger m-1"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                                 @endforeach
@@ -131,3 +131,24 @@
     </div>
 </div>
 @endsection
+@section('scripts')
+        <script>
+            function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Modul" + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("beritaDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+        </script>
+    @endsection
