@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
             'nama'  => 'admin',
             'username' => 'admin123',
             'password'  => bcrypt('admin123'),
-            'role' => 2
+            'role' => 2,
+            'foto' => 'default.jpg'
     ]);
     }
 }
