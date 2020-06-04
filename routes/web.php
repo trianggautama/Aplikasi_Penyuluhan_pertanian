@@ -40,7 +40,6 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/pelatihan/edit/{uuid}', 'pelatihanController@edit')->name('pelatihanEdit');
     Route::put('/pelatihan/edit/{uuid}', 'pelatihanController@update')->name('pelatihanUpdate');
     Route::get('/pelatihan/delete/{uuid}', 'pelatihanController@destroy')->name('pelatihanDestroy');
-    Route::get('/pelatihan/peserta/{uuid}', 'pelatihanController@detail')->name('tambahPeserta');
     Route::get('/pelatihan/detail/deleteModul/{uuid}', 'pelatihanController@destroyModul')->name('modulPelatihanDestroy');
 
 ////modul Route
@@ -69,4 +68,6 @@ Route::group(['middleware' => ['admin']], function () {
 
 Route::group(['middleware' => ['kecamatan']], function () {
     Route::get('/user/dashboard/index', 'adminController@userIndex')->name('userDashboardIndex');
+    Route::get('/pelatihan/peserta/{uuid}', 'pelatihanController@tambahPeserta')->name('tambahPeserta');
+
 });

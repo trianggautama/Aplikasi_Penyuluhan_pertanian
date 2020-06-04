@@ -247,7 +247,7 @@
 						<div class="blog_text">
 							<h2><a href="blog-deatils-1.html">{{$b->judul}}</a></h2>
 							<p>{{ \Illuminate\Support\Str::limit($b->isi, 150, $end='...') }}</p>
-							<a href="{{Route('beritaDetail',['uuid'=>$b->uuid])}}">See more ...</a>
+							<a href="{{Route('beritaShow',['uuid'=>$b->uuid])}}">See more ...</a>
 						</div>
 					</div>
 				</div>

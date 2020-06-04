@@ -131,7 +131,12 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title"
                             data-i18n="Starter kit">Pelatihan</span></a>
                     <ul class="menu-content">
-                        <li><a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item"
+                        <!-- <li>
+                            <a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item"
+                                    data-i18n="2 columns">Data Pelatihan</span></a>
+                        </li> -->
+                        <li>
+                            <a href="#"><i></i><span class="menu-item"
                                     data-i18n="2 columns">Data Pelatihan</span></a>
                         </li>
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"

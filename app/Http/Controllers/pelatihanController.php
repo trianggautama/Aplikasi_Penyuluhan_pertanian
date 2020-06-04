@@ -87,7 +87,6 @@ class pelatihanController extends Controller
     public function tambahPeserta($uuid)
     {
         $data = pelatihan::where('uuid', $uuid)->first();
-        dd($pelatihan);
         $modul_pelatihan = Modul_pelatihan::where('pelatihan_id', $data->id)->orderBy('id', 'desc')->get();
         return view('user.pelatihan.tambahPeserta', compact('data', 'modul_pelatihan'));
     }

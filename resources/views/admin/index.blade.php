@@ -44,10 +44,9 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-success">
-                                        <h4 class="card-title text-white">Card Image Overlay</h4>
-                                        <p class="card-text text-white">Sugar plum tiramisu sweet. Cake jelly marshmallow cotton candy chupa chups.
-                                        </p>
-                                        <p class="card-text text-white"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h4 class="card-title text-white">Admin Kecamatan</h4>
+                                        <h4 class="card-text text-white">75 Kecamatan
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
@@ -57,10 +56,9 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-warning">
-                                        <h4 class="card-title text-white">Card Image Overlay</h4>
-                                        <p class="card-text text-white">Sugar plum tiramisu sweet. Cake jelly marshmallow cotton candy chupa chups.
-                                        </p>
-                                        <p class="card-text"><small class="text-white">Last updated 3 mins ago</small></p>
+                                        <h4 class="card-title text-white">Peserta Pelatihan</h4>
+                                        <h4 class="card-text text-white"> 240 Orang
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
@@ -70,10 +68,8 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-info">
-                                        <h4 class="card-title text-white">Card Image Overlay</h4>
-                                        <p class="card-text text-white">Sugar plum tiramisu sweet. Cake jelly marshmallow cotton candy chupa chups.
-                                        </p>
-                                        <p class="card-text text-white"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h4 class="card-title text-white">Evaluasi Peserta</h4>
+                                        <h4 class="card-text text-white">240 Berkas Evaluasi</h4>
                                     </div>
                                 </div>
                             </div>
