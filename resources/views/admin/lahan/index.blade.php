@@ -53,22 +53,24 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>500 m</td>
-                                                    <td>Jl.Ayani</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_lahan}}</td>
+                                                    <td>{{$d->luas_lahan}}</td>
+                                                    <td>{{$d->lokasi}}</td>
                                                     <td>
-                                                        <a href="{{Route('lahanShow')}}"
+                                                        <a href="{{Route('lahanShow',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-primary"><i
                                                                 class="feather icon-info"></i></a>
-                                                        <a href="{{Route('lahanEdit')}}"
+                                                        <a href="{{Route('lahanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -102,27 +104,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('tanamanStore')}}" method="POST">
+                <form action="{{Route('lahanStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="">Kode Lahan</label>
-                        <input type="text" name="kode_buah" id="kode_buah" class="form-control"
-                            placeholder="Kode Buah">
+                        <input type="text" name="kode_lahan" id="kode_lahan" class="form-control"
+                            placeholder="Kode Lahan">
                     </div>
                     <div class="form-group">
                         <label for="">Luas Lahan</label>
-                        <input type="text" name="nama_buah" id="nama_buah" class="form-control"
-                            placeholder="Nama Buah">
+                        <input type="text" name="luas_lahan" id="luas_lahan" class="form-control"
+                            placeholder="Luas lahan">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan Luas</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="Nama Buah">
+                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Satuan">
                     </div>
                     <div class="form-group">
                         <label for="">Lokasi Lahan</label>
-                        <input type="text" name="stok" id="stok" class="form-control"
-                            placeholder="Kode Buah">
+                        <input type="text" name="lokasi" id="lokasi" class="form-control" placeholder="Lokasi">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -135,8 +135,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -153,5 +153,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

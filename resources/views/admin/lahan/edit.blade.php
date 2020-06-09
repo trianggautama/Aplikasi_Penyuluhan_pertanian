@@ -38,44 +38,35 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                        <label for="">Kode buah</label>
-                                        <input type="text" name="kode_buah" id="kode_buah" class="form-control"
-                                            placeholder="Kode Buah">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Nama buah</label>
-                                        <input type="text" name="nama_buah" id="nama_buah" class="form-control"
-                                            placeholder="Nama Buah">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Stok</label>
-                                        <input type="text" name="stok" id="stok" class="form-control"
-                                            placeholder="Kode Buah">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Satuan</label>
-                                        <input type="text" name="satuan" id="satuan" class="form-control"
-                                            placeholder="Nama Buah">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Harga</label>
-                                        <input type="text" name="harga" id="harga" class="form-control"
-                                            placeholder="Kode Buah">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Satuan Harga</label>
-                                        <input type="text" name="satuan_harga" id="satuan_harga" class="form-control"
-                                            placeholder="Nama Buah">
-                                    </div>
+                                            <label for="">Kode Lahan</label>
+                                            <input type="text" name="kode_lahan" value="{{$data->kode_lahan}}"
+                                                id="kode_lahan" class="form-control" placeholder="Kode Lahan">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Luas Lahan</label>
+                                            <input type="text" name="luas_lahan" value="{{$data->luas_lahan}}"
+                                                id="luas_lahan" class="form-control" placeholder="Luas lahan">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Satuan Luas</label>
+                                            <input type="text" name="satuan" value="{{$data->satuan}}" id="satuan"
+                                                class="form-control" placeholder="Satuan">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Lokasi Lahan</label>
+                                            <input type="text" name="lokasi" value="{{$data->lokasi}}" id="lokasi"
+                                                class="form-control" placeholder="Lokasi">
+                                        </div>
+                                        <div
+                                            class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                            <a href="{{Route('lahanIndex')}}"
+                                                class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                                    class="feather icon-arrow-left"></i> Batal</a>
+                                            <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                                    class="feather icon-save"></i> Ubah Data</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('lahanIndex')}}"
-                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-arrow-left"></i> Batal</a>
-                                    <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-save"></i> Ubah Data</button>
-                                </div>
-                                </form>
                             </div>
                         </div>
                     </div>

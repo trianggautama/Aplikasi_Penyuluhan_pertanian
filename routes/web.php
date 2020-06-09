@@ -69,8 +69,8 @@ Route::group(['middleware' => ['admin']], function () {
 ////Berita Route
     Route::get('/lahan/index', 'lahanController@index')->name('lahanIndex');
     Route::post('/lahan/index', 'lahanController@store')->name('lahanStore');
-    Route::get('/lahan/detail/', 'lahanController@show')->name('lahanShow');
-    Route::get('/lahan/edit/', 'lahanController@edit')->name('lahanEdit');
+    Route::get('/lahan/detail/{uuid}', 'lahanController@show')->name('lahanShow');
+    Route::get('/lahan/edit/{uuid}', 'lahanController@edit')->name('lahanEdit');
     Route::put('/lahan/edit/{uuid}', 'lahanController@update')->name('lahanUpdate');
     Route::get('/lahan/delete/{uuid}', 'lahanController@destroy')->name('lahanDestroy');
 
