@@ -9,10 +9,10 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-left mb-0">Data Bahan</h2>
+                        <h2 class="content-header-title float-left mb-0">Data Panen</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Bahan</a>
+                                <li class="breadcrumb-item"><a href="index.html">Panen</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Data</a>
                                 </li>
@@ -46,10 +46,11 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Kode Bahan</th>
-                                                    <th>Nama Bahan</th>
-                                                    <th>Stok</th>
-                                                    <th>Kategori</th>
+                                                    <th>Kode Panen</th>
+                                                    <th>Penanaman</th>
+                                                    <th>Tanaman</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Tanggal Panen</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -57,11 +58,12 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td>L012</td>
-                                                    <td>Pupuk MPK</td>
-                                                    <td>2 Karung</td>
-                                                    <td>Pupuk</td>
+                                                    <td>Tanggal 8 Juni Lahan Jl.A</td>
+                                                    <td>Pepaya</td>
+                                                    <td>180 Buah</td>
+                                                    <td>12 Agustus 2020</td>
                                                     <td>
-                                                        <a href="{{Route('bahanEdit')}}"
+                                                        <a href="{{Route('panenEdit')}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
@@ -72,10 +74,11 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Kode Bahan</th>
-                                                    <th>Nama Bahan</th>
-                                                    <th>Stok</th>
-                                                    <th>Kategori</th>
+                                                    <th>Kode Panen</th>
+                                                    <th>Penanaman</th>
+                                                    <th>Tanaman</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Tanggal Panen</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </tfoot>
@@ -102,36 +105,27 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('bahanStore')}}" method="POST">
+                <form action="{{Route('penanamanStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="">Kode bahan</label>
-                        <input type="text" name="kode_bahan" id="kode_bahan" class="form-control"
-                            placeholder="Kode bahan">
+                        <label for="">Penanaman</label>
+                       <select name="penanaman_id" id="" class="form-control">
+                           <option value="">-- pilih Penanaman --</option>
+                       </select>
                     </div>
                     <div class="form-group">
-                        <label for="">Nama bahan</label>
-                        <input type="text" name="nama_bahan" id="nama_bahan" class="form-control"
-                            placeholder="Nama bahan">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Stok</label>
-                        <input type="text" name="stok" id="stok" class="form-control"
-                            placeholder="Stok">
+                        <label for="">Jumlah</label>
+                        <input type="text" name="jumlah" id="jumlah" class="form-control"
+                            placeholder="julah Panen">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan</label>
                         <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="Stok">
+                            placeholder="julah Panen">
                     </div>
                     <div class="form-group">
-                        <label for="">Kategori</label>
-                       <select name="bahan_id" id="" class="form-control">
-                           <option value="">-- pilih katgeori --</option>
-                           <option value="">Bibit</option>
-                           <option value="">Pupuk</option>
-                           <option value="">Lain -lain</option>
-                       </select>
+                        <label for="">Tanggal</label>
+                        <input type="date" name="tanggal_panen" id="tanggal_panen" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

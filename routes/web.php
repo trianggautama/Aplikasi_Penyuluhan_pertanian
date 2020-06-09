@@ -90,6 +90,27 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/bahan/delete/{uuid}', 'bahanController@destroy')->name('bahanDestroy');
 
 ////Berita Route
+    Route::get('/pembelianBahan/index', 'pembelianBahanController@index')->name('pembelianBahanIndex');
+    Route::post('/pembelianBahan/index', 'pembelianBahanController@store')->name('pembelianBahanStore');
+    Route::get('/pembelianBahan/edit/', 'pembelianBahanController@edit')->name('pembelianBahanEdit');
+    Route::put('/pembelianBahan/edit/{uuid}', 'pembelianBahanController@update')->name('pembelianBahanUpdate');
+    Route::get('/pembelianBahan/delete/{uuid}', 'pembelianBahanController@destroy')->name('pembelianBahanDestroy');
+
+////Panen Route
+    Route::get('/panen/index', 'panenController@index')->name('panenIndex');
+    Route::post('/panen/index', 'panenController@store')->name('panenStore');
+    Route::get('/panen/edit/', 'panenController@edit')->name('panenEdit');
+    Route::put('/panen/edit/{uuid}', 'panenController@update')->name('panenUpdate');
+    Route::get('/panen/delete/{uuid}', 'panenController@destroy')->name('panenDestroy');
+
+////Panen Route
+    Route::get('/penjualan/index', 'penjualanController@index')->name('penjualanIndex');
+    Route::post('/penjualan/index', 'penjualanController@store')->name('penjualanStore');
+    Route::get('/penjualan/edit/', 'penjualanController@edit')->name('penjualanEdit');
+    Route::put('/penjualan/edit/{uuid}', 'penjualanController@update')->name('penjualanUpdate');
+    Route::get('/penjualan/delete/{uuid}', 'penjualanController@destroy')->name('penjualanDestroy');
+
+////Berita Route
     Route::get('rincian/penanaman/edit/', 'rincianPenanamanController@edit')->name('rincianPenanamanEdit');
     Route::put('rincian/penanaman/edit/{uuid}', 'rincianPenanamanController@update')->name('rincianPenanamanUpdate');
     Route::get('rincian/penanaman/delete/{uuid}', 'rincianPenanamanController@destroy')->name('rincianPenanamanDestroy');

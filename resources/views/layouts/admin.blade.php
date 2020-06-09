@@ -152,8 +152,8 @@
                     <ul class="menu-content">
                         <li><a href="{{Route('bahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Bahan</span></a>
                         </li>
-                        <li>
-                            <a href="{{Route('tanamanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Tanaman</span></a>
+
+                        <li><a href="{{Route('pembelianBahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Pembelian Bahan</span></a>
                         </li>
                         <li><a href="{{Route('lahanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Lahan</span></a>
                         </li>
@@ -165,9 +165,12 @@
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title" data-i18n="Starter kit">Hasil Panen</span></a>
                     <ul class="menu-content">
-                        <li><a href="{{Route('userIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Panen</span></a>
+                        <li>
+                            <a href="{{Route('tanamanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Tanaman</span></a>
                         </li>
-                        <li><a href="{{Route('kecamatanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Penjualan</span></a>
+                        <li><a href="{{Route('panenIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Panen</span></a>
+                        </li>
+                        <li><a href="{{Route('penjualanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Penjualan</span></a>
                     </ul>
                 </li>
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span
