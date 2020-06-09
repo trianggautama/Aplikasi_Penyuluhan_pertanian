@@ -54,20 +54,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>Pupuk Kompos</td>
-                                                    <td>2 Karung</td>
-                                                    <td>12 Agustus 2020</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_pembelian}}</td>
+                                                    <td>{{$d->bahan->nama_bahan}}</td>
+                                                    <td>{{$d->jumlah}}</td>
+                                                    <td>{{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}}
+                                                    </td>
                                                     <td>
-                                                        <a href="{{Route('pembelianBahanEdit')}}"
+                                                        <a href="{{Route('pembelianBahanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -102,23 +105,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('penanamanStore')}}" method="POST">
+                <form action="{{Route('pembelianBahanStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="">Kode Pembelian</label>
-                        <input type="text" name="Kode pembelian" id="Kode pembelian" class="form-control"
+                        <input type="text" name="kode pembelian" id="Kode pembelian" class="form-control"
                             placeholder="Kode pembelian">
                     </div>
                     <div class="form-group">
                         <label for="">Bahan</label>
-                       <select name="penanaman_id" id="" class="form-control">
-                           <option value="">-- pilih Bahan --</option>
-                       </select>
+                        <select name="bahan_id" id="" class="form-control">
+                            <option value="">-- pilih Bahan --</option>
+                            @foreach($bahan as $d)
+                            <option value="{{$d->id}}">{{$d->nama_bahan}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="">Jumlah</label>
-                        <input type="text" name="jumlah" id="jumlah" class="form-control"
-                            placeholder="julah Panen">
+                        <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="jumlah Panen">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan</label>
@@ -126,7 +131,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>
-                        <input type="date" name="tanggal_panen" id="tanggal_panen" class="form-control">
+                        <input type="date" name="tanggal" id="tanggal" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -139,8 +144,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -157,5 +162,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

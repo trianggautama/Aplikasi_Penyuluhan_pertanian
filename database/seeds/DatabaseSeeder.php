@@ -12,11 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\User::create([
-            'nama'  => 'admin',
+            'nama' => 'admin',
             'username' => 'admin123',
-            'password'  => bcrypt('admin123'),
+            'password' => bcrypt('admin123'),
             'role' => 2,
-            'foto' => 'default.jpg'
-    ]);
+            'foto' => 'default.jpg',
+        ]);
     }
 }

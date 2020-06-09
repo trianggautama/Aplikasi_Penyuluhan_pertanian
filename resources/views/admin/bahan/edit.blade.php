@@ -39,27 +39,35 @@
                                         @method('PUT')
                                         <div class="form-group">
                                             <label for="">Kode bahan</label>
-                                            <input type="text" name="kode_bahan" id="kode_bahan" class="form-control"
-                                                placeholder="Kode bahan">
+                                            <input type="text" name="kode_bahan" value="{{$data->kode_bahan}}"
+                                                id="kode_bahan" class="form-control" placeholder="Kode bahan">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nama bahan</label>
-                                            <input type="text" name="nama_bahan" id="nama_bahan" class="form-control"
-                                                placeholder="Nama bahan">
+                                            <input type="text" name="nama_bahan" value="{{$data->nama_bahan}}"
+                                                id="nama_bahan" class="form-control" placeholder="Nama bahan">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Stok</label>
-                                            <input type="text" name="stok" id="stok" class="form-control"
-                                                placeholder="Stok">
+                                            <input type="text" name="stok" value="{{$data->stok}}" id="stok"
+                                                class="form-control" placeholder="Stok">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Satuan</label>
+                                            <input type="text" name="satuan" value="{{$data->satuan}}" id="satuan"
+                                                class="form-control" placeholder="Stok">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Kategori</label>
-                                        <select name="bahan_id" id="" class="form-control">
-                                            <option value="">-- pilih katgeori --</option>
-                                            <option value="">Bibit</option>
-                                            <option value="">Pupuk</option>
-                                            <option value="">Lain -lain</option>
-                                        </select>
+                                            <select name="kategori" id="" class="form-control">
+                                                <option value="">-- pilih kategori --</option>
+                                                <option value="1" {{$data->kategori == 1 ? 'selected' : ''}}>Bibit
+                                                </option>
+                                                <option value="2" {{$data->kategori == 2 ? 'selected' : ''}}>Pupuk
+                                                </option>
+                                                <option value="3" {{$data->kategori == 3 ? 'selected' : ''}}>Lain -lain
+                                                </option>
+                                            </select>
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">

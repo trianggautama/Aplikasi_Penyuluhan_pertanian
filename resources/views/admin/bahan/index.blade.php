@@ -54,20 +54,30 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>Pupuk MPK</td>
-                                                    <td>2 Karung</td>
-                                                    <td>Pupuk</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_bahan}}</td>
+                                                    <td>{{$d->nama_bahan}}</td>
+                                                    <td>{{$d->stok}}</td>
                                                     <td>
-                                                        <a href="{{Route('bahanEdit')}}"
+                                                        @if($d->kategori == 1)
+                                                        Bibit
+                                                        @elseif($d->kategori == 2)
+                                                        Pupuk
+                                                        @else
+                                                        Lain-lain
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{Route('bahanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -116,22 +126,20 @@
                     </div>
                     <div class="form-group">
                         <label for="">Stok</label>
-                        <input type="text" name="stok" id="stok" class="form-control"
-                            placeholder="Stok">
+                        <input type="text" name="stok" id="stok" class="form-control" placeholder="Stok">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="Stok">
+                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Stok">
                     </div>
                     <div class="form-group">
                         <label for="">Kategori</label>
-                       <select name="bahan_id" id="" class="form-control">
-                           <option value="">-- pilih katgeori --</option>
-                           <option value="">Bibit</option>
-                           <option value="">Pupuk</option>
-                           <option value="">Lain -lain</option>
-                       </select>
+                        <select name="kategori" id="" class="form-control">
+                            <option value="">-- pilih kategori --</option>
+                            <option value="1">Bibit</option>
+                            <option value="2">Pupuk</option>
+                            <option value="3">Lain-lain</option>
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -144,8 +152,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -162,5 +170,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

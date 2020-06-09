@@ -85,14 +85,14 @@ Route::group(['middleware' => ['admin']], function () {
 ////Berita Route
     Route::get('/bahan/index', 'bahanController@index')->name('bahanIndex');
     Route::post('/bahan/index', 'bahanController@store')->name('bahanStore');
-    Route::get('/bahan/edit/', 'bahanController@edit')->name('bahanEdit');
+    Route::get('/bahan/edit/{uuid}', 'bahanController@edit')->name('bahanEdit');
     Route::put('/bahan/edit/{uuid}', 'bahanController@update')->name('bahanUpdate');
     Route::get('/bahan/delete/{uuid}', 'bahanController@destroy')->name('bahanDestroy');
 
 ////Berita Route
     Route::get('/pembelianBahan/index', 'pembelianBahanController@index')->name('pembelianBahanIndex');
     Route::post('/pembelianBahan/index', 'pembelianBahanController@store')->name('pembelianBahanStore');
-    Route::get('/pembelianBahan/edit/', 'pembelianBahanController@edit')->name('pembelianBahanEdit');
+    Route::get('/pembelianBahan/edit/{uuid}', 'pembelianBahanController@edit')->name('pembelianBahanEdit');
     Route::put('/pembelianBahan/edit/{uuid}', 'pembelianBahanController@update')->name('pembelianBahanUpdate');
     Route::get('/pembelianBahan/delete/{uuid}', 'pembelianBahanController@destroy')->name('pembelianBahanDestroy');
 
