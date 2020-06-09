@@ -111,7 +111,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/penjualan/delete/{uuid}', 'penjualanController@destroy')->name('penjualanDestroy');
 
 ////Berita Route
-    Route::get('rincian/penanaman/edit/', 'rincianPenanamanController@edit')->name('rincianPenanamanEdit');
+    Route::post('rincian/penanaman/index', 'rincianPenanamanController@store')->name('rincianPenanamanStore');
+    Route::get('rincian/penanaman/edit/{uuid}', 'rincianPenanamanController@edit')->name('rincianPenanamanEdit');
     Route::put('rincian/penanaman/edit/{uuid}', 'rincianPenanamanController@update')->name('rincianPenanamanUpdate');
     Route::get('rincian/penanaman/delete/{uuid}', 'rincianPenanamanController@destroy')->name('rincianPenanamanDestroy');
 

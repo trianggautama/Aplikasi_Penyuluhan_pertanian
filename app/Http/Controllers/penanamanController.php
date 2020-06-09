@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bahan;
 use App\Penanaman;
 use Illuminate\Http\Request;
 
@@ -23,8 +24,9 @@ class penanamanController extends Controller
     public function show($uuid)
     {
         $data = Penanaman::where('uuid', $uuid)->first();
+        $bahan = Bahan::orderBy('nama_bahan', 'asc')->get();
 
-        return view('admin.penanaman.show', compact('data'));
+        return view('admin.penanaman.show', compact('data', 'bahan'));
     }
 
     public function edit($uuid)

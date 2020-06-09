@@ -54,20 +54,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data->rincian_penanaman as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>Pupuk MPK</td>
-                                                    <td>3 Kilo</td>
-                                                    <td>6 Juni 2020</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->penanaman->kode_penanaman}}</td>
+                                                    <td>{{$d->bahan->nama_bahan}}</td>
+                                                    <td>{{$d->jumlah}}</td>
+                                                    <td>{{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}}
+                                                    </td>
                                                     <td>
-                                                        <a href="{{Route('rincianPenanamanEdit')}}"
+                                                        <a href="{{Route('rincianPenanamanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -101,18 +104,21 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('penanamanStore')}}" method="POST">
+                <form action="{{Route('rincianPenanamanStore')}}" method="POST">
                     @csrf
+                    <input type="hidden" name="penanaman_id" value="{{$data->id}}">
                     <div class="form-group">
                         <label for="">Bahan</label>
-                       <select name="bahan_id" id="" class="form-control">
-                           <option value="">-- pilih bahan --</option>
-                       </select>
+                        <select name="bahan_id" id="" class="form-control">
+                            <option value="">-- pilih bahan --</option>
+                            @foreach($bahan as $d)
+                            <option value="{{$d->id}}">{{$d->nama_bahan}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="">Jumlah</label>
-                        <input type="text" name="jumlah" id="jumlah" class="form-control"
-                            placeholder="jumlah">
+                        <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="jumlah">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>
@@ -129,8 +135,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -147,5 +153,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

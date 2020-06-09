@@ -39,18 +39,24 @@
                                         @method('PUT')
                                         <div class="form-group">
                                             <label for="">Bahan</label>
-                                        <select name="bahan_id" id="" class="form-control">
-                                            <option value="">-- pilih bahan --</option>
-                                        </select>
+                                            <select name="bahan_id" id="" class="form-control">
+                                                <option value="">-- pilih bahan --</option>
+                                                @foreach($bahan as $d)
+                                                <option value="{{$d->id}}"
+                                                    {{$d->id == $data->bahan_id ? 'selected' : ''}}>
+                                                    {{$d->nama_bahan}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Jumlah</label>
-                                            <input type="text" name="jumlah" id="jumlah" class="form-control"
-                                                placeholder="jumlah">
+                                            <input type="text" name="jumlah" value="{{$data->jumlah}}" id="jumlah"
+                                                class="form-control" placeholder="jumlah">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Tanggal</label>
-                                            <input type="date" name="tanggal" id="tanggal" class="form-control">
+                                            <input type="date" name="tanggal" value="{{$data->tanggal}}" id="tanggal"
+                                                class="form-control">
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">

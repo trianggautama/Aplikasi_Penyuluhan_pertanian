@@ -18,4 +18,9 @@ class Penanaman extends Model
         return $this->belongsTo(Lahan::class);
     }
 
+    public function rincian_penanaman()
+    {
+        return $this->hasMany(Rincian_penanaman::class);
+    }
+
 }
