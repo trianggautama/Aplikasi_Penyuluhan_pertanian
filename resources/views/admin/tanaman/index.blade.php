@@ -54,23 +54,25 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>T012</td>
-                                                    <td>Pepaya</td>
-                                                    <td> 120 Buah</td>
-                                                    <td>Rp.20.000 /buah</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_tanaman}}</td>
+                                                    <td>{{$d->nama_tanaman}}</td>
+                                                    <td>{{$d->stok}}</td>
+                                                    <td>{{$d->harga}}</td>
                                                     <td>
-                                                        <a href="{{Route('tanamanShow')}}"
-                                                            class="btn btn-icon btn-primary"><i
-                                                                class="feather icon-info"></i></a>
-                                                        <a href="{{Route('tanamanEdit')}}"
+                                                        {{--  <a href="{{Route('tanamanShow',['uuid' => $d->uuid])}}"
+                                                        class="btn btn-icon btn-primary"><i
+                                                            class="feather icon-info"></i></a> --}}
+                                                        <a href="{{Route('tanamanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -108,34 +110,26 @@
                 <form action="{{Route('tanamanStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="">Kode buah</label>
-                        <input type="text" name="kode_buah" id="kode_buah" class="form-control"
+                        <label for="">Kode tanaman</label>
+                        <input type="text" name="kode_tanaman" id="kode_tanaman" class="form-control"
                             placeholder="Kode Buah">
                     </div>
                     <div class="form-group">
-                        <label for="">Nama buah</label>
-                        <input type="text" name="nama_buah" id="nama_buah" class="form-control"
+                        <label for="">Nama tanaman</label>
+                        <input type="text" name="nama_tanaman" id="nama_tanaman" class="form-control"
                             placeholder="Nama Buah">
                     </div>
                     <div class="form-group">
                         <label for="">Stok</label>
-                        <input type="text" name="stok" id="stok" class="form-control"
-                            placeholder="Kode Buah">
+                        <input type="text" name="stok" id="stok" class="form-control" placeholder="Kode Buah">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="Nama Buah">
+                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Nama Buah">
                     </div>
                     <div class="form-group">
                         <label for="">Harga</label>
-                        <input type="text" name="harga" id="harga" class="form-control"
-                            placeholder="Kode Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan Harga</label>
-                        <input type="text" name="satuan_harga" id="satuan_harga" class="form-control"
-                            placeholder="Nama Buah">
+                        <input type="text" name="harga" id="harga" class="form-control" placeholder="Kode Buah">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -148,8 +142,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -166,5 +160,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

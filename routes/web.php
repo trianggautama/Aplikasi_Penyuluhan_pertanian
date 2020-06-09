@@ -61,8 +61,8 @@ Route::group(['middleware' => ['admin']], function () {
 ////Berita Route
     Route::get('/tanaman/index', 'tanamanController@index')->name('tanamanIndex');
     Route::post('/tanaman/index', 'tanamanController@store')->name('tanamanStore');
-    Route::get('/tanaman/detail/', 'tanamanController@show')->name('tanamanShow');
-    Route::get('/tanaman/edit/', 'tanamanController@edit')->name('tanamanEdit');
+    Route::get('/tanaman/detail/{uuid}', 'tanamanController@show')->name('tanamanShow');
+    Route::get('/tanaman/edit/{uuid}', 'tanamanController@edit')->name('tanamanEdit');
     Route::put('/tanaman/edit/{uuid}', 'tanamanController@update')->name('tanamanUpdate');
     Route::get('/tanaman/delete/{uuid}', 'tanamanController@destroy')->name('tanamanDestroy');
 

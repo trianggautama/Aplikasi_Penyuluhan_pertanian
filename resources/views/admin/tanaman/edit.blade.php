@@ -38,35 +38,30 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                        <label for="">Kode buah</label>
-                        <input type="text" name="kode_buah" id="kode_buah" class="form-control"
-                            placeholder="Kode Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Nama buah</label>
-                        <input type="text" name="nama_buah" id="nama_buah" class="form-control"
-                            placeholder="Nama Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Stok</label>
-                        <input type="text" name="stok" id="stok" class="form-control"
-                            placeholder="Kode Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="Nama Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Harga</label>
-                        <input type="text" name="harga" id="harga" class="form-control"
-                            placeholder="Kode Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan Harga</label>
-                        <input type="text" name="satuan_harga" id="satuan_harga" class="form-control"
-                            placeholder="Nama Buah">
-                    </div>
+                                            <label for="">Kode tanaman</label>
+                                            <input type="text" name="kode_tanaman" value="{{$data->kode_tanaman}}"
+                                                id="kode_tanaman" class="form-control" placeholder="Kode Buah">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Nama tanaman</label>
+                                            <input type="text" name="nama_tanaman" value="{{$data->nama_tanaman}}"
+                                                id="nama_tanaman" class="form-control" placeholder="Nama Buah">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Stok</label>
+                                            <input type="text" name="stok" value="{{$data->stok}}" id="stok"
+                                                class="form-control" placeholder="Kode Buah">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Satuan</label>
+                                            <input type="text" name="satuan" value="{{$data->satuan}}" id="satuan"
+                                                class="form-control" placeholder="Nama Buah">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Harga</label>
+                                            <input type="text" name="harga" value="{{$data->harga}}" id="harga"
+                                                class="form-control" placeholder="Kode Buah">
+                                        </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
                                     <a href="{{Route('tanamanIndex')}}"
