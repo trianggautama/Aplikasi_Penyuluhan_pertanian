@@ -66,7 +66,7 @@
                                                         <a href="{{Route('pembelianBahanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->bahan->nama_bahan}}')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -157,7 +157,7 @@
                 cancelButtonText: 'Batal'
             }).then((result) => {
                 if (result.value) {
-                url = '{{route("pelatihanDestroy",'')}}';
+                url = '{{route("pembelianBahanDestroy",'')}}';
                 window.location.href =  url+'/'+uuid ;
                 }
             })
