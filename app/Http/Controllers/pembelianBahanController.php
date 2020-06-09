@@ -19,6 +19,10 @@ class pembelianBahanController extends Controller
     {
         $data = Pembelian_bahan::create($req->all());
 
+        $bahan = Bahan::findOrFail($req->bahan_id);
+        $bahan->stok = $bahan->stok + $req->jumlah;
+        $bahan->update();
+
         return redirect()->back()->withSuccess('Data berhasil disimpan');
     }
 

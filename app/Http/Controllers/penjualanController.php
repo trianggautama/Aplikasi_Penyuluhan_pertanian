@@ -19,6 +19,10 @@ class penjualanController extends Controller
     {
         $data = Penjualan::create($req->all());
 
+        $tanaman = Tanaman::findOrFail($req->tanaman_id);
+        $tanaman->stok = $tanaman->stok - $req->jumlah;
+        $tanaman->update();
+
         return redirect()->back()->withSuccess('Data berhasil disimpan');
     }
 
