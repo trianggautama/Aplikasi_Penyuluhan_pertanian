@@ -161,7 +161,7 @@
                                                     <td>Laki -laki</td>
                                                     <td>Banjarbaru, 04 Maret 1997</td>
                                                     <td>
-                                                        <a href="" class="btn btn-icon btn-primary"><i
+                                                        <a href="{{Rout('lahanInfo')}}" class="btn btn-icon btn-primary"><i
                                                                 class="feather icon-info"></i></a>
                                                         <a href="" class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>

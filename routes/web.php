@@ -58,6 +58,42 @@ Route::group(['middleware' => ['admin']], function () {
     Route::put('/berita/edit/{uuid}', 'beritaController@update')->name('beritaUpdate');
     Route::get('/berita/delete/{uuid}', 'beritaController@destroy')->name('beritaDestroy');
 
+////Berita Route
+    Route::get('/tanaman/index', 'tanamanController@index')->name('tanamanIndex');
+    Route::post('/tanaman/index', 'tanamanController@store')->name('tanamanStore');
+    Route::get('/tanaman/detail/', 'tanamanController@show')->name('tanamanShow');
+    Route::get('/tanaman/edit/', 'tanamanController@edit')->name('tanamanEdit');
+    Route::put('/tanaman/edit/{uuid}', 'tanamanController@update')->name('tanamanUpdate');
+    Route::get('/tanaman/delete/{uuid}', 'tanamanController@destroy')->name('tanamanDestroy');
+
+////Berita Route
+    Route::get('/lahan/index', 'lahanController@index')->name('lahanIndex');
+    Route::post('/lahan/index', 'lahanController@store')->name('lahanStore');
+    Route::get('/lahan/detail/', 'lahanController@show')->name('lahanShow');
+    Route::get('/lahan/edit/', 'lahanController@edit')->name('lahanEdit');
+    Route::put('/lahan/edit/{uuid}', 'lahanController@update')->name('lahanUpdate');
+    Route::get('/lahan/delete/{uuid}', 'lahanController@destroy')->name('lahanDestroy');
+
+////Berita Route
+    Route::get('/penanaman/index', 'penanamanController@index')->name('penanamanIndex');
+    Route::post('/penanaman/index', 'penanamanController@store')->name('penanamanStore');
+    Route::get('/penanaman/detail/', 'penanamanController@show')->name('penanamanShow');
+    Route::get('/penanaman/edit/', 'penanamanController@edit')->name('penanamanEdit');
+    Route::put('/penanaman/edit/{uuid}', 'penanamanController@update')->name('penanamanUpdate');
+    Route::get('/penanaman/delete/{uuid}', 'penanamanController@destroy')->name('penanamanDestroy');
+
+////Berita Route
+    Route::get('/bahan/index', 'bahanController@index')->name('bahanIndex');
+    Route::post('/bahan/index', 'bahanController@store')->name('bahanStore');
+    Route::get('/bahan/edit/', 'bahanController@edit')->name('bahanEdit');
+    Route::put('/bahan/edit/{uuid}', 'bahanController@update')->name('bahanUpdate');
+    Route::get('/bahan/delete/{uuid}', 'bahanController@destroy')->name('bahanDestroy');
+
+////Berita Route
+    Route::get('rincian/penanaman/edit/', 'rincianPenanamanController@edit')->name('rincianPenanamanEdit');
+    Route::put('rincian/penanaman/edit/{uuid}', 'rincianPenanamanController@update')->name('rincianPenanamanUpdate');
+    Route::get('rincian/penanaman/delete/{uuid}', 'rincianPenanamanController@destroy')->name('rincianPenanamanDestroy');
+
 ////Cetak Report
     Route::get('/kecamatan/cetak', 'reportController@kecamatanCetak')->name('kecamatanCetak');
     Route::get('/evaluasi/cetak', 'reportController@evaluasiCetak')->name('evaluasiCetak');
