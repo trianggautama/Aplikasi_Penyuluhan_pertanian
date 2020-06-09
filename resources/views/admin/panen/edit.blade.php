@@ -38,20 +38,37 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                                <label for="">Penanaman</label>
+                                            <label for="">Penanaman</label>
                                             <select name="penanaman_id" id="" class="form-control">
                                                 <option value="">-- pilih Penanaman --</option>
+                                                @foreach($penanaman as $d)
+                                                <option value="{{$d->id}}"
+                                                    {{$d->id == $data->penanaman_id ? 'selected' : ''}}>Tanggal
+                                                    {{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}},
+                                                    {{$d->lahan->lokasi}}</option>
+                                                @endforeach
                                             </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Jumlah</label>
-                                                <input type="text" name="jumlah" id="jumlah" class="form-control"
-                                                    placeholder="julah Panen">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Tanggal</label>
-                                                <input type="date" name="tanggal_panen" id="tanggal_panen" class="form-control">
-                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Kode panen</label>
+                                            <input type="text" name="kode_panen" value="{{$data->kode_panen}}"
+                                                id="kode_panen" class="form-control" placeholder="Kode Panen">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Jumlah</label>
+                                            <input type="text" name="jumlah" value="{{$data->jumlah}}" id="jumlah"
+                                                class="form-control" placeholder="julah Panen">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Satuan</label>
+                                            <input type="text" name="satuan" value="{{$data->satuan}}" id="satuan"
+                                                class="form-control" placeholder="julah Panen">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Tanggal</label>
+                                            <input type="date" name="tanggal" value="{{$data->tanggal}}" id="tanggal"
+                                                class="form-control">
+                                        </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
                                     <a href="{{Route('lahanIndex')}}"
