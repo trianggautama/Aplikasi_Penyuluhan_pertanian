@@ -157,8 +157,8 @@
                         </li>
                         <li><a href="{{Route('lahanIndex')}}"><i></i><span class="menu-item" data-i18n="2 columns">Lahan</span></a>
                         </li>
-                        <li><a href="{{Route('penanamanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Penanaman</span></a>
-                        </li>
+                        <!-- <li><a href="{{Route('penanamanIndex')}}"><i></i><span class="menu-item" data-i18n="Fixed navbar">Penanaman</span></a>
+                        </li> -->
                         <!-- <li><a href="{{Route('evaluasiIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Beli Bahan</span></a>
                         </li> -->
                     </ul>

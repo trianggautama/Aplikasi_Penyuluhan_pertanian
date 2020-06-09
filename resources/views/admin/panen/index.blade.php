@@ -110,7 +110,10 @@
                     <div class="form-group">
                         <label for="">Penanaman</label>
                        <select name="penanaman_id" id="" class="form-control">
-                           <option value="">-- pilih Penanaman --</option>
+                            <option value="">-- pilih Penanaman --</option>
+                            @foreach($penanaman as $p)
+                            <option value="{{$p->id}}">{{$p->tanggal}}</option>
+                            @endforeach
                        </select>
                     </div>
                     <div class="form-group">

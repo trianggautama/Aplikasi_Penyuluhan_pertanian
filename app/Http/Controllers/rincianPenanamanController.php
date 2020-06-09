@@ -34,7 +34,7 @@ class rincianPenanamanController extends Controller
         $data = Rincian_penanaman::where('uuid', $uuid)->first();
 
         $data->fill($req->all())->save();
-
+ 
         return redirect()->route('penanamanShow', ['uuid' => $data->penanaman->uuid])->withSuccess('Data berhasil diubah');
     }
 
@@ -42,6 +42,6 @@ class rincianPenanamanController extends Controller
     {
         $data = Rincian_penanaman::where('uuid', $uuid)->first()->delete();
 
-        return redirect()->route('rincianPenanamanIndex')->withSuccess('Data berhasil dihapus');
+        return redirect()->back()->withSuccess('Data berhasil dihapus');
     }
 }
