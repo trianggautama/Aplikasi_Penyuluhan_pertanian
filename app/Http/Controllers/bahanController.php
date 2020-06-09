@@ -38,6 +38,7 @@ class bahanController extends Controller
 
     public function destroy($uuid)
     {
+        
         $data = Bahan::where('uuid', $uuid)->first()->delete();
 
         return redirect()->route('bahanIndex')->withSuccess('Data berhasil dihapus');
