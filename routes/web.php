@@ -77,8 +77,8 @@ Route::group(['middleware' => ['admin']], function () {
 ////Berita Route
     Route::get('/penanaman/index', 'penanamanController@index')->name('penanamanIndex');
     Route::post('/penanaman/index', 'penanamanController@store')->name('penanamanStore');
-    Route::get('/penanaman/detail/', 'penanamanController@show')->name('penanamanShow');
-    Route::get('/penanaman/edit/', 'penanamanController@edit')->name('penanamanEdit');
+    Route::get('/penanaman/detail/{uuid}', 'penanamanController@show')->name('penanamanShow');
+    Route::get('/penanaman/edit/{uuid}', 'penanamanController@edit')->name('penanamanEdit');
     Route::put('/penanaman/edit/{uuid}', 'penanamanController@update')->name('penanamanUpdate');
     Route::get('/penanaman/delete/{uuid}', 'penanamanController@destroy')->name('penanamanDestroy');
 

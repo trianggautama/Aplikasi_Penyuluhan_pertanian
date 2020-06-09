@@ -53,22 +53,22 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data->penanaman as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>2 Juni 2020</td>
-                                                    <td>Jl. A.yani</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_penanaman}}</td>
+                                                    <td>{{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}}
+                                                    <td>{{$d->lahan->lokasi}}</td>
+                                                    </td>
                                                     <td>
-                                                        <a href="{{Route('penanamanShow')}}"
-                                                            class="btn btn-icon btn-primary"><i
-                                                                class="feather icon-info"></i></a>
-                                                        <a href="{{Route('penanamanEdit')}}"
+                                                        <a href="{{Route('penanamanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
                                                         <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -104,15 +104,15 @@
             <div class="modal-body">
                 <form action="{{Route('penanamanStore')}}" method="POST">
                     @csrf
+                    <input type="hidden" name="lahan_id" value="{{$data->id}}">
                     <div class="form-group">
                         <label for="">Kode Penanaman</label>
-                        <input type="text" name="kode_buah" id="kode_buah" class="form-control"
-                            placeholder="Kode Buah">
+                        <input type="text" name="kode_penanaman" id="kode_penanaman" class="form-control"
+                            placeholder="Kode penanaman">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>
-                        <input type="date" name="tanggal" id="tanggal" class="form-control"
-                            placeholder="Nama Buah">
+                        <input type="date" name="tanggal" id="tanggal" class="form-control" placeholder="Nama Buah">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -125,8 +125,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -143,5 +143,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

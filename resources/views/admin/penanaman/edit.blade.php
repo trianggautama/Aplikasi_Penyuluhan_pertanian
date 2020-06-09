@@ -39,13 +39,14 @@
                                         @method('PUT')
                                         <div class="form-group">
                                             <label for="">Kode Penanaman</label>
-                                            <input type="text" name="kode_buah" id="kode_buah" class="form-control"
+                                            <input type="text" name="kode_penanaman" id="kode_penanaman"
+                                                class="form-control" value="{{$data->kode_penanaman}}"
                                                 placeholder="Kode Penenaman">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Tanggal</label>
                                             <input type="date" name="tanggal" id="tanggal" class="form-control"
-                                                placeholder="Nama Buah">
+                                                value="{{$data->tanggal}}" placeholder="Nama Buah">
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">

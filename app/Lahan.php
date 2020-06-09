@@ -12,4 +12,10 @@ class Lahan extends Model
     protected $fillable = [
         'kode_lahan', 'luas_lahan', 'satuan', 'lokasi',
     ];
+
+    public function penanaman()
+    {
+        return $this->hasMany(Penanaman::class);
+    }
+
 }
