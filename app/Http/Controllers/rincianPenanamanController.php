@@ -18,6 +18,10 @@ class rincianPenanamanController extends Controller
     {
         $data = Rincian_penanaman::create($req->all());
 
+        $bahan = Bahan::findOrFail($req->bahan_id);
+        $bahan->stok = $bahan->stok - $req->jumlah;
+        $bahan->update();
+
         return redirect()->back()->withSuccess('Data berhasil disimpan');
     }
 

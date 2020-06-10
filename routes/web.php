@@ -99,14 +99,14 @@ Route::group(['middleware' => ['admin']], function () {
 ////Panen Route
     Route::get('/panen/index', 'panenController@index')->name('panenIndex');
     Route::post('/panen/index', 'panenController@store')->name('panenStore');
-    Route::get('/panen/edit/', 'panenController@edit')->name('panenEdit');
+    Route::get('/panen/edit/{uuid}', 'panenController@edit')->name('panenEdit');
     Route::put('/panen/edit/{uuid}', 'panenController@update')->name('panenUpdate');
     Route::get('/panen/delete/{uuid}', 'panenController@destroy')->name('panenDestroy');
 
 ////Panen Route
     Route::get('/penjualan/index', 'penjualanController@index')->name('penjualanIndex');
     Route::post('/penjualan/index', 'penjualanController@store')->name('penjualanStore');
-    Route::get('/penjualan/edit/', 'penjualanController@edit')->name('penjualanEdit');
+    Route::get('/penjualan/edit/{uuid}/', 'penjualanController@edit')->name('penjualanEdit');
     Route::put('/penjualan/edit/{uuid}', 'penjualanController@update')->name('penjualanUpdate');
     Route::get('/penjualan/delete/{uuid}', 'penjualanController@destroy')->name('penjualanDestroy');
 

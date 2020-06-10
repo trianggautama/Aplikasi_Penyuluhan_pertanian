@@ -48,28 +48,34 @@
                                                     <th>No</th>
                                                     <th>Kode Panen</th>
                                                     <th>Penanaman</th>
-                                                    <th>Tanaman</th>
+                                                    {{--  <th>Tanaman</th>  --}}
                                                     <th>Jumlah</th>
                                                     <th>Tanggal Panen</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>L012</td>
-                                                    <td>Tanggal 8 Juni Lahan Jl.A</td>
-                                                    <td>Pepaya</td>
-                                                    <td>180 Buah</td>
-                                                    <td>12 Agustus 2020</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->kode_panen}}</td>
+                                                    <td>Tanggal
+                                                        {{carbon\carbon::parse($d->penanaman->tanggal)->translatedFormat('d F Y')}},
+                                                        {{$d->penanaman->lokasi}}
+                                                    </td>
+                                                    <td>{{$d->jumlah}}</td>
+                                                    {{--  <td>{{$d->penanaman->bahan->nama_bahan}}</td> --}}
+                                                    <td>{{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}}
+                                                    </td>
                                                     <td>
-                                                        <a href="{{Route('panenEdit')}}"
+                                                        <a href="{{Route('panenEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->kode_panen}}')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -105,30 +111,35 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('penanamanStore')}}" method="POST">
+                <form action="{{Route('panenStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="">Penanaman</label>
-                       <select name="penanaman_id" id="" class="form-control">
+                        <select name="penanaman_id" id="" class="form-control">
                             <option value="">-- pilih Penanaman --</option>
-                            @foreach($penanaman as $p)
-                            <option value="{{$p->id}}">{{$p->tanggal}}</option>
+                            @foreach($penanaman as $d)
+                            <option value="{{$d->id}}">Tanggal
+                                {{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}},
+                                {{$d->lahan->lokasi}}</option>
                             @endforeach
-                       </select>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Kode panen</label>
+                        <input type="text" name="kode_panen" id="kode_panen" class="form-control"
+                            placeholder="Kode Panen">
                     </div>
                     <div class="form-group">
                         <label for="">Jumlah</label>
-                        <input type="text" name="jumlah" id="jumlah" class="form-control"
-                            placeholder="julah Panen">
+                        <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="julah Panen">
                     </div>
                     <div class="form-group">
                         <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control"
-                            placeholder="julah Panen">
+                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="julah Panen">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>
-                        <input type="date" name="tanggal_panen" id="tanggal_panen" class="form-control">
+                        <input type="date" name="tanggal" id="tanggal" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -141,11 +152,11 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
-                text: " Menghapus data Pelatihan" + nama ,        
+                text: " Menghapus data panen kode" + nama ,        
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -154,10 +165,10 @@
                 cancelButtonText: 'Batal'
             }).then((result) => {
                 if (result.value) {
-                url = '{{route("pelatihanDestroy",'')}}';
+                url = '{{route("panenDestroy",'')}}';
                 window.location.href =  url+'/'+uuid ;
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection
