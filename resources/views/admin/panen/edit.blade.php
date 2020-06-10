@@ -50,6 +50,16 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
+                                            <label for="">Tanaman</label>
+                                            <select name="tanaman_id" id="" class="form-control">
+                                                <option value="">-- pilih Tanaman --</option>
+                                                @foreach($tanaman as $d)
+                                                <option value="{{$d->id}}">
+                                                    {{$d->nama_tanaman}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="">Kode panen</label>
                                             <input type="text" name="kode_panen" value="{{$data->kode_panen}}"
                                                 id="kode_panen" class="form-control" placeholder="Kode Panen">

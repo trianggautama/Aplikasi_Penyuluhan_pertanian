@@ -82,7 +82,6 @@
                                                     <th>No</th>
                                                     <th>Kode Panen</th>
                                                     <th>Penanaman</th>
-                                                    <th>Tanaman</th>
                                                     <th>Jumlah</th>
                                                     <th>Tanggal Panen</th>
                                                     <th>Aksi</th>
@@ -121,6 +120,16 @@
                             <option value="{{$d->id}}">Tanggal
                                 {{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}},
                                 {{$d->lahan->lokasi}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tanaman</label>
+                        <select name="tanaman_id" id="" class="form-control">
+                            <option value="">-- pilih Penanaman --</option>
+                            @foreach($tanaman as $d)
+                            <option value="{{$d->id}}">
+                                {{$d->nama_tanaman}}</option>
                             @endforeach
                         </select>
                     </div>
