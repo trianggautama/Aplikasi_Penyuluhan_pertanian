@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Panen;
 use App\Penanaman;
+use App\Tanaman;
 use Illuminate\Http\Request;
 
 class panenController extends Controller
@@ -12,7 +13,8 @@ class panenController extends Controller
     {
         $data = Panen::orderBy('id', 'desc')->get();
         $penanaman = Penanaman::orderBy('id', 'desc')->get();
-        return view('admin.panen.index', compact('data', 'penanaman'));
+        $tanaman = Tanaman::orderBy('id', 'desc')->get();
+        return view('admin.panen.index', compact('data', 'penanaman', 'tanaman'));
     }
 
     public function store(Request $req)
@@ -36,9 +38,10 @@ class panenController extends Controller
     public function edit($uuid)
     {
         $data = Panen::where('uuid', $uuid)->first();
+        $tanaman = Tanaman::orderBy('id', 'desc')->get();
         $penanaman = Penanaman::orderBy('id', 'desc')->get();
 
-        return view('admin.panen.edit', compact('data', 'penanaman'));
+        return view('admin.panen.edit', compact('data', 'penanaman', 'tanaman'));
     }
 
     public function update(Request $req, $uuid)

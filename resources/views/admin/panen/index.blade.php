@@ -71,7 +71,8 @@
                                                         <a href="{{Route('panenEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->kode_panen}}')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->kode_panen}}')"
+                                                            class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -126,7 +127,7 @@
                     <div class="form-group">
                         <label for="">Tanaman</label>
                         <select name="tanaman_id" id="" class="form-control">
-                            <option value="">-- pilih Penanaman --</option>
+                            <option value="">-- pilih Tanaman --</option>
                             @foreach($tanaman as $d)
                             <option value="{{$d->id}}">
                                 {{$d->nama_tanaman}}</option>

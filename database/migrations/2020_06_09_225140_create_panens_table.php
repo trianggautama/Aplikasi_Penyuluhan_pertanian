@@ -18,6 +18,7 @@ class CreatePanensTable extends Migration
             $table->string('uuid', 36);
             $table->string('kode_panen', 50);
             $table->foreignId('penanaman_id')->onDelete('cascade');
+            $table->foreignId('tanaman_id')->onDelete('cascade');
             $table->string('jumlah', 50);
             $table->string('satuan', 50);
             $table->date('tanggal');
