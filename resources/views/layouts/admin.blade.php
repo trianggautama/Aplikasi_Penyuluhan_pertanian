@@ -93,7 +93,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand"
-                        href="../../../html/ltr/vertical-collapsed-menu-template/index.html">
+                        href="{{Route('adminIndex')}}">
                         <img src="{{asset('admin/app-assets/images/logo/vuexy-logo.png')}}" width="50px" alt="">
                         <h2 class="brand-text mb-0">BP2TP</h2>
                     </a></li>
@@ -131,11 +131,11 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title"
                             data-i18n="Starter kit">Pelatihan</span></a>
                     <ul class="menu-content">
-                        <!-- <li>
+                        <li>
                             <a href="{{Route('pelatihanIndex')}}"><i></i><span class="menu-item"
                                     data-i18n="2 columns">Data Pelatihan</span></a>
-                        </li> -->
-                        <li>
+                        </li>
+                        <!-- <li>
                             <a href="#"><i></i><span class="menu-item"
                                     data-i18n="2 columns">Data Pelatihan</span></a>
                         </li>
@@ -144,7 +144,7 @@
                         </li>
                         <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"
                                     data-i18n="Floating navbar">Evaluasi Peserta</span></a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title"

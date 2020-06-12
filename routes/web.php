@@ -122,6 +122,15 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/pelatihan/cetak', 'reportController@pelatihanCetak')->name('pelatihanCetak');
     Route::get('/pelatihan/detail/cetak/{uuid}', 'reportController@detailPelatihanCetak')->name('detailPelatihanCetak');
     Route::get('/modul/cetak', 'reportController@modulCetak')->name('modulCetak');
+    Route::get('/bahan/cetak', 'reportController@bahanCetak')->name('bahanCetak');
+    Route::get('/pembelian/cetak', 'reportController@pembelianCetak')->name('pembelianCetak');
+    Route::get('/lahan/cetak', 'reportController@lahanCetak')->name('lahanCetak');
+    Route::get('/penanaman/cetak/{uuid}', 'reportController@penanamanCetak')->name('penanamanCetak');
+    Route::get('/penanaman/rincian/cetak/{uuid}', 'reportController@rincianPenanamanCetak')->name('rincianPenanamanCetak');
+    Route::get('/tanaman/cetak', 'reportController@tanamanCetak')->name('tanamanCetak');
+    Route::get('/panen/cetak', 'reportController@panenCetak')->name('panenCetak');
+    Route::get('/penjualan/cetak', 'reportController@penjualanCetak')->name('penjualanCetak');
+
 });
 
 Route::group(['middleware' => ['kecamatan']], function () {

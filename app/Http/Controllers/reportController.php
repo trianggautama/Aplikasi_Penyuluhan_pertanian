@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Bahan;
 use App\Evaluasi;
 use PDF;
 use App\Kecamatan;
+use App\Lahan;
 use App\Modul;
+use App\Panen;
 use App\Pelatihan;
+use App\Pembelian_bahan;
+use App\Penanaman;
+use App\Penjualan;
+use App\Rincian_penanaman;
+use App\Tanaman;
 use Illuminate\Http\Request;
 
 class reportController extends Controller
@@ -54,5 +62,79 @@ class reportController extends Controller
         $pdf->setPaper('a4', 'portrait');
 
         return $pdf->stream('Laporan Data Modul.pdf');
+    }
+
+    public function bahanCetak()
+    {
+        $data         = Bahan::all();
+        $pdf          = PDF::loadView('formCetak.dataBahan', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Bahan.pdf');
+    }
+
+    public function pembelianCetak()
+    {
+        $data         = Pembelian_bahan::all();
+        $pdf          = PDF::loadView('formCetak.dataPembelian', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Pembelian.pdf');
+    }
+
+    public function lahanCetak()
+    {
+        $data         = Lahan::all();
+        $pdf          = PDF::loadView('formCetak.dataLahan', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Lahan.pdf');
+    }
+
+    public function penanamanCetak($uuid)
+    {
+        $lahan        = Lahan::where('uuid',$uuid)->first();
+        $data         = Penanaman::where('lahan_id',$lahan->id)->get();
+        $pdf          = PDF::loadView('formCetak.dataPenanaman', ['data'=>$data,'lahan'=>$lahan]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Penanaman.pdf');
+    }
+
+    public function rincianPenanamanCetak($uuid)
+    {
+        $penanaman    = Penanaman::where('uuid',$uuid)->first();
+        $data         = Rincian_penanaman::where('penanaman_id',$penanaman->id)->get();
+        $pdf          = PDF::loadView('formCetak.dataRincianPenanaman', ['data'=>$data,'penanaman'=>$penanaman]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Rincian Penanaman.pdf');
+    }
+
+    public function tanamanCetak()
+    {
+        $data         = Tanaman::all();
+        $pdf          = PDF::loadView('formCetak.dataTanaman', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Tanaman.pdf');
+    }
+
+    public function panenCetak()
+    {
+        $data         = Panen::all();
+        $pdf          = PDF::loadView('formCetak.dataPanen', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Panen Tanaman.pdf');
+    }
+
+    public function penjualanCetak()
+    {
+        $data         = Penjualan::all();
+        $pdf          = PDF::loadView('formCetak.dataPenjualan', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Penjualan.pdf');
     }
 }

@@ -32,7 +32,7 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('pelatihanCetak')}}"
+                                    <a href="{{Route('tanamanCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -60,7 +60,7 @@
                                                     <td>{{$d->kode_tanaman}}</td>
                                                     <td>{{$d->nama_tanaman}}</td>
                                                     <td>{{$d->stok}}</td>
-                                                    <td>{{$d->harga}}</td>
+                                                    <td>Rp. {{$d->harga}} / {{$d->satuan}}</td>
                                                     <td>
                                                         {{--  <a href="{{Route('tanamanShow',['uuid' => $d->uuid])}}"
                                                         class="btn btn-icon btn-primary"><i
@@ -128,7 +128,7 @@
                         <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Nama Buah">
                     </div>
                     <div class="form-group">
-                        <label for="">Harga</label>
+                        <label for="">Harga Satuan</label>
                         <input type="text" name="harga" id="harga" class="form-control" placeholder="Kode Buah">
                     </div>
                     <div class="modal-footer">

@@ -129,62 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="col-6">
-                                    <h4 class="card-title">Tabel Peserta</h4>
-                                </div>
-                                <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body card-dashboard">
-                                    <div class="table-responsive">
-                                        <table class="table zero-configuration">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama</th>
-                                                    <th>Tanggal SPT</th>
-                                                    <th>Nomor SPT</th>
-                                                    <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>John Doe</td>
-                                                    <td>2 Februari</td>
-                                                    <td>123131/2121/12</td>
-                                                    <td>Laki -laki</td>
-                                                    <td>Banjarbaru, 04 Maret 1997</td>
-                                                    <td>
-                                                        <a href="{{Rout('lahanInfo')}}" class="btn btn-icon btn-primary"><i
-                                                                class="feather icon-info"></i></a>
-                                                        <a href="" class="btn btn-icon btn-warning"><i
-                                                                class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal SPT</th>
-                                                    <th>Nomor SPT</th>
-                                                    <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+   
                     </div>
                 </div>
             </section>

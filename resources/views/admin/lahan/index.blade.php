@@ -32,7 +32,7 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('pelatihanCetak')}}"
+                                    <a href="{{Route('lahanCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -57,7 +57,7 @@
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$d->kode_lahan}}</td>
-                                                    <td>{{$d->luas_lahan}}</td>
+                                                    <td>{{$d->luas_lahan}} {{$d->satuan}}</td>
                                                     <td>{{$d->lokasi}}</td>
                                                     <td>
                                                         <a href="{{Route('lahanShow',['uuid' => $d->uuid])}}"

@@ -33,7 +33,7 @@
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-danger overlay-lighten-2">
                                         <h class="card-title text-white">Data Pelatihan</h4>
-                                        <p class="card-text text-white"> 12 Data Pelatihan
+                                        <p class="card-text text-white"> {{$pelatihan->count()}} Data Pelatihan
                                         </p>
                                     </div>
                                 </div>
@@ -44,8 +44,8 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-success">
-                                        <h4 class="card-title text-white">Admin Kecamatan</h4>
-                                        <h4 class="card-text text-white">75 Kecamatan
+                                        <h4 class="card-title text-white">Lahan</h4>
+                                        <h4 class="card-text text-white">{{$lahan->count()}} Lahan Pertanian
                                         </h4>
                                     </div>
                                 </div>
@@ -56,8 +56,8 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-warning">
-                                        <h4 class="card-title text-white">Peserta Pelatihan</h4>
-                                        <h4 class="card-text text-white"> 240 Orang
+                                        <h4 class="card-title text-white">Tanaman</h4>
+                                        <h4 class="card-text text-white"> {{$tanaman->count()}} Jenis tanaman
                                         </h4>
                                     </div>
                                 </div>
@@ -68,27 +68,25 @@
                                 <div class="card-content">
                                     <img class="card-img img-fluid" src="{{asset('admin/app-assets/images/slider/04.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay overflow-hidden overlay-info">
-                                        <h4 class="card-title text-white">Evaluasi Peserta</h4>
-                                        <h4 class="card-text text-white">240 Berkas Evaluasi</h4>
+                                        <h4 class="card-title text-white">Penjualan</h4>
+                                        <h4 class="card-text text-white">{{$penjualan->count()}} Data Penjualan</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                <h3>Selamat Datang Admin (Nama Auth)</h3><hr>
+                                <h3>Selamat Datang Admin {{Auth::user()->nama}}</h3><hr>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum id nemo sit maxime voluptates a reprehenderit quo ipsa ad atque iste, error consequatur, dignissimos ipsam sint odio itaque quod! Quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur impedit fugiat atque, libero minima sit reiciendis ad quas reprehenderit, aspernatur velit quos? Unde, possimus voluptatibus voluptas iste officia minima aperiam.</p>
+                                <p>Selamat Datang di Aplikasi Balai Pelatihan dan Penerapan Teknologi Pertanian Provinsi Kalimantan Selatan</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- Card Captions and Overlay section end -->
-                <!--/ Zero configuration table -->
-                <!-- Data list view end -->
-
+        
             </div>
         </div>
     </div>

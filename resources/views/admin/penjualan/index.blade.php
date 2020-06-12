@@ -32,7 +32,7 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('pelatihanCetak')}}"
+                                    <a href="{{Route('penjualanCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -61,7 +61,7 @@
                                                     <td>{{$d->kode_penjualan}}</td>
                                                     <td>{{$d->tanaman->nama_tanaman}}</td>
                                                     <td>{{$d->jumlah}}</td>
-                                                    <td>{{$d->tanaman->harga * $d->jumlah}}</td>
+                                                    <td>Rp. {{$d->tanaman->harga * $d->jumlah}}</td>
                                                     {{--  <td>{{$d->tanaman->bahan->nama_bahan}}</td> --}}
                                                     <td>{{carbon\carbon::parse($d->tanggal)->translatedFormat('d F Y')}}
                                                     </td>

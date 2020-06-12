@@ -23,7 +23,6 @@ class lahanController extends Controller
     public function show($uuid)
     {
         $data = Lahan::where('uuid', $uuid)->first();
-
         return view('admin.lahan.show', compact('data'));
     }
 
