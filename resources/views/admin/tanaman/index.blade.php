@@ -119,13 +119,25 @@
                         <input type="text" name="nama_tanaman" id="nama_tanaman" class="form-control"
                             placeholder="Nama Buah">
                     </div>
-                    <div class="form-group">
-                        <label for="">Stok</label>
-                        <input type="text" name="stok" id="stok" class="form-control" placeholder="Kode Buah">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Nama Buah">
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Stok</label>
+                            <input type="text" name="stok" id="stok" class="form-control" placeholder="Kode Buah">
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Satuan</label>
+                                <select name="satuan" id="" class="form-control">
+                                    <option value="">-- pilih Satuan --</option>
+                                    <option value="Buah">Buah</option>
+                                    <option value="Kilo">Kilo</option>
+                                    <option value="Ons">Ons</option>
+                                    <option value="Gram">Gram</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Harga Satuan</label>

@@ -140,13 +140,25 @@
                         <input type="text" name="kode_panen" id="kode_panen" class="form-control"
                             placeholder="Kode Panen">
                     </div>
-                    <div class="form-group">
-                        <label for="">Jumlah</label>
-                        <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="julah Panen">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="julah Panen">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <label for="">Jumlah</label>
+                            <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="julah Panen">
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Satuan</label>
+                                <select name="satuan" id="" class="form-control">
+                                    <option value="">-- pilih Satuan --</option>
+                                    <option value="Buah">Buah</option>
+                                    <option value="Kg">Kg</option>
+                                    <option value="Ons">Ons</option>
+                                    <option value="gram">gram</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>

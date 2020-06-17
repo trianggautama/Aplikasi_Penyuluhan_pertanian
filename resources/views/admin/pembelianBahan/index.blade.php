@@ -121,13 +121,25 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="">Jumlah</label>
-                        <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="jumlah Panen">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Jumlah</label>
+                                <input type="text" name="jumlah" id="jumlah" class="form-control" placeholder="jumlah Panen">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                                <label for="">Satuan</label>
+                                <select name="satuan" id="" class="form-control">
+                                    <option value="">-- pilih Satuan --</option>
+                                    <option value="Buah">Buah</option>
+                                    <option value="Kilo">Kilo</option>
+                                    <option value="Ons">Ons</option>
+                                    <option value="Gram">Gram</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal</label>

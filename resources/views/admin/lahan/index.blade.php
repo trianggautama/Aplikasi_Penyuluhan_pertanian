@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-6">
-                                    <h4 class="card-title">Tabel Data</h4>
+                                    <h4 class="card-title">Tabel Data </h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                     <a href="{{Route('lahanCetak')}}"
@@ -111,10 +111,24 @@
                         <input type="text" name="kode_lahan" id="kode_lahan" class="form-control"
                             placeholder="Kode Lahan">
                     </div>
-                    <div class="form-group">
-                        <label for="">Luas Lahan</label>
-                        <input type="text" name="luas_lahan" id="luas_lahan" class="form-control"
-                            placeholder="Luas lahan">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Luas Lahan</label>
+                                <input type="text" name="luas_lahan" id="luas_lahan" class="form-control"
+                                    placeholder="Luas lahan">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                                <label for="">Satuan</label>
+                                <select name="satuan" id="" class="form-control">
+                                    <option value="">-- pilih Satuan --</option>
+                                    <option value="m"><p>m <sup>2</sup></p></option>
+                                    <option value="Hektar">Hektar</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="">Satuan Luas</label>
