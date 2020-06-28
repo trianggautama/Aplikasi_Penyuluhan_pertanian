@@ -180,15 +180,15 @@
                             class="menu-title" data-i18n="Dashboard">Beranda</span><span
                             class="badge badge badge-warning badge-pill float-right"></span></a>
                 </li>
-                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-user"></i><span
-                            class="menu-title">Profil Kelurahan</span></a>
+                <li class=" nav-item"><a href="{{Route('kecamatanProfil')}}"><i class="feather icon-user"></i><span
+                            class="menu-title">Profil Kecamatan</span></a>
                 </li>
-                <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span
+                <!-- <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span
                             class="menu-title">Pelatihan</span></a>
                 </li>
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file-text"></i><span
                             class="menu-title">hasil Evaluasi</span></a>
-                </li>
+                </li> -->
                 @endif
             </ul>
         </div>

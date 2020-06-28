@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Kecamatan;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class kecamatanController extends Controller
@@ -13,6 +14,12 @@ class kecamatanController extends Controller
     {
         $data = User::where('role', 1)->orderBy('id', 'desc')->get();
         return view('admin.kecamatan.index', compact('data'));
+    }
+
+    public function profil()
+    {   
+        $data = User::findOrFail(Auth::user()->id);
+        return view('user.profil',compact('data'));
     }
 
     public function store(Request $request)

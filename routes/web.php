@@ -145,5 +145,6 @@ Route::group(['middleware' => ['admin']], function () {
 Route::group(['middleware' => ['kecamatan']], function () {
     Route::get('/user/dashboard/index', 'adminController@userIndex')->name('userDashboardIndex');
     Route::get('/pelatihan/peserta/{uuid}', 'pelatihanController@tambahPeserta')->name('tambahPeserta');
+    Route::get('/kecamatan/profil', 'kecamatanController@profil')->name('kecamatanProfil');
 
 });
