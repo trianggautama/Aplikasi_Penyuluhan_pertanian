@@ -10,7 +10,8 @@ class pesertaController extends Controller
 {
     public function index(){
         $kecamatan = Kecamatan::latest()->get();
-        return view('admin.peserta.index',compact('kecamatan'));
+        $pelatihan = Pelatihan::latest()->get();
+        return view('admin.peserta.index',compact('kecamatan','pelatihan'));
     }
 
     public function filter(){

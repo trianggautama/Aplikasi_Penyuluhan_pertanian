@@ -118,6 +118,15 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="">Pelatihan</label>
+                        <select name="tanaman_id" id="" class="form-control">
+                            <option value="">-- pilih Pelatihan --</option>
+                                @foreach($pelatihan as $d)
+                                    <option value="{{$d->id}}"> {{$d->nama_pelatihan}}</option>
+                                @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="">Nomor SPT</label>
                         <input type="text" name="no_spt" class="form-control">
                     </div>
