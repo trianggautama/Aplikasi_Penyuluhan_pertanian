@@ -104,6 +104,15 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/panen/delete/{uuid}', 'panenController@destroy')->name('panenDestroy');
 
 ////Panen Route
+    Route::get('/peserta/index', 'pesertaController@index')->name('pesertaIndex');
+    Route::post('/peserta/index', 'pesertaController@store')->name('pesertaStore');
+    Route::get('/peserta/edit/{uuid}', 'pesertaController@edit')->name('pesertaEdit');
+    Route::put('/peserta/edit/{uuid}', 'pesertaController@update')->name('pesertaUpdate');
+    Route::get('/peserta/delete/{uuid}', 'pesertaController@destroy')->name('pesertaDestroy');
+    Route::get('/peserta/filter', 'pesertaController@filter')->name('pesertaFilter');
+
+
+////Panen Route
     Route::get('/penjualan/index', 'penjualanController@index')->name('penjualanIndex');
     Route::post('/penjualan/index', 'penjualanController@store')->name('penjualanStore');
     Route::get('/penjualan/edit/{uuid}/', 'penjualanController@edit')->name('penjualanEdit');

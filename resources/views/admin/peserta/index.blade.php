@@ -6,22 +6,18 @@
     <div class="header-navbar-shadow"></div>
     <div class="content-wrapper">
         <div class="content-header row">
-            <div class="content-header-left col-md-12 col-12 mb-2">
+            <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
-                    <div class="col-6">
-                        <h2 class="content-header-title float-left mb-0">Data Pelatihan</h2>
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">Data Peserta Pelatihan</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Pelatihan</a>
+                                <li class="breadcrumb-item"><a href="index.html">Peserta Pelatihan</a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#">Detail</a>
+                                <li class="breadcrumb-item"><a href="#">Data</a>
                                 </li>
                             </ol>
                         </div>
-                    </div>
-                    <div class="col-6 text-right">
-                        <a href="{{Route('pelatihanIndex')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                class="feather icon-arrow-left"></i> Kembali</a>
                     </div>
                 </div>
             </div>
@@ -33,50 +29,13 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-6">
-                                    <h4 class="card-title">Detail Data</h4>
-                                    <hr>
-                                </div>
-                                <div class="col-6">
-                                </div>
-
-                            </div>
-                            <div class="card-content">
-                                <div class="card-body card-dashboard">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <h5>Nama Pelatihan</h5>
-                                                <p>{{$data->nama_pelatihan}}</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <h5>Tanggal Mulai</h5>
-                                                <p>{{carbon\carbon::parse($data->tgl_mulai)->translatedFormat('d F Y')}}
-                                                </p>
-                                            </div>
-                                            <div class="form-group">
-                                                <h5>Tanggal Selesai</h5>
-                                                <p>{{carbon\carbon::parse($data->tgl_selesai)->translatedFormat('d F Y')}}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 pr-5">
-                                            <div class="form-group">
-                                                <h5>uraian</h5>
-                                                <p class="text-justify">{{$data->uraian}}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="col-6">
-                                    <h4 class="card-title">Tabel Peserta dari kecamatan {{Auth::user()->kecamatan->kecamatan}}</h4>
+                                    <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
-                                        data-target="#exampleModal">Tambah Peserta</button>
+                                <a href="{{Route('pesertaFilter')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i class="feather icon-filter"></i> filter Cetak</a>
+                                    <a href="{{Route('penjualanCetak')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i class="feather icon-printer"></i> Cetak Data</a>
+                                    <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
+                                        data-target="#exampleModal">Tambah Data</button>
                                 </div>
                             </div>
                             <div class="card-content">
@@ -86,39 +45,42 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
+                                                    <th>Pelatihan</th>
                                                     <th>Nama</th>
-                                                    <th>Tanggal SPT</th>
                                                     <th>Nomor SPT</th>
+                                                    <th>Tanggal SPT</th>
+                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
+                                                    <th>Tempat Tanggal lahir</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>John Doe</td>
-                                                    <td>2 Februari</td>
-                                                    <td>123131/2121/12</td>
-                                                    <td>Laki -laki</td>
-                                                    <td>Banjarbaru, 04 Maret 1997</td>
+                                                    <td>Pelatihan A</td>
+                                                    <td>Tri Angga </td>
+                                                    <td>12/DAW/2020</td>
+                                                    <td>28 Juni 2020</td>
+                                                    <td>12615362153625</td>
+                                                    <td>Laki-laki</td>
+                                                    <td>Banjarbaru, 12 Juni 1999</td>
                                                     <td>
-                                                        <a href="" class="btn btn-icon btn-primary"><i
-                                                                class="feather icon-info"></i></a>
-                                                        <a href="" class="btn btn-icon btn-warning"><i
-                                                                class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                        <a href="{{Route('pesertaEdit','jabjbj')}}" class="btn btn-icon btn-warning"><i class="feather icon-edit"></i></a>
+                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Tanggal SPT</th>
+                                                    <th>Pelatihan</th>
+                                                    <th>Nama</th>
                                                     <th>Nomor SPT</th>
+                                                    <th>Tanggal SPT</th>
+                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
+                                                    <th>Tempat Tanggal lahir</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </tfoot>
@@ -130,18 +92,13 @@
                     </div>
                 </div>
             </section>
-            <!--/ Zero configuration table -->
-            <!-- Data list view end -->
-
         </div>
     </div>
 </div>
-<!-- END: Content-->
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog " role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
@@ -150,16 +107,24 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="#" method="POST">
+                <form action="{{Route('penjualanStore')}}" method="POST">
                     @csrf
-                    <input type="hidden" name="pelatihan_id" value="{{$data->id}}" id="">
+                    <div class="form-group">
+                        <label for="">Kecamatan</label>
+                        <select name="tanaman_id" id="" class="form-control">
+                            <option value="">-- pilih Kecamatan --</option>
+                                @foreach($kecamatan as $d)
+                                    <option value="{{$d->id}}"> {{$d->kecamatan}}</option>
+                                @endforeach
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="">Nomor SPT</label>
                         <input type="text" name="no_spt" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal SPT</label>
-                        <input type="text" name="tanggal_spt" class="form-control">
+                        <input type="date" name="tanggal_spt" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Nama Peserta</label>
@@ -205,4 +170,25 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+    function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Pelatihan" + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("pelatihanDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+</script>
 @endsection

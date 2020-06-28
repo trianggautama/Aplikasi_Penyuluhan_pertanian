@@ -138,11 +138,9 @@
                         <!-- <li>
                             <a href="#"><i></i><span class="menu-item"
                                     data-i18n="2 columns">Data Pelatihan</span></a>
-                        </li>
-                        <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"
-                                    data-i18n="Floating navbar">Peserta</span></a>
-                        </li>
-                        <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"
+                         </li> -->
+                        <li><a href="{{Route('pesertaIndex')}}"><i></i><span class="menu-item" data-i18n="Floating navbar">Peserta</span></a> </li>
+                        <!-- <li><a href="sk-layout-floating-navbar.html"><i></i><span class="menu-item"
                                     data-i18n="Floating navbar">Evaluasi Peserta</span></a>
                         </li> -->
                     </ul>
