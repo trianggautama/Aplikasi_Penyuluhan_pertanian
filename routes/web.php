@@ -111,7 +111,6 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/peserta/delete/{uuid}', 'pesertaController@destroy')->name('pesertaDestroy');
     Route::get('/peserta/filter', 'pesertaController@filter')->name('pesertaFilter');
 
-
 ////Panen Route
     Route::get('/penjualan/index', 'penjualanController@index')->name('penjualanIndex');
     Route::post('/penjualan/index', 'penjualanController@store')->name('penjualanStore');
@@ -145,6 +144,10 @@ Route::group(['middleware' => ['admin']], function () {
 Route::group(['middleware' => ['kecamatan']], function () {
     Route::get('/user/dashboard/index', 'adminController@userIndex')->name('userDashboardIndex');
     Route::get('/pelatihan/peserta/{uuid}', 'pelatihanController@tambahPeserta')->name('tambahPeserta');
+    Route::post('/pelatihan/peserta/create', 'pelatihanController@tambahPesertaStore')->name('tambahPesertaStore');
+    Route::get('/pelatihan/peserta/edit/{uuid}', 'pelatihanController@pesertaEdit')->name('pesertaKecamatanEdit');
+    Route::put('/pelatihan/peserta/edit/{uuid}', 'pelatihanController@pesertaUpdate')->name('pesertaKecamatanUpdate');
+    Route::get('/pelatihan/peserta/delete/{uuid}', 'pelatihanController@pesertaDestroy')->name('pesertaKecamatanDestroy');
     Route::get('/kecamatan/profil', 'kecamatanController@profil')->name('kecamatanProfil');
 
 });

@@ -32,9 +32,14 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                <a href="{{Route('pesertaFilter')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i class="feather icon-filter"></i> filter Cetak</a>
-                                    <a href="{{Route('penjualanCetak')}}" class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i class="feather icon-printer"></i> Cetak Data</a>
-                                    <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"  data-target="#exampleModal">Tambah Data</button>
+                                    <a href="{{Route('pesertaFilter')}}"
+                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
+                                            class="feather icon-filter"></i> filter Cetak</a>
+                                    <a href="{{Route('penjualanCetak')}}"
+                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
+                                            class="feather icon-printer"></i> Cetak Data</a>
+                                    <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
+                                        data-target="#exampleModal">Tambah Data</button>
                                 </div>
                             </div>
                             <div class="card-content">
@@ -55,20 +60,34 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($data as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>Pelatihan A</td>
-                                                    <td>Tri Angga </td>
-                                                    <td>12/DAW/2020</td>
-                                                    <td>28 Juni 2020</td>
-                                                    <td>12615362153625</td>
-                                                    <td>Laki-laki</td>
-                                                    <td>Banjarbaru, 12 Juni 1999</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->pelatihan->nama_pelatihan}}</td>
+                                                    <td>{{$d->nama_peserta}}</td>
+                                                    <td>{{$d->no_spt}}</td>
+                                                    <td>{{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                    <td>{{$d->NIK}}</td>
                                                     <td>
-                                                        <a href="{{Route('pesertaEdit','jabjbj')}}" class="btn btn-icon btn-warning"><i class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i class="feather icon-delete"></i></button>
+                                                        @if($d->jk == 1)
+                                                        Laki-laki
+                                                        @else
+                                                        Perempuan
+                                                        @endif
+                                                    </td>
+                                                    <td>{{$d->tempat_lahir}},
+                                                        {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{Route('pesertaEdit',['uuid' => $d->uuid])}}"
+                                                            class="btn btn-icon btn-warning"><i
+                                                                class="feather icon-edit"></i></a>
+                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -106,24 +125,24 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('penjualanStore')}}" method="POST">
+                <form action="{{Route('pesertaStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="">Kecamatan</label>
-                        <select name="tanaman_id" id="" class="form-control">
+                        <select name="kecamatan_id" id="" class="form-control">
                             <option value="">-- pilih Kecamatan --</option>
-                                @foreach($kecamatan as $d)
-                                    <option value="{{$d->id}}"> {{$d->kecamatan}}</option>
-                                @endforeach
+                            @foreach($kecamatan as $d)
+                            <option value="{{$d->id}}"> {{$d->kecamatan}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="">Pelatihan</label>
-                        <select name="tanaman_id" id="" class="form-control">
+                        <select name="pelatihan_id" id="" class="form-control">
                             <option value="">-- pilih Pelatihan --</option>
-                                @foreach($pelatihan as $d)
-                                    <option value="{{$d->id}}"> {{$d->nama_pelatihan}}</option>
-                                @endforeach
+                            @foreach($pelatihan as $d)
+                            <option value="{{$d->id}}"> {{$d->nama_pelatihan}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group">
@@ -132,15 +151,15 @@
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal SPT</label>
-                        <input type="date" name="tanggal_spt" class="form-control">
+                        <input type="date" name="tgl_spt" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Nama Peserta</label>
-                        <input type="text" name="nama" class="form-control">
+                        <input type="text" name="nama_peserta" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">NIK</label>
-                        <input type="text" name="nomor_ktp" class="form-control">
+                        <input type="text" name="NIK" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label>
@@ -157,9 +176,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="">Tanggal Lahir</label>
-                                <input type="date" name="tanggal_lahir" class="form-control">
+                                <input type="date" name="tgl_lahir" class="form-control">
                             </div>
                         </div>
                     </div>

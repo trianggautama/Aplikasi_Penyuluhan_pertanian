@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Kecamatan;
 use App\Modul;
 use App\Modul_pelatihan;
 use App\Pelatihan;
+use App\Peserta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class pelatihanController extends Controller
 {
@@ -87,7 +90,39 @@ class pelatihanController extends Controller
     public function tambahPeserta($uuid)
     {
         $data = pelatihan::where('uuid', $uuid)->first();
+        $peserta = Peserta::where('kecamatan_id', Auth::user()->kecamatan->id)->where('pelatihan_id', $data->id)->get();
         $modul_pelatihan = Modul_pelatihan::where('pelatihan_id', $data->id)->orderBy('id', 'desc')->get();
-        return view('user.pelatihan.tambahPeserta', compact('data', 'modul_pelatihan'));
+
+        return view('user.pelatihan.tambahPeserta', compact('peserta', 'data', 'modul_pelatihan'));
+    }
+
+    public function tambahPesertaStore(Request $req)
+    {
+        $data = Peserta::create($req->all());
+
+        return back()->withSuccess('Data berhasil disimpan');
+    }
+
+    public function pesertaEdit($uuid)
+    {
+        $kecamatan = Kecamatan::latest()->get();
+        $pelatihan = Pelatihan::latest()->get();
+        $data = Peserta::where('uuid', $uuid)->first();
+        return view('user.peserta.edit', compact('data', 'pelatihan', 'kecamatan'));
+    }
+
+    public function pesertaUpdate(Request $req, $uuid)
+    {
+        $data = Peserta::where('uuid', $uuid)->first();
+        $data->fill($req->all())->save();
+
+        return redirect()->route('tambahPeserta', ['uuid' => $data->pelatihan->uuid])->withSuccess('Data berhasil diubah');
+    }
+
+    public function pesertaDestroy($uuid)
+    {
+        $data = Peserta::where('uuid', $uuid)->first()->delete();
+
+        return back();
     }
 }

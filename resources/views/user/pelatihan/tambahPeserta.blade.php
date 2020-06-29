@@ -72,10 +72,11 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-6">
-                                    <h4 class="card-title">Tabel Peserta dari kecamatan {{Auth::user()->kecamatan->kecamatan}}</h4>
+                                    <h4 class="card-title">Tabel Peserta dari kecamatan
+                                        {{Auth::user()->kecamatan->kecamatan}}</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
+                                    <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
                                         data-target="#exampleModal">Tambah Peserta</button>
                                 </div>
                             </div>
@@ -86,39 +87,56 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
+                                                    <th>Pelatihan</th>
                                                     <th>Nama</th>
-                                                    <th>Tanggal SPT</th>
                                                     <th>Nomor SPT</th>
+                                                    <th>Tanggal SPT</th>
+                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
+                                                    <th>Tempat Tanggal lahir</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($peserta as $d)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>John Doe</td>
-                                                    <td>2 Februari</td>
-                                                    <td>123131/2121/12</td>
-                                                    <td>Laki -laki</td>
-                                                    <td>Banjarbaru, 04 Maret 1997</td>
+                                                    <td>{{$loop->iteration}}</td>
+                                                    <td>{{$d->pelatihan->nama_pelatihan}}</td>
+                                                    <td>{{$d->nama_peserta}}</td>
+                                                    <td>{{$d->no_spt}}</td>
+                                                    <td>{{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                    <td>{{$d->NIK}}</td>
                                                     <td>
-                                                        <a href="" class="btn btn-icon btn-primary"><i
-                                                                class="feather icon-info"></i></a>
-                                                        <a href="" class="btn btn-icon btn-warning"><i
+                                                        @if($d->jk == 1)
+                                                        Laki-laki
+                                                        @else
+                                                        Perempuan
+                                                        @endif
+                                                    </td>
+                                                    <td>{{$d->tempat_lahir}},
+                                                        {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{Route('pesertaKecamatanEdit',['uuid' => $d->uuid])}}"
+                                                            class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <a href="" class="btn btn-icon btn-danger"><i
-                                                                class="feather icon-delete"></i></a>
+                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                                class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Tanggal SPT</th>
+                                                    <th>Pelatihan</th>
+                                                    <th>Nama</th>
                                                     <th>Nomor SPT</th>
+                                                    <th>Tanggal SPT</th>
+                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
-                                                    <th>Tempat / Tanggal Lahir</th>
+                                                    <th>Tempat Tanggal lahir</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </tfoot>
@@ -150,24 +168,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="#" method="POST">
+                <form action="{{Route('tambahPesertaStore')}}" method="POST">
                     @csrf
                     <input type="hidden" name="pelatihan_id" value="{{$data->id}}" id="">
+                    <input type="hidden" name="kecamatan_id" value="{{Auth::user()->kecamatan->id}}" id="">
                     <div class="form-group">
                         <label for="">Nomor SPT</label>
                         <input type="text" name="no_spt" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal SPT</label>
-                        <input type="text" name="tanggal_spt" class="form-control">
+                        <input type="date" name="tgl_spt" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Nama Peserta</label>
-                        <input type="text" name="nama" class="form-control">
+                        <input type="text" name="nama_peserta" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">NIK</label>
-                        <input type="text" name="nomor_ktp" class="form-control">
+                        <input type="text" name="NIK" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label>
@@ -184,9 +203,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="">Tanggal Lahir</label>
-                                <input type="date" name="tanggal_lahir" class="form-control">
+                                <input type="date" name="tgl_lahir" class="form-control">
                             </div>
                         </div>
                     </div>

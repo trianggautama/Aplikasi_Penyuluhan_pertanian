@@ -13,4 +13,9 @@ class Kecamatan extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function peserta()
+    {
+        return $this->hasMany(Peserta::class);
+    }
 }
