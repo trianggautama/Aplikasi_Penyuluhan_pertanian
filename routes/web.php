@@ -138,6 +138,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/tanaman/cetak', 'reportController@tanamanCetak')->name('tanamanCetak');
     Route::get('/panen/cetak', 'reportController@panenCetak')->name('panenCetak');
     Route::get('/penjualan/cetak', 'reportController@penjualanCetak')->name('penjualanCetak');
+    Route::get('/peserta/cetak', 'reportController@pesertaCetak')->name('pesertaCetak');
+    Route::post('/peserta/filter', 'reportController@pesertaFilter')->name('pesertaFilterCetak');
 
 });
 

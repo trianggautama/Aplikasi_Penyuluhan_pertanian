@@ -35,11 +35,11 @@
                                     <a href="{{Route('pesertaFilter')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
                                             class="feather icon-filter"></i> filter Cetak</a>
-                                    <a href="{{Route('penjualanCetak')}}"
+                                    <a href="{{Route('pesertaCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
-                                        data-target="#exampleModal">Tambah Data</button>
+                                        data-target="#exampleModal">+ Tambah Data</button>
                                 </div>
                             </div>
                             <div class="card-content">
@@ -83,7 +83,7 @@
                                                         <a href="{{Route('pesertaEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_peserta}}')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -185,7 +185,7 @@
                     <div class="form-group">
                         <label for="">Status</label>
                         <select name="status" id="status" class="form-control">
-                            <option value="1">-- ini kurang tau isinya apa --</option>
+                            <option value="1">-- Aktif --</option>
                         </select>
                     </div>
                     <div class="modal-footer">
@@ -212,7 +212,7 @@
                 cancelButtonText: 'Batal'
             }).then((result) => {
                 if (result.value) {
-                url = '{{route("pelatihanDestroy",'')}}';
+                url = '{{route("pesertaDestroy",'')}}';
                 window.location.href =  url+'/'+uuid ;
                 }
             })

@@ -13,6 +13,7 @@ use App\Pelatihan;
 use App\Pembelian_bahan;
 use App\Penanaman;
 use App\Penjualan;
+use App\Peserta;
 use App\Rincian_penanaman;
 use App\Tanaman;
 use Illuminate\Http\Request;
@@ -136,5 +137,24 @@ class reportController extends Controller
         $pdf->setPaper('a4', 'portrait');
 
         return $pdf->stream('Laporan Data Penjualan.pdf');
+    }
+
+    public function pesertaCetak()
+    {
+        $data         = Peserta::all();
+        $pdf          = PDF::loadView('formCetak.dataPeserta', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Peserta.pdf');
+    }
+
+    public function pesertaFilter()
+    {
+        $pelatihan    = Pelatihan::findOrFail(request()->pelatihan_id);
+        $data         = Peserta::where('pelatihan_id',request()->pelatihan_id)->get();
+        $pdf          = PDF::loadView('formCetak.dataPesertaFilter', ['data'=>$data, 'pelatihan'=>$pelatihan]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('Laporan Data Peserta Filter.pdf');
     }
 }

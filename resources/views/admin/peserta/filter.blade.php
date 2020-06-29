@@ -36,10 +36,9 @@
                                 <div class="card-body card-dashboard">
                                     <form action="" method="POST">
                                         @csrf
-                                        @method('PUT')
                                         <div class="form-group">
                                             <label for="">Pelatihan</label>
-                                            <select name="tanaman_id" id="" class="form-control">
+                                            <select name="pelatihan_id" id="" class="form-control">
                                                 <option value="">-- pilih Pelatihan --</option>
                                                 @foreach($pelatihan as $d)
                                                 <option value="{{$d->id}}">{{$d->nama_pelatihan}}</option>

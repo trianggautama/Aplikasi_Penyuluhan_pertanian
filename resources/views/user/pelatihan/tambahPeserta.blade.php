@@ -121,7 +121,7 @@
                                                         <a href="{{Route('pesertaKecamatanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_peserta}}')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -212,7 +212,7 @@
                     <div class="form-group">
                         <label for="">Status</label>
                         <select name="status" id="status" class="form-control">
-                            <option value="1">-- ini kurang tau isinya apa --</option>
+                            <option value="1">-- Aktif --</option>
                         </select>
                     </div>
                     <div class="modal-footer">
@@ -224,4 +224,25 @@
         </div>
     </div>
 </div>
+@endsection 
+@section('scripts')
+<script>
+    function Hapus(uuid, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Peserta " + nama ,        
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                url = '{{route("pesertaKecamatanDestroy",'')}}';
+                window.location.href =  url+'/'+uuid ;
+                }
+            })
+            }
+</script>
 @endsection
