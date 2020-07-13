@@ -47,6 +47,7 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Nama Pelatihan</th>
+                                                    <th>Nama Narasumber</th>
                                                     <th>Tanggal Mulai</th>
                                                     <th>Tanggal Selesai</th>
                                                     <th>Aksi</th>
@@ -57,6 +58,7 @@
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$d->nama_pelatihan}}</td>
+                                                    <td> Narasumber</td>
                                                     <td>{{carbon\carbon::parse($d->tgl_mulai)->translatedFormat('d F Y')}}
                                                     </td>
                                                     <td>{{carbon\carbon::parse($d->tgl_selesai)->translatedFormat('d F Y')}}
@@ -77,9 +79,10 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Kode evaluasi</th>
-                                                    <th>Nama Evaluasi</th>
-                                                    <th>Keterangan</th>
+                                                    <th>Nama Pelatihan</th>
+                                                    <th>Nama Narasumber</th>
+                                                    <th>Tanggal Mulai</th>
+                                                    <th>Tanggal Selesai</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </tfoot>
@@ -112,6 +115,11 @@
                         <label for="">Nama Pelatihan</label>
                         <input type="text" name="nama_pelatihan" id="nama_pelatihan" class="form-control"
                             placeholder="Nama Pelatihan">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nama Narasumber</label>
+                        <input type="text" name="nama_narasumber" id="nama_narasumber" class="form-control"
+                            placeholder="Nama Narasumber">
                     </div>
                     <div class="form-group">
                         <label for="">Tanggal Mulai</label>

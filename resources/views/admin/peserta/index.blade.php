@@ -34,10 +34,10 @@
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                     <a href="{{Route('pesertaFilter')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                            class="feather icon-filter"></i> filter Cetak</a>
-                                    <a href="{{Route('pesertaCetak')}}"
-                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
+                                    <!-- <a href="{{Route('pesertaCetak')}}"
+                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
+                                            class="feather icon-printer"></i> Cetak Data</a> -->
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
                                         data-target="#exampleModal">+ Tambah Data</button>
                                 </div>

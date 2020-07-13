@@ -89,7 +89,7 @@
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">DATA BAHAN</h2>
+            <h3 style="text-align:center;">DATA BAHAN</h3>
             <table class="table zero-configuration">
                                             <thead>
                                                 <tr>
@@ -123,13 +123,13 @@
                       <br>
                       <br>
                       <div class="ttd">
-                        <h5> <p> Kabupaten Tanah Laut, </p></h5>
-                       <h6>Mengetahui</h6>
-                      <h5>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
+                        <h5 style="margin:0px;"> <p> Kabupaten Tanah Laut, </p></h5>
+                       <h6 style="margin:0px;">Mengetahui</h6>
+                      <h5 style="margin:0px;">Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
                       <br>
                       <br>
-                      <h5 style="text-decoration:underline;">Nama</h5>
-                      <h5>NIP. 19580726 1984 03 1 007</h5>
+                      <h5 style="text-decoration:underline;margin:0px;">Nama</h5>
+                      <h5 style="margin:0px;">NIP. 19580726 1984 03 1 007</h5>
                       </div>
                     </div>
              </div>

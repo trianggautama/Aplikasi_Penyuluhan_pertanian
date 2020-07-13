@@ -53,6 +53,10 @@
                                                 <p>{{$data->nama_pelatihan}}</p>
                                             </div>
                                             <div class="form-group">
+                                                <h5>Nama Narasumber</h5>
+                                                <p>-</p>
+                                            </div>
+                                            <div class="form-group">
                                                 <h5>Tanggal Mulai</h5>
                                                 <p>{{carbon\carbon::parse($data->tgl_mulai)->translatedFormat('d F Y')}}
                                                 </p>

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+    p{
+        font-size: 12px;
+    }
     h4,h2{
         font-family:serif;
     }
@@ -89,7 +92,27 @@
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center; text-transform:uppercase;">DATA PESERTA PELATIHAN FILTER {{$pelatihan->nama_pelatihan}}</h2>
+            <h3 style="text-align:center; text-transform:uppercase;">DATA PELATIHAN  </h3>
+            <table style="width:100%; border:none;">
+                <tr style="text-align:left; border:none;">
+                    <td style="text-align:left; width:25%; border:none;">Nama Pelatihan</td>
+                    <td style="text-align:left; border:none;">: {{$pelatihan->nama_pelatihan}}</td>
+                </tr>
+                <tr style="text-align:left; border:none;">
+                    <td style="text-align:left; border:none;">Pelaksanaan</td>
+                    <td style="text-align:left; border:none;">: {{carbon\carbon::parse($pelatihan->tgl_mulai)->translatedFormat('d F Y')}} - {{carbon\carbon::parse($pelatihan->tgl_mulai)->translatedFormat('d F Y')}}</td>
+                </tr>
+                <tr style="text-align:left; border:none;">
+                    <td style="text-align:left; border:none;">Narasumber</td>
+                    <td style="text-align:left; border:none;">: -</td>
+                </tr>
+                <tr style="text-align:left; border:none;">
+                    <td style="text-align:left; vertical-align:top; border:none;">Uraian</td>
+                    <td style="text-align:left; text-align:justify; border:none;">: {{$pelatihan->uraian}}</td>
+                </tr>
+            </table>
+            <br>
+            <h3 style="text-align:center; text-transform:uppercase;">DAFTAR PESERTA  </h3>
             <table class="table zero-configuration">
                                             <thead>
                                                 <tr>
@@ -130,13 +153,13 @@
                       <br>
                       <br>
                       <div class="ttd">
-                        <h5> <p> Kabupaten Tanah Laut, </p></h5>
-                       <h6>Mengetahui</h6>
-                      <h5>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
+                        <h5 style="margin:0px;"> <p> Kabupaten Tanah Laut, </p></h5>
+                       <h6  style="margin:0px;">Mengetahui</h6>
+                      <h5  style="margin:0px;">Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
                       <br>
                       <br>
-                      <h5 style="text-decoration:underline;">Nama</h5>
-                      <h5>NIP. 19580726 1984 03 1 007</h5>
+                      <h5 style="text-decoration:underline; margin:0px;">Nama</h5>
+                      <h5 style="margin:0px;">NIP. 19580726 1984 03 1 007</h5>
                       </div>
                     </div>
              </div>

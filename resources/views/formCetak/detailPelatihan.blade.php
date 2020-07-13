@@ -92,7 +92,7 @@
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
-            <h2 style="text-align:center;">DETAIL PELATIHAN</h2>
+            <h3 style="text-align:center;">DETAIL PELATIHAN</h3>
             <table>
                 <tr >
                     <td style="width:100px !important;">Nomor</td>
@@ -115,6 +115,10 @@
                     <td>: {{$data->nama_pelatihan}}</td>
                 </tr>
                 <tr >
+                    <td style="width:150px !important;">Nama narasumber</td>
+                    <td>: -</td>
+                </tr>
+                <tr >
                     <td style="width:100px !important;">uraian</td>
                     <td> <p style="text-align:justify;">: {{$data->uraian}}</p></td>
                 </tr>
@@ -135,36 +139,54 @@
                 </tr>
             </table>
             <br>
-            <h2 style="text-align:center;">PESERTA PELATIHAN</h2>
-            <table class="table table-hover" id="myTable" style="border:1px solid black;">
-                        <thead >
-                        <tr style="border:1px solid black;">
-                            <th style="border:1px solid black;">No</th>
-                            <th style="border:1px solid black;">Nama</th>
-                            <th style="border:1px solid black;">No SPT</th>
-                            <th style="border:1px solid black;">Jenis Kelamin</th>
-                            <th style="border:1px solid black;">Tempat, Tanggal Lahir</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="border:1px solid 1px;">1</td>
-                                <td style="border:1px solid 1px;">-</td>
-                                <td style="border:1px solid 1px;">-</td>
-                                <td style="border:1px solid 1px;">-</td>
-                                <td style="border:1px solid 1px;">-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="ttd">
-                    <p> Kabupaten Tanah Laut,
-                </p>
-                       
-                      <p>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </p>
+            <h3 style="text-align:center;">PESERTA PELATIHAN</h3>
+            <table class=" zero-configuration" style="border: 1px solid black;">
+                                            <thead style="border: 1px solid black;">
+                                                <tr style="border: 1px solid black;">
+                                                    <th style="border: 1px solid black;">No</th>
+                                                    <th style="border: 1px solid black;">Pelatihan</th>
+                                                    <th style="border: 1px solid black;">Nama</th>
+                                                    <th style="border: 1px solid black;">Nomor SPT</th>
+                                                    <th style="border: 1px solid black;">Tanggal SPT</th>
+                                                    <th style="border: 1px solid black;">Nomor Ktp</th>
+                                                    <th style="border: 1px solid black;">Jenis Kelamin</th>
+                                                    <th style="border: 1px solid black;">Tempat Tanggal lahir</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="border: 1px solid black;">
+                                                @foreach($data->peserta as $d)
+                                                <tr style="border: 1px solid black;">
+                                                    <td style="border: 1px solid black;">{{$loop->iteration}}</td>
+                                                    <td style="border: 1px solid black;">{{$d->pelatihan->nama_pelatihan}}</td>
+                                                    <td style="border: 1px solid black;">{{$d->nama_peserta}}</td>
+                                                    <td style="border: 1px solid black;">{{$d->no_spt}}</td>
+                                                    <td style="border: 1px solid black;">{{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                    <td style="border: 1px solid black;">{{$d->NIK}}</td>
+                                                    <td style="border: 1px solid black;">
+                                                        @if($d->jk == 1)
+                                                        Laki-laki
+                                                        @else
+                                                        Perempuan
+                                                        @endif
+                                                    </td>
+                                                    <td style="border: 1px solid black;">{{$d->tempat_lahir}},
+                                                        {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        <br>
+                                        <br>
+                                        <div class="ttd">
+                        <h5 style="margin:0px;"> <p> Kabupaten Tanah Laut, </p></h5>
+                       <h6 style="margin:0px;">Mengetahui</h6>
+                      <h5 style="margin:0px;">Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
                       <br>
                       <br>
                       <h5 style="text-decoration:underline;">Nama</h5>
-                      <h5>NIP. 19580726 1984 03 1 007</h5>
+                      <h5 style="margin:0px;">NIP. 19580726 1984 03 1 007</h5>
                       </div>
                     </div>
              </div>

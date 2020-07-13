@@ -44,6 +44,11 @@
                                                 placeholder="Nama Pelatihan">
                                         </div>
                                         <div class="form-group">
+                                            <label for="">Nama Narasumber</label>
+                                            <input type="text" name="nama_narasumber" id="nama_narasumber" class="form-control"
+                                                placeholder="Nama Narasumber">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="">Tanggal Mulai</label>
                                             <input type="date" value="{{$data->tgl_mulai}}" name="tgl_mulai"
                                                 id="tgl_mulai" class="form-control">

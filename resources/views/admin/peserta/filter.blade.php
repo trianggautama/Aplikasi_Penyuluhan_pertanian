@@ -34,7 +34,7 @@
                             </div>
                             <div class="card-content">
                                 <div class="card-body card-dashboard">
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" target="_blank">
                                         @csrf
                                         <div class="form-group">
                                             <label for="">Pelatihan</label>
@@ -47,11 +47,11 @@
                                         </div>
                                        
                                         <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                            <a href="{{Route('penjualanIndex')}}"
+                                            <a href="{{Route('pesertaIndex')}}"
                                                 class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
                                                     class="feather icon-arrow-left"></i> Batal</a>
                                             <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
-                                                    class="feather icon-save"></i> Ubah Data</button>
+                                                    class="feather icon-save"></i> cetak Data</button>
                                         </div>
                                     </form>
                                 </div>
