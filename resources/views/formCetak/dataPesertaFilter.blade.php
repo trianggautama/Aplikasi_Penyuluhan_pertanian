@@ -88,7 +88,7 @@
                 <p style="margin:0px;">Email: bp2tp.provkalsel@gmail.com </p>
             </div>
             <br>
-    </div>
+    </div> 
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
@@ -104,7 +104,7 @@
                 </tr>
                 <tr style="text-align:left; border:none;">
                     <td style="text-align:left; border:none;">Narasumber</td>
-                    <td style="text-align:left; border:none;">: -</td>
+                    <td style="text-align:left; border:none;">: {{$pelatihan->narasumber}}</td>
                 </tr>
                 <tr style="text-align:left; border:none;">
                     <td style="text-align:left; vertical-align:top; border:none;">Uraian</td>

@@ -54,7 +54,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <h5>Nama Narasumber</h5>
-                                                <p>-</p>
+                                                <p>{{$data->narasumber}}</p>
                                             </div>
                                             <div class="form-group">
                                                 <h5>Tanggal Mulai</h5>
