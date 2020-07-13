@@ -24,6 +24,7 @@ class pelatihanController extends Controller
         $data->nama_pelatihan = $request->nama_pelatihan;
         $data->tgl_mulai = $request->tgl_mulai;
         $data->tgl_selesai = $request->tgl_selesai;
+        $data->narasumber = $request->narasumber;
         $data->uraian = $request->uraian;
 
         $data->save();
@@ -72,6 +73,7 @@ class pelatihanController extends Controller
         $data->nama_pelatihan = $request->nama_pelatihan;
         $data->tgl_mulai = $request->tgl_mulai;
         $data->tgl_selesai = $request->tgl_selesai;
+        $data->narasumber = $request->narasumber;
         $data->uraian = $request->uraian;
 
         $data->update();

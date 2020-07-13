@@ -17,6 +17,7 @@ class CreatePelatihansTable extends Migration
             $table->id();
             $table->string('uuid', 36);
             $table->string('nama_pelatihan', 100);
+            $table->string('narasumber', 50);
             $table->date('tgl_mulai');
             $table->date('tgl_selesai');
             $table->text('uraian');

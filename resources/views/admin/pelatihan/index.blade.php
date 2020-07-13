@@ -58,7 +58,7 @@
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
                                                     <td>{{$d->nama_pelatihan}}</td>
-                                                    <td> Narasumber</td>
+                                                    <td>{{$d->narasumber}}</td>
                                                     <td>{{carbon\carbon::parse($d->tgl_mulai)->translatedFormat('d F Y')}}
                                                     </td>
                                                     <td>{{carbon\carbon::parse($d->tgl_selesai)->translatedFormat('d F Y')}}
@@ -70,7 +70,8 @@
                                                         <a href="{{Route('pelatihanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_pelatihan}}')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_pelatihan}}')"
+                                                            class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -118,7 +119,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Nama Narasumber</label>
-                        <input type="text" name="nama_narasumber" id="nama_narasumber" class="form-control"
+                        <input type="text" name="narasumber" id="narasumber" class="form-control"
                             placeholder="Nama Narasumber">
                     </div>
                     <div class="form-group">
@@ -144,8 +145,8 @@
 </div>
 @endsection
 @section('scripts')
-        <script>
-            function Hapus(uuid, nama) {
+<script>
+    function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data Pelatihan" + nama ,        
@@ -162,5 +163,5 @@
                 }
             })
             }
-        </script>
-    @endsection
+</script>
+@endsection

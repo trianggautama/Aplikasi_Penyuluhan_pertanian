@@ -45,7 +45,8 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nama Narasumber</label>
-                                            <input type="text" name="nama_narasumber" id="nama_narasumber" class="form-control"
+                                            <input type="text" name="narasumber" id="narasumber"
+                                                value="{{$data->narasumber}}" class="form-control"
                                                 placeholder="Nama Narasumber">
                                         </div>
                                         <div class="form-group">
@@ -60,8 +61,8 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Keterangan</label>
-                                            <textarea name="uraian" id="keterangan"
-                                                class="form-control" rows="10">{{$data->uraian}}</textarea>
+                                            <textarea name="uraian" id="keterangan" class="form-control"
+                                                rows="10">{{$data->uraian}}</textarea>
                                         </div>
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
