@@ -104,9 +104,15 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="">Alamat</label>
+                                            <textarea name="alamat" id="alamat"
+                                                class="form-control">{{$data->alamat}}</textarea>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="">Status</label>
                                             <select name="status" id="status" class="form-control">
-                                                <option value="1" {{$data->status == '1' ? 'selected' : ''}}>Aktif</option>
+                                                <option value="1" {{$data->status == '1' ? 'selected' : ''}}>Aktif
+                                                </option>
                                             </select>
                                         </div>
                                         <div

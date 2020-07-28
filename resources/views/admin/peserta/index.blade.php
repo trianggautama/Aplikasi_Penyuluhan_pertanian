@@ -78,12 +78,13 @@
                                                     <td>{{$d->tempat_lahir}},
                                                         {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
-                                                    <td>Alamat</td>
+                                                    <td>{{$d->alamat}}</td>
                                                     <td>
                                                         <a href="{{Route('pesertaEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_peserta}}')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->nama_peserta}}')"
+                                                            class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>

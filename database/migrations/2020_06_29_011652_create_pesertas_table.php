@@ -24,6 +24,7 @@ class CreatePesertasTable extends Migration
             $table->string('NIK', 30);
             $table->tinyInteger('jk');
             $table->string('tempat_lahir', 50);
+            $table->text('alamat');
             $table->date('tgl_lahir');
             $table->tinyInteger('status');
             $table->foreign('kecamatan_id')->references('id')->on('kecamatans')->onDelete('cascade');

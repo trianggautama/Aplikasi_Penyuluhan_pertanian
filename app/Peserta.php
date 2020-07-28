@@ -12,7 +12,7 @@ class Peserta extends Model
     protected $fillable = [
         'kecamatan_id', 'pelatihan_id', 'no_spt', 'tgl_spt',
         'nama_peserta', 'NIK', 'jk', 'tempat_lahir', 'tgl_lahir',
-        'status',
+        'status', 'alamat',
     ];
 
     public function kecamatan()
