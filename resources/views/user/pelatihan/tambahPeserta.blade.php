@@ -91,9 +91,9 @@
                                                     <th>Nama</th>
                                                     <th>Nomor SPT</th>
                                                     <th>Tanggal SPT</th>
-                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
                                                     <th>Tempat Tanggal lahir</th>
+                                                    <th>Alamat</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -106,7 +106,6 @@
                                                     <td>{{$d->no_spt}}</td>
                                                     <td>{{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
-                                                    <td>{{$d->NIK}}</td>
                                                     <td>
                                                         @if($d->jk == 1)
                                                         Laki-laki
@@ -117,6 +116,7 @@
                                                     <td>{{$d->tempat_lahir}},
                                                         {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
+                                                    <td>Alamat</td>
                                                     <td>
                                                         <a href="{{Route('pesertaKecamatanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
@@ -208,6 +208,10 @@
                                 <input type="date" name="tgl_lahir" class="form-control">
                             </div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat</label>
+                        <textarea name="alamat" id="alamat" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="">Status</label>

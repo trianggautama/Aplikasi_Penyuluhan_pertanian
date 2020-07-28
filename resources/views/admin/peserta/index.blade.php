@@ -53,9 +53,9 @@
                                                     <th>Nama</th>
                                                     <th>Nomor SPT</th>
                                                     <th>Tanggal SPT</th>
-                                                    <th>Nomor Ktp</th>
                                                     <th>Jenis Kelamin</th>
                                                     <th>Tempat Tanggal lahir</th>
+                                                    <th>Alamat</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -68,7 +68,6 @@
                                                     <td>{{$d->no_spt}}</td>
                                                     <td>{{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
-                                                    <td>{{$d->NIK}}</td>
                                                     <td>
                                                         @if($d->jk == 1)
                                                         Laki-laki
@@ -79,6 +78,7 @@
                                                     <td>{{$d->tempat_lahir}},
                                                         {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
+                                                    <td>Alamat</td>
                                                     <td>
                                                         <a href="{{Route('pesertaEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
@@ -128,15 +128,6 @@
                 <form action="{{Route('pesertaStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="">Kecamatan</label>
-                        <select name="kecamatan_id" id="" class="form-control">
-                            <option value="">-- pilih Kecamatan --</option>
-                            @foreach($kecamatan as $d)
-                            <option value="{{$d->id}}"> {{$d->kecamatan}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label for="">Pelatihan</label>
                         <select name="pelatihan_id" id="" class="form-control">
                             <option value="">-- pilih Pelatihan --</option>
@@ -145,6 +136,7 @@
                             @endforeach
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label for="">Nomor SPT</label>
                         <input type="text" name="no_spt" class="form-control">
@@ -181,6 +173,19 @@
                                 <input type="date" name="tgl_lahir" class="form-control">
                             </div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Kecamatan Asal</label>
+                        <select name="kecamatan_id" id="" class="form-control">
+                            <option value="">-- pilih Kecamatan --</option>
+                            @foreach($kecamatan as $d)
+                            <option value="{{$d->id}}"> {{$d->kecamatan}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Alamat</label>
+                        <textarea name="alamat" id="alamat" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="">Status</label>
