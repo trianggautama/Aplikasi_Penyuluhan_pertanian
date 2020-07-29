@@ -38,17 +38,6 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                            <label for="">Kecamatan</label>
-                                            <select name="kecamatan_id" id="" class="form-control">
-                                                <option value="">-- pilih Kecamatan --</option>
-                                                @foreach($kecamatan as $d)
-                                                <option value="{{$d->id}}"
-                                                    {{$data->kecamatan_id == $d->id ? 'selected' : ''}}>
-                                                    {{$d->kecamatan}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
                                             <label for="">Pelatihan</label>
                                             <select name="pelatihan_id" id="" class="form-control">
                                                 <option value="">-- pilih Pelatihan --</option>
@@ -102,6 +91,17 @@
                                                         class="form-control">
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Kecamatan Asal</label>
+                                            <select name="kecamatan_id" id="" class="form-control">
+                                                <option value="">-- pilih Kecamatan --</option>
+                                                @foreach($kecamatan as $d)
+                                                <option value="{{$d->id}}"
+                                                    {{$data->kecamatan_id == $d->id ? 'selected' : ''}}>
+                                                    {{$d->kecamatan}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Alamat</label>

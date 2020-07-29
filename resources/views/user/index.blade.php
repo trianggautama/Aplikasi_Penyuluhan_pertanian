@@ -35,7 +35,7 @@
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                <p>Pelathian Berlangsung</p>
+                                <p>Pelatihan Berlangsung</p>
                                 <div class="table-responsive">
                                 <table class="table zero-configuration">
                                             <thead>

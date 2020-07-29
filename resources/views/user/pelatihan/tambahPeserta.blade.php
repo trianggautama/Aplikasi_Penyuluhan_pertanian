@@ -116,7 +116,7 @@
                                                     <td>{{$d->tempat_lahir}},
                                                         {{carbon\carbon::parse($d->tgl_spt)->translatedFormat('d F Y')}}
                                                     </td>
-                                                    <td>Alamat</td>
+                                                    <td>{{$d->alamat}}</td>
                                                     <td>
                                                         <a href="{{Route('pesertaKecamatanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
