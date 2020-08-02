@@ -66,7 +66,8 @@
                                                         <a href="{{Route('lahanEdit',['uuid' => $d->uuid])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->lokasi}}')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->lokasi}}')"
+                                                            class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
@@ -120,19 +121,17 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="">Satuan</label>
                                 <select name="satuan" id="" class="form-control">
                                     <option value="">-- pilih Satuan --</option>
-                                    <option value="m"><p>m <sup>2</sup></p></option>
+                                    <option value="m">
+                                        <p>m <sup>2</sup></p>
+                                    </option>
                                     <option value="Hektar">Hektar</option>
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Satuan Luas</label>
-                        <input type="text" name="satuan" id="satuan" class="form-control" placeholder="Satuan">
                     </div>
                     <div class="form-group">
                         <label for="">Lokasi Lahan</label>
