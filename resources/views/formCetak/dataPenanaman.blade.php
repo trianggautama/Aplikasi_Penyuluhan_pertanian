@@ -119,7 +119,7 @@
                       <h5>Kepala Balai Pelatihan dan Penerapan Teknologi Pertanian </h5>
                       <br>
                       <br>
-                      <h5 style="text-decoration:underline;">Nama</h5>
+                      <h5 style="text-decoration:underline;">Dr. Muhammad Yasin, MP</h5>
                       <h5 style="margin:0px;">NIP. 19580726 1984 03 1 007</h5>
                       </div>
                     </div>
