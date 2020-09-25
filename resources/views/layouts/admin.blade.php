@@ -147,7 +147,7 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title"
                             data-i18n="Starter kit">Penanaman</span></a>
                     <ul class="menu-content">
-                        <li><a href="{{Route('bahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Bahan</span></a>
+                        <li><a href="{{Route('bahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout"> Bibit Buah</span></a>
                         </li>
 
                         <li><a href="{{Route('pembelianBahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Pembelian Bahan</span></a>
