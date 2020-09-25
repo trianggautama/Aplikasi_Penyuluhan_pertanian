@@ -173,15 +173,9 @@
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">Berita Kegiatan</span></a>
                 </li>
-<<<<<<< HEAD
-                <li class=" nav-item"><a href="{{Route('mahasiswaIndex')}}"><i class="feather icon-file"></i><span
-                            class="menu-title">mahasiswa</span></a>
-                </li>
-=======
                 <!-- <li class=" nav-item"><a href="{{Route('mahasiswaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">mahasiswa Kegiatan</span></a>
                 </li> -->
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                 @endif
                 @if(Auth::user()->role == 1)
                 <li class=" active nav-item"><a href="{{Route('userDashboardIndex')}}"><i class="feather icon-home"></i><span
