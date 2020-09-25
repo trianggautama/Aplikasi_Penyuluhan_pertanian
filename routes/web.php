@@ -153,3 +153,8 @@ Route::group(['middleware' => ['kecamatan']], function () {
     Route::get('/kecamatan/profil', 'kecamatanController@profil')->name('kecamatanProfil');
 
 });
+Route::get('/mahasiswa/index', 'mahasiswaController@index')->name('mahasiswaIndex');
+    Route::post('/mahasiswa/index', 'mahasiswaController@store')->name('mahasiswaStore');
+    Route::get('/mahasiswa/edit/{id}', 'mahasiswaController@edit')->name('mahasiswaEdit');
+    Route::put('/mahasiswa/edit/{id}', 'mahasiswaController@update')->name('mahasiswaUpdate');
+    Route::get('/mahasiswa/delete/{id}', 'mahasiswaController@destroy')->name('mahasiswaDestroy');
