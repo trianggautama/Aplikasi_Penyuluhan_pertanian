@@ -147,7 +147,7 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-database"></i><span class="menu-title"
                             data-i18n="Starter kit">Penanaman</span></a>
                     <ul class="menu-content">
-                        <li><a href="{{Route('bahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Bahan</span></a>
+                        <li><a href="{{Route('bahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout"> Bibit Buah</span></a>
                         </li>
 
                         <li><a href="{{Route('pembelianBahanIndex')}}"><i></i><span class="menu-item"  data-i18n="Fixed layout">Pembelian Bahan</span></a>
@@ -173,15 +173,9 @@
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">Berita Kegiatan</span></a>
                 </li>
-<<<<<<< HEAD
-                <li class=" nav-item"><a href="{{Route('mahasiswaIndex')}}"><i class="feather icon-file"></i><span
-                            class="menu-title">mahasiswa</span></a>
-                </li>
-=======
                 <!-- <li class=" nav-item"><a href="{{Route('mahasiswaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">mahasiswa Kegiatan</span></a>
                 </li> -->
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                 @endif
                 @if(Auth::user()->role == 1)
                 <li class=" active nav-item"><a href="{{Route('userDashboardIndex')}}"><i class="feather icon-home"></i><span

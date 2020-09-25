@@ -89,13 +89,13 @@
     <hr style="margin-top:1px;">
     <div class="container">
         <div class="isi">
-            <h3 style="text-align:center;">DATA BAHAN</h3>
+            <h3 style="text-align:center;">DATA BUAH</h3>
             <table class="table zero-configuration">
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Kode Bahan</th>
-                                                    <th>Nama Bahan</th>
+                                                    <th>Kode Buah</th>
+                                                    <th>Nama Buah</th>
                                                     <th>Stok</th>
                                                     <th>Kategori</th>
                                                 </tr>
