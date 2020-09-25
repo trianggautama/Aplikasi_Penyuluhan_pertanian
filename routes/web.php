@@ -104,6 +104,14 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/panen/delete/{uuid}', 'panenController@destroy')->name('panenDestroy');
 
 ////Panen Route
+Route::get('/mahasiswa/index', 'mahasiswaController@index')->name('mahasiswaIndex');
+Route::post('/mahasiswa/index', 'mahasiswaController@store')->name('mahasiswaStore');
+Route::get('/mahasiswa/edit/{id}', 'mahasiswaController@edit')->name('mahasiswaEdit');
+Route::put('/mahasiswa/edit/{id}', 'mahasiswaController@update')->name('mahasiswaUpdate');
+Route::get('/mahasiswa/delete/{id}', 'mahasiswaController@destroy')->name('mahasiswaDestroy');
+Route::get('/mahasiswa/cetak', 'mahasiswaController@cetak')->name('mahasiswaCetak');
+
+////Panen Route
     Route::get('/peserta/index', 'pesertaController@index')->name('pesertaIndex');
     Route::post('/peserta/index', 'pesertaController@store')->name('pesertaStore');
     Route::get('/peserta/edit/{uuid}', 'pesertaController@edit')->name('pesertaEdit');

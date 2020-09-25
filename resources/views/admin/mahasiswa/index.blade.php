@@ -9,10 +9,10 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-left mb-0">Data Bahan</h2>
+                        <h2 class="content-header-title float-left mb-0">Data mahasiswa</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Bahan</a>
+                                <li class="breadcrumb-item"><a href="index.html">mahasiswa</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Data</a>
                                 </li>
@@ -32,7 +32,7 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('bahanCetak')}}"
+                                    <a href="{{Route('mahasiswaCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -46,10 +46,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Kode Bahan</th>
-                                                    <th>Nama Bahan</th>
-                                                    <th>Stok</th>
-                                                    <th>Kategori</th>
+                                                    <th>nama</th>
+                                                    <th>nis</th>
+                                                    <th>kelas</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -57,38 +56,19 @@
                                                 @foreach($data as $d)
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
-                                                    <td>{{$d->kode_bahan}}</td>
-                                                    <td>{{$d->nama_bahan}}</td>
-                                                    <td>{{$d->stok}}</td>
+                                                    <td>{{$d->nama}}</td>
+                                                    <td>{{$d->nis}}</td>
+                                                    <td>{{$d->kelas}}</td>
                                                     <td>
-                                                        @if($d->kategori == 1)
-                                                        Bibit
-                                                        @elseif($d->kategori == 2)
-                                                        Pupuk
-                                                        @else
-                                                        Lain-lain
-                                                        @endif
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{Route('bahanEdit',['uuid' => $d->uuid])}}"
+                                                        <a href="{{Route('mahasiswaEdit',['id' => $d->id])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
-                                                        <button onclick="Hapus('{{$d->uuid}}','{{$d->bahan}}')" class="btn btn-icon btn-danger"><i
+                                                        <button onclick="Hapus('{{$d->id}}')" class="btn btn-icon btn-danger"><i
                                                                 class="feather icon-delete"></i></button>
                                                     </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Kode Bahan</th>
-                                                    <th>Nama Bahan</th>
-                                                    <th>Stok</th>
-                                                    <th>Kategori</th>
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -112,46 +92,21 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{Route('bahanStore')}}" method="POST">
+                <form action="{{Route('mahasiswaStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="">Kode bahan</label>
-                        <input type="text" name="kode_bahan" id="kode_bahan" class="form-control"
-                            placeholder="Kode bahan">
+                        <label for="">nis</label>
+                        <input type="text" name="nis" id="nis" class="form-control"
+                            placeholder="nis">
                     </div>
                     <div class="form-group">
-                        <label for="">Nama Buah</label>
-                        <input type="text" name="nama_bahan" id="nama_bahan" class="form-control"
-                            placeholder="Nama bahan">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Stok</label>
-                            <input type="text" name="stok" id="stok" class="form-control" placeholder="Stok">
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Satuan</label>
-                                <select name="satuan" id="" class="form-control">
-                                    <option value="">-- pilih Satuan --</option>
-                                    <option value="Buah">Buah</option>
-                                    <option value="Kilo">Kilo</option>
-                                    <option value="Ons">Ons</option>
-                                    <option value="Gram">Gram</option>
-                                </select>
-                            </div>
-                        </div>
+                        <label for="">Nama </label>
+                        <input type="text" name="nama" id="nama" class="form-control"
+                            placeholder="Nama ">
                     </div>
                     <div class="form-group">
-                        <label for="">Kategori</label>
-                        <select name="kategori" id="" class="form-control">
-                            <option value="">-- pilih kategori --</option>
-                            <option value="1">Bibit</option>
-                            <option value="2">Pupuk</option>
-                            <option value="3">Lain-lain</option>
-                        </select>
+                        <label for="">kelas</label>
+                        <input type="text" name="kelas" id="kelas" class="form-control" placeholder="kelas">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -165,10 +120,10 @@
 @endsection
 @section('scripts')
 <script>
-    function Hapus(uuid, nama) {
+    function Hapus(id) {
                 Swal.fire({
                 title: 'Anda Yakin?',
-                text: " Menghapus data bahan" + nama ,        
+                text: " Menghapus data mahasiswa" + id ,        
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -177,8 +132,8 @@
                 cancelButtonText: 'Batal'
             }).then((result) => {
                 if (result.value) {
-                url = '{{route("bahanDestroy",'')}}';
-                window.location.href =  url+'/'+uuid ;
+                url = '{{route("mahasiswaDestroy",'')}}';
+                window.location.href =  url+'/'+id ;
                 }
             })
             }

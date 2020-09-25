@@ -173,6 +173,9 @@
                 <li class=" nav-item"><a href="{{Route('beritaIndex')}}"><i class="feather icon-file"></i><span
                             class="menu-title">Berita Kegiatan</span></a>
                 </li>
+                <li class=" nav-item"><a href="{{Route('mahasiswaIndex')}}"><i class="feather icon-file"></i><span
+                            class="menu-title">mahasiswa</span></a>
+                </li>
                 @endif
                 @if(Auth::user()->role == 1)
                 <li class=" active nav-item"><a href="{{Route('userDashboardIndex')}}"><i class="feather icon-home"></i><span
