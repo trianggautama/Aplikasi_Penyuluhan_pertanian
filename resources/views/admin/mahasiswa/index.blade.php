@@ -32,7 +32,11 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
+<<<<<<< HEAD
                                     <a href="{{Route('mahasiswaCetak')}}"
+=======
+                                    <a href="{{Route('tanamanCetak')}}"
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -46,9 +50,15 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
+<<<<<<< HEAD
                                                     <th>nama</th>
                                                     <th>nis</th>
                                                     <th>kelas</th>
+=======
+                                                    <th>Nama</th>
+                                                    <th>NPM</th>
+                                            
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -56,10 +66,17 @@
                                                 @foreach($data as $d)
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
+<<<<<<< HEAD
                                                     <td>{{$d->nama}}</td>
                                                     <td>{{$d->nis}}</td>
                                                     <td>{{$d->kelas}}</td>
                                                     <td>
+=======
+                                                    <td>{{$d->Nama}}</td>
+                                                    <td>{{$d->NPM}}</td>
+                                                    <td>
+                
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                                         <a href="{{Route('mahasiswaEdit',['id' => $d->id])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
@@ -69,6 +86,19 @@
                                                 </tr>
                                                 @endforeach
                                             </tbody>
+<<<<<<< HEAD
+=======
+                                            <tfoot>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Kode Tanaman</th>
+                                                    <th>Nama Tanaman</th>
+                                                    <th>Stok</th>
+                                                    <th>Harga</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </tfoot>
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                         </table>
                                     </div>
                                 </div>
@@ -95,6 +125,7 @@
                 <form action="{{Route('mahasiswaStore')}}" method="POST">
                     @csrf
                     <div class="form-group">
+<<<<<<< HEAD
                         <label for="">nis</label>
                         <input type="text" name="nis" id="nis" class="form-control"
                             placeholder="nis">
@@ -107,6 +138,14 @@
                     <div class="form-group">
                         <label for="">kelas</label>
                         <input type="text" name="kelas" id="kelas" class="form-control" placeholder="kelas">
+=======
+                        <label for="">nama</label>
+                        <input type="text" name="Nama" id="nama" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label for="">NPM</label>
+                        <input type="text" name="NPM" id="NPM" class="form-control" >
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -120,10 +159,17 @@
 @endsection
 @section('scripts')
 <script>
+<<<<<<< HEAD
     function Hapus(id) {
                 Swal.fire({
                 title: 'Anda Yakin?',
                 text: " Menghapus data mahasiswa" + id ,        
+=======
+    function Hapus(id, nama) {
+                Swal.fire({
+                title: 'Anda Yakin?',
+                text: " Menghapus data Pelatihan" + nama ,        
+>>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
