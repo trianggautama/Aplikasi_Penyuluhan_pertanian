@@ -9,10 +9,10 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-left mb-0">Bahan</h2>
+                        <h2 class="content-header-title float-left mb-0">Buah</h2>
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Bahan</a>
+                                <li class="breadcrumb-item"><a href="index.html">Buah</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#">Edit</a>
                                 </li>
@@ -38,12 +38,12 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-                                            <label for="">Kode bahan</label>
+                                            <label for="">Kode Buah</label>
                                             <input type="text" name="kode_bahan" value="{{$data->kode_bahan}}"
                                                 id="kode_bahan" class="form-control" placeholder="Kode bahan">
                                         </div>
                                         <div class="form-group">
-                                            <label for="">Nama bahan</label>
+                                            <label for="">Nama Buah</label>
                                             <input type="text" name="nama_bahan" value="{{$data->nama_bahan}}"
                                                 id="nama_bahan" class="form-control" placeholder="Nama bahan">
                                         </div>
