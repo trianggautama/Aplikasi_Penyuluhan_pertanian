@@ -32,11 +32,7 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
-<<<<<<< HEAD
-                                    <a href="{{Route('mahasiswaCetak')}}"
-=======
                                     <a href="{{Route('tanamanCetak')}}"
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>
                                     <button class="btn btn-primary  mb-1 mb-sm-0 mr-0 " data-toggle="modal"
@@ -50,15 +46,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-<<<<<<< HEAD
-                                                    <th>nama</th>
-                                                    <th>nis</th>
-                                                    <th>kelas</th>
-=======
                                                     <th>Nama</th>
                                                     <th>NPM</th>
                                             
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -66,17 +56,10 @@
                                                 @foreach($data as $d)
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
-<<<<<<< HEAD
-                                                    <td>{{$d->nama}}</td>
-                                                    <td>{{$d->nis}}</td>
-                                                    <td>{{$d->kelas}}</td>
-                                                    <td>
-=======
                                                     <td>{{$d->Nama}}</td>
                                                     <td>{{$d->NPM}}</td>
                                                     <td>
                 
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                                         <a href="{{Route('mahasiswaEdit',['id' => $d->id])}}"
                                                             class="btn btn-icon btn-warning"><i
                                                                 class="feather icon-edit"></i></a>
@@ -86,8 +69,6 @@
                                                 </tr>
                                                 @endforeach
                                             </tbody>
-<<<<<<< HEAD
-=======
                                             <tfoot>
                                                 <tr>
                                                     <th>No</th>
@@ -98,7 +79,6 @@
                                                     <th>Aksi</th>
                                                 </tr>
                                             </tfoot>
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                         </table>
                                     </div>
                                 </div>

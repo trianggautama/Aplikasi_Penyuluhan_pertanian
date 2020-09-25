@@ -168,7 +168,7 @@
     function Hapus(uuid, nama) {
                 Swal.fire({
                 title: 'Anda Yakin?',
-                text: " Menghapus data bahan" + nama ,        
+                text: " Menghapus data buah" + nama ,        
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',

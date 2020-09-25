@@ -38,26 +38,6 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
-<<<<<<< HEAD
-                                            <label for="">nis</label>
-                                            <input type="text" name="nis" value="{{$data->nis}}"
-                                                id="nis" class="form-control" placeholder="nis">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Nama </label>
-                                            <input type="text" name="nama" value="{{$data->nama}}"
-                                                id="nama" class="form-control" placeholder="Nama ">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Stok</label>
-                                            <input type="text" name="kelas" value="{{$data->kelas}}" id="kelas"
-                                                class="form-control" placeholder="Kelas">
-                                        </div>
-                            
-                                </div>
-                                <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <a href="{{Route('mahasiswaIndex')}}"
-=======
                                             <label for="">Kode tanaman</label>
                                             <input type="text" name="kode_tanaman" value="{{$data->kode_tanaman}}"
                                                 id="kode_tanaman" class="form-control" placeholder="Kode Buah">
@@ -85,7 +65,6 @@
                                 </div>
                                 <div class="card-footer d-flex flex-sm-row flex-column justify-content-end mt-1">
                                     <a href="{{Route('tanamanIndex')}}"
->>>>>>> 1bb981b9f5176c80e445f8ea875b54d416062f17
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
                                             class="feather icon-arrow-left"></i> Batal</a>
                                     <button type="submit" class="btn btn-primary  mb-1 mb-sm-0 mr-0 mr-sm-1"><i
