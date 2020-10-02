@@ -155,6 +155,8 @@ Route::get('/mahasiswa/cetak', 'mahasiswaController@cetak')->name('mahasiswaCeta
     Route::get('/peserta/cetak', 'reportController@pesertaCetak')->name('pesertaCetak');
     Route::post('/peserta/filter', 'reportController@pesertaFilter')->name('pesertaFilterCetak');
     Route::post('/panen/filter', 'reportController@panenFilter')->name('panenFilterCetak');
+    Route::post('/penjualan/filter', 'reportController@penjualanFilter')->name('penjualanFilterCetak');
+
 
 });
 

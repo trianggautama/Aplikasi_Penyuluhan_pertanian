@@ -169,4 +169,15 @@ class reportController extends Controller
         $pdf->setPaper('a4', 'landscape');
         return $pdf->stream('Laporan data Filter Panen .pdf');
     }
+
+    public function penjualanFilter(Request $request){
+        $data = Penjualan::whereBetween('tanggal', [$request->tgl_mulai, $request->tgl_akhir])->get();
+        $tgl_mulai = $request->tgl_mulai;
+        $tgl_akhir = $request->tgl_akhir;
+        $tgl= Carbon::now()->format('d-m-Y');
+        $pdf =PDF::loadView('formCetak.filterPenjualan', ['data'=>$data,'tgl'=>$tgl,'tgl_mulai'=>$tgl_mulai,'tgl_akhir'=>$tgl_akhir]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan data Filter Penjualan .pdf');
+    }
+
 }

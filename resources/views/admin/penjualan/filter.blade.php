@@ -34,7 +34,7 @@
                             </div>
                             <div class="card-content">
                                 <div class="card-body card-dashboard">
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" target="_blank">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-6">
