@@ -32,6 +32,9 @@
                                     <h4 class="card-title">Tabel Data</h4>
                                 </div>
                                 <div class="col-6 d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                <a href="{{Route('penjualanFilter')}}"
+                                        class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
+                                            class="feather icon-filter"></i> Filter Data</a>
                                     <a href="{{Route('penjualanCetak')}}"
                                         class="btn btn-secondary  mb-1 mb-sm-0 mr-0 mr-sm-1" target="_blank"><i
                                             class="feather icon-printer"></i> Cetak Data</a>

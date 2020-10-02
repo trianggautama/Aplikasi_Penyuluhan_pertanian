@@ -73,6 +73,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/lahan/edit/{uuid}', 'lahanController@edit')->name('lahanEdit');
     Route::put('/lahan/edit/{uuid}', 'lahanController@update')->name('lahanUpdate');
     Route::get('/lahan/delete/{uuid}', 'lahanController@destroy')->name('lahanDestroy');
+    Route::get('/lahan/filter/{uuid}', 'lahanController@filter')->name('lahanFilter');
+
 
 ////Berita Route
     Route::get('/penanaman/index', 'penanamanController@index')->name('penanamanIndex');
@@ -102,6 +104,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/panen/edit/{uuid}', 'panenController@edit')->name('panenEdit');
     Route::put('/panen/edit/{uuid}', 'panenController@update')->name('panenUpdate');
     Route::get('/panen/delete/{uuid}', 'panenController@destroy')->name('panenDestroy');
+    Route::get('/panen/filter', 'panenController@filter')->name('panenFilter');
+
 
 ////Panen Route
 Route::get('/mahasiswa/index', 'mahasiswaController@index')->name('mahasiswaIndex');
@@ -125,6 +129,8 @@ Route::get('/mahasiswa/cetak', 'mahasiswaController@cetak')->name('mahasiswaCeta
     Route::get('/penjualan/edit/{uuid}/', 'penjualanController@edit')->name('penjualanEdit');
     Route::put('/penjualan/edit/{uuid}', 'penjualanController@update')->name('penjualanUpdate');
     Route::get('/penjualan/delete/{uuid}', 'penjualanController@destroy')->name('penjualanDestroy');
+    Route::get('/penjualan/filter', 'penjualanController@filter')->name('penjualanFilter');
+
 
 ////Berita Route
     Route::post('rincian/penanaman/index', 'rincianPenanamanController@store')->name('rincianPenanamanStore');
@@ -148,6 +154,7 @@ Route::get('/mahasiswa/cetak', 'mahasiswaController@cetak')->name('mahasiswaCeta
     Route::get('/penjualan/cetak', 'reportController@penjualanCetak')->name('penjualanCetak');
     Route::get('/peserta/cetak', 'reportController@pesertaCetak')->name('pesertaCetak');
     Route::post('/peserta/filter', 'reportController@pesertaFilter')->name('pesertaFilterCetak');
+    Route::post('/panen/filter', 'reportController@panenFilter')->name('panenFilterCetak');
 
 });
 

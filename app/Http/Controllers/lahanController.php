@@ -49,4 +49,10 @@ class lahanController extends Controller
         return redirect()->route('lahanIndex')->withSuccess('Data berhasil dihapus');
     }
 
+    public function filter($uuid)
+    {
+        $data = Lahan::where('uuid', $uuid)->first();
+        return view('admin.lahan.filter', compact('data'));
+    }
+
 }

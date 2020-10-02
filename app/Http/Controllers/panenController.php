@@ -59,4 +59,10 @@ class panenController extends Controller
 
         return redirect()->route('panenIndex')->withSuccess('Data berhasil dihapus');
     }
+
+    public function filter()
+    {
+        
+        return view('admin.panen.filter');
+    }
 }

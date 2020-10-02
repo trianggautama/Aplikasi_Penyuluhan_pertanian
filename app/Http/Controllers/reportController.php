@@ -16,6 +16,8 @@ use App\Penjualan;
 use App\Peserta;
 use App\Rincian_penanaman;
 use App\Tanaman;
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 
 class reportController extends Controller
@@ -156,5 +158,15 @@ class reportController extends Controller
         $pdf->setPaper('a4', 'portrait');
 
         return $pdf->stream('Laporan Data Peserta Filter.pdf');
+    }
+
+    public function panenFilter(Request $request){
+        $data = Panen::whereBetween('tanggal', [$request->tgl_mulai, $request->tgl_akhir])->get();
+        $tgl_mulai = $request->tgl_mulai;
+        $tgl_akhir = $request->tgl_akhir;
+        $tgl= Carbon::now()->format('d-m-Y');
+        $pdf =PDF::loadView('formCetak.filterPanen', ['data'=>$data,'tgl'=>$tgl,'tgl_mulai'=>$tgl_mulai,'tgl_akhir'=>$tgl_akhir]);
+        $pdf->setPaper('a4', 'landscape');
+        return $pdf->stream('Laporan data Filter Panen .pdf');
     }
 }

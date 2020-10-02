@@ -56,4 +56,9 @@ class penjualanController extends Controller
 
         return redirect()->route('penjualanIndex')->withSuccess('Data berhasil dihapus');
     }
+
+    public function filter()
+    {
+        return view('admin.penjualan.filter');
+    }
 }
